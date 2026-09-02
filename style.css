@@ -381,3 +381,24 @@ img{max-width:100%}
 .logo-image img{display:block;width:min(520px,46vw);height:auto;max-height:58px;object-fit:contain;object-position:left center}
 @media(max-width:900px){.logo-image img{width:min(430px,58vw);max-height:52px}}
 @media(max-width:640px){.logo-image{width:100%}.logo-image img{width:min(100%,430px);max-height:48px}}
+
+
+/* V6.5 article sidebar + slightly larger header slogan */
+.article-layout{width:min(1180px,calc(100% - 40px));display:grid;grid-template-columns:minmax(0,820px) 300px;gap:42px;align-items:start;margin:0 auto}
+.article-layout>.article{min-width:0}
+.article-sidebar{position:sticky;top:22px;padding-top:58px}
+.sidebar-card{background:#fff;border:1px solid #e1e7ef;border-radius:18px;padding:24px;margin-bottom:22px;box-shadow:0 8px 24px rgba(15,23,42,.035)}
+.sidebar-card h2{margin:0 0 18px;font-size:19px;letter-spacing:-.5px;color:#101828}
+.sidebar-categories{display:flex;flex-direction:column}
+.sidebar-categories a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;color:#344054;border-bottom:1px solid #f0f2f5;text-decoration:none}
+.sidebar-categories a:last-child{border-bottom:0}
+.sidebar-categories a:hover span{color:#1f62dd}
+.sidebar-categories b{font-size:13px;color:#667085;font-weight:700}
+.recent-post-list{display:flex;flex-direction:column;gap:15px}
+.recent-post-item{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:center;color:#101828;text-decoration:none}
+.recent-post-item img{width:76px;height:56px;border-radius:8px;object-fit:cover;background:#f3f6fa}
+.recent-post-item strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:1.42;letter-spacing:-.2px}
+.recent-post-item small{display:block;margin-top:5px;font-size:11px;color:#8490a3}
+.recent-post-item:hover strong{color:#1f62dd}
+@media(max-width:980px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static;padding-top:0;display:grid;grid-template-columns:1fr 1fr;gap:18px}.sidebar-card{margin-bottom:0}}
+@media(max-width:640px){.article-layout{width:min(100% - 28px,1180px)}.article-sidebar{grid-template-columns:1fr}.recent-post-item{grid-template-columns:72px minmax(0,1fr)}.recent-post-item img{width:72px;height:54px}}
