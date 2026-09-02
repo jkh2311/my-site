@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://haninelife.com/sitemap.xml
+Sitemap: https://haninelife.com/rss.xml
