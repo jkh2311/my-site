@@ -403,3 +403,20 @@ img{max-width:100%}
 .recent-post-item:hover strong{color:#1f62dd}
 @media(max-width:980px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static;padding-top:0;display:grid;grid-template-columns:1fr 1fr;gap:18px}.sidebar-card{margin-bottom:0}}
 @media(max-width:640px){.article-layout{width:min(100% - 28px,1180px)}.article-sidebar{grid-template-columns:1fr}.recent-post-item{grid-template-columns:72px minmax(0,1fr)}.recent-post-item img{width:72px;height:54px}}
+
+/* Mascot card brand symbol */
+.hani-card figcaption .hani-mark{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+}
+.hani-card figcaption .hani-mark img{
+  display:block;
+  width:34px;
+  height:34px;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
