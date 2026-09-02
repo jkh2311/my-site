@@ -34,19 +34,20 @@
 <section class="section"><div class="container prose">
 <div class="form-card">
 <h2>문의 보내기</h2>
-<p>아래 내용을 작성하고 <strong>문의 보내기</strong>를 누르면 이메일 작성 화면이 열립니다. 수신 주소는 <strong>jhh271@naver.com</strong>으로 자동 입력됩니다.</p>
-<form id="contact-form">
+<p>아래 내용을 작성하고 <strong>문의 보내기</strong>를 누르면 별도의 이메일 앱을 열지 않고 사이트에서 바로 전송됩니다.</p>
+<form id="contact-form" novalidate>
 <div class="form-grid">
-<div class="form-field"><label for="contact-name">이름 또는 닉네임</label><input id="contact-name" required maxlength="50" placeholder="예: 홍길동"></div>
-<div class="form-field"><label for="contact-email">답변 받을 이메일</label><input id="contact-email" type="email" required maxlength="120" placeholder="example@email.com"></div>
-<div class="form-field full"><label for="contact-type">문의 유형</label><select id="contact-type"><option>정보 수정 제보</option><option>사이트 이용 문의</option><option>광고·제휴 문의</option><option>기타 문의</option></select></div>
-<div class="form-field full"><label for="contact-subject">제목</label><input id="contact-subject" required maxlength="100" placeholder="문의 제목을 입력하세요"></div>
-<div class="form-field full"><label for="contact-message">문의 내용</label><textarea id="contact-message" required maxlength="3000" placeholder="문의 내용을 입력하세요"></textarea><div class="form-help">주민등록번호, 계좌번호, 비밀번호 등 민감한 개인정보는 적지 마세요.</div></div>
+<div class="form-field"><label for="contact-name">이름 또는 닉네임</label><input id="contact-name" name="name" required maxlength="50" placeholder="예: 홍길동"></div>
+<div class="form-field"><label for="contact-email">답변 받을 이메일</label><input id="contact-email" name="email" type="email" required maxlength="120" placeholder="example@email.com"></div>
+<div class="form-field full"><label for="contact-type">문의 유형</label><select id="contact-type" name="문의유형"><option>정보 수정 제보</option><option>사이트 이용 문의</option><option>광고·제휴 문의</option><option>기타 문의</option></select></div>
+<div class="form-field full"><label for="contact-subject">제목</label><input id="contact-subject" name="제목" required maxlength="100" placeholder="문의 제목을 입력하세요"></div>
+<div class="form-field full"><label for="contact-message">문의 내용</label><textarea id="contact-message" name="message" required maxlength="3000" placeholder="문의 내용을 입력하세요"></textarea><div class="form-help">주민등록번호, 계좌번호, 비밀번호 등 민감한 개인정보는 적지 마세요.</div></div>
+<input type="text" id="contact-website" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
 </div>
-<div class="form-actions"><button class="btn btn-primary" type="submit">문의 보내기</button><button class="btn btn-secondary" type="reset">내용 지우기</button></div>
+<div class="form-actions"><button class="btn btn-primary" id="contact-submit" type="submit">문의 보내기</button><button class="btn btn-secondary" type="reset">내용 지우기</button></div>
 <div class="form-status" id="contact-status"></div>
 </form></div>
-<div class="notice" style="margin-top:20px">이 문의 폼은 별도 서버에 개인정보를 저장하지 않고 사용자의 이메일 앱을 이용해 전송합니다. 기기에 이메일 앱이 설정되어 있어야 합니다.</div>
+<div class="notice" style="margin-top:20px">문의 전송을 위해 외부 폼 전송 서비스(FormSubmit)를 이용합니다. 입력한 이름·이메일·문의 내용은 문의 전달을 위해 해당 서비스를 통해 처리될 수 있습니다. 민감한 개인정보는 입력하지 마세요.</div>
 </div></section></main>
 
 <footer class="site-footer"><div class="container footer-inner">
@@ -107,6 +108,62 @@
 </script>
 
 <script>
-(function(){const f=document.getElementById('contact-form');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('contact-name').value.trim();const email=document.getElementById('contact-email').value.trim();const type=document.getElementById('contact-type').value;const subject=document.getElementById('contact-subject').value.trim();const message=document.getElementById('contact-message').value.trim();const body=`문의 유형: ${type}\n이름/닉네임: ${name}\n답변 이메일: ${email}\n\n문의 내용\n${message}`;document.getElementById('contact-status').style.display='block';document.getElementById('contact-status').textContent='이메일 작성 화면을 여는 중입니다. 내용을 확인한 뒤 메일 앱에서 전송을 눌러주세요.';location.href='mailto:jhh271@naver.com?subject='+encodeURIComponent('[한이네생활정보 문의] '+subject)+'&body='+encodeURIComponent(body);});})();
+(function(){
+  const f=document.getElementById('contact-form');
+  if(!f)return;
+  const status=document.getElementById('contact-status');
+  const submit=document.getElementById('contact-submit');
+  const endpoint='https://formsubmit.co/ajax/jhh271@naver.com';
+
+  function showStatus(message, isError){
+    status.style.display='block';
+    status.textContent=message;
+    status.setAttribute('role', isError ? 'alert' : 'status');
+  }
+
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+
+    const honey=document.getElementById('contact-website').value.trim();
+    if(honey) return;
+
+    const name=document.getElementById('contact-name').value.trim();
+    const email=document.getElementById('contact-email').value.trim();
+    const type=document.getElementById('contact-type').value;
+    const subject=document.getElementById('contact-subject').value.trim();
+    const message=document.getElementById('contact-message').value.trim();
+
+    submit.disabled=true;
+    submit.textContent='보내는 중...';
+    showStatus('문의를 전송하고 있습니다.', false);
+
+    try{
+      const res=await fetch(endpoint,{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({
+          name:name,
+          email:email,
+          문의유형:type,
+          제목:subject,
+          message:message,
+          _subject:'[한이네생활정보 문의] '+subject,
+          _template:'table',
+          _url:'https://haninelife.com/contact.html'
+        })
+      });
+      const data=await res.json().catch(()=>({}));
+      if(!res.ok || data.success===false) throw new Error('submit failed');
+      showStatus('문의가 정상적으로 접수되었습니다. 확인 후 답변드리겠습니다.', false);
+      f.reset();
+    }catch(err){
+      showStatus('문의 전송에 실패했습니다. 잠시 후 다시 시도해주세요.', true);
+    }finally{
+      submit.disabled=false;
+      submit.textContent='문의 보내기';
+    }
+  });
+})();
 </script>
 </body></html>
