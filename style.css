@@ -375,3 +375,9 @@ img{max-width:100%}
 .hero-title-group{width:fit-content;max-width:100%;}
 .hero-title-group .eyebrow{width:100%;text-align:center;}
 .hero-title-group h1{width:fit-content;max-width:100%;}
+
+/* Header brand logo */
+.logo-image{display:flex;align-items:center;line-height:1;flex:0 1 auto}
+.logo-image img{display:block;width:min(520px,46vw);height:auto;max-height:58px;object-fit:contain;object-position:left center}
+@media(max-width:900px){.logo-image img{width:min(430px,58vw);max-height:52px}}
+@media(max-width:640px){.logo-image{width:100%}.logo-image img{width:min(100%,430px);max-height:48px}}
