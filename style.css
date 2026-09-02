@@ -304,3 +304,15 @@ img{max-width:100%}
   color:#667085;
   line-height:1.6;
 }
+
+/* V5.4 precise photo specification blocks */
+.spec-precision-box{margin:22px 0 30px;padding:22px;border:1px solid #dbe4f0;border-radius:17px;background:#fff}
+.spec-precision-box h2{margin:0 0 16px;font-size:22px}
+.spec-table{border-top:1px solid #dbe4f0}
+.spec-table p{display:grid;grid-template-columns:145px 1fr;gap:14px;margin:0;padding:12px 4px;border-bottom:1px solid #e8edf3;line-height:1.65}
+.spec-table b{color:#174ea6}.spec-table span{color:#344054}
+.spec-caution{margin:16px 0 0;padding:15px 17px;border-radius:12px;background:#f3f7ff;line-height:1.7}
+.passport-strict{border-color:#b8d7bd;background:#fbfefb}
+.passport-strict .spec-table b{color:#137333}
+.passport-strict .spec-caution{background:#edf8ef}
+@media(max-width:600px){.spec-table p{grid-template-columns:1fr;gap:4px}.spec-precision-box{padding:17px}}
