@@ -66,3 +66,23 @@ img{max-width:100%}
 .issue-cta-button:hover{transform:translateY(-1px)}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:34px}.hani-card{max-width:520px}.hani-about{grid-template-columns:180px 1fr}}
 @media(max-width:640px){.hani-card{max-width:none}.hani-about{grid-template-columns:1fr}.hani-about img{max-height:320px}.issue-cta{align-items:stretch;flex-direction:column}.issue-cta-button{width:100%}}
+
+/* V4.3 - smaller Hani mascot */
+.hero-grid{grid-template-columns:minmax(0,1fr) 240px;gap:42px}
+.hani-card{width:240px;justify-self:end}
+.hani-card img{aspect-ratio:4/5}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hani-card{width:220px;justify-self:start}}
+@media(max-width:640px){.hani-card{width:180px}}
+.guide-steps{counter-reset:step;display:grid;gap:14px;margin:22px 0}
+.guide-step{position:relative;padding:18px 18px 18px 62px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.guide-step:before{counter-increment:step;content:counter(step);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#1d62df;color:white;font-weight:800}
+.method-box{padding:22px;margin:24px 0;border:1px solid var(--line);border-radius:16px;background:#f8fafc}
+.photo-rule{padding:22px;margin:24px 0;border:1px solid var(--line);border-radius:16px;background:#fff}
+.photo-diagram{max-width:330px;margin:18px auto;padding:18px;border:2px solid #dbe5f5;border-radius:12px;text-align:center;background:#f8fbff}
+.photo-frame{width:140px;height:180px;margin:12px auto;border:2px solid #2467df;position:relative;background:#fff}
+.photo-head{width:76px;height:98px;border:2px solid #687386;border-radius:48% 48% 45% 45%;position:absolute;left:30px;top:28px}
+.photo-shoulders{width:112px;height:50px;border:2px solid #687386;border-radius:55% 55% 0 0;position:absolute;left:12px;bottom:0}
+.okbad{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.okbad>div{padding:18px;border-radius:14px;border:1px solid var(--line)}
+.ok{background:#f1fbf6}.bad{background:#fff5f5}
+@media(max-width:640px){.okbad{grid-template-columns:1fr}}
