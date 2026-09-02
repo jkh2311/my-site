@@ -328,3 +328,24 @@ img{max-width:100%}
 .pre-step-photo-cta a{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:11px;background:#1f62dd;color:#fff;font-weight:800}
 @media(max-width:760px){.quick-photo-cards{grid-template-columns:1fr 1fr}.pre-step-photo-cta{align-items:stretch;flex-direction:column}.pre-step-photo-cta a{width:100%}}
 @media(max-width:480px){.quick-photo-cards{grid-template-columns:1fr}}
+
+/* V5.7 site-wide article search */
+.article-search-wrap{position:relative;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.article-search-box{position:relative;max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.article-search-box>label{font-size:13px;font-weight:800;color:#344054;white-space:nowrap}
+.article-search-input-row{display:flex;width:min(390px,100%);gap:7px}
+.article-search-input-row input{width:100%;height:40px;padding:0 12px;border:1px solid #cfd8e6;border-radius:10px;background:#fff;font:inherit;outline:none}
+.article-search-input-row input:focus{border-color:#1f62dd;box-shadow:0 0 0 3px rgba(31,98,221,.10)}
+.article-search-input-row button{height:40px;padding:0 14px;border:0;border-radius:10px;background:#1f62dd;color:#fff;font-weight:800;cursor:pointer;white-space:nowrap}
+.article-search-results{position:absolute;top:58px;right:20px;width:min(520px,calc(100vw - 40px));max-height:420px;overflow:auto;border:1px solid #d8e1ed;border-radius:14px;background:#fff;box-shadow:0 18px 45px rgba(15,23,42,.16);padding:8px}
+.article-search-result{display:block;padding:12px 13px;border-radius:10px;color:#101828;text-decoration:none}
+.article-search-result:hover{background:#f4f7fb}
+.article-search-result-cat{display:block;font-size:11px;font-weight:800;color:#1f62dd;margin-bottom:3px}
+.article-search-result strong{display:block;font-size:15px;line-height:1.45}
+.article-search-result small{display:block;margin-top:4px;color:#667085;line-height:1.45}
+.article-search-message{padding:15px;color:#667085;text-align:center}
+@media(max-width:700px){
+  .article-search-box{align-items:stretch;flex-direction:column;gap:6px}
+  .article-search-input-row{width:100%}
+  .article-search-results{top:90px;left:20px;right:20px;width:auto}
+}
