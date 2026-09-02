@@ -148,3 +148,27 @@ img{max-width:100%}
 .photo-spec-grid span{font-size:14px;line-height:1.55;color:#344054}
 @media(max-width:850px){.photo-spec-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.photo-spec-grid{grid-template-columns:1fr}}
+
+/* V4.9 — article main image is photo only */
+.article-cover{
+  margin:12px 0 26px;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#eef3f8;
+  box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+.article-cover img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/7;
+  object-fit:cover;
+  object-position:center;
+}
+.article-cover::before,.article-cover::after{display:none!important;content:none!important}
+.article-cover *:not(img){display:none!important}
+@media(max-width:640px){
+  .article-cover{border-radius:14px}
+  .article-cover img{aspect-ratio:16/9}
+}
