@@ -362,3 +362,7 @@ img{max-width:100%}
 .article-published{margin:.45rem 0 .5rem!important;font-size:.84rem!important;color:#6b7280!important;}
 .article-published time{font-variant-numeric:tabular-nums;}
 .article-published-detail{margin:.35rem 0 1rem;color:#6b7280;font-size:.92rem;}
+
+/* V6.5 hero copy refinement */
+.hero h1{width:fit-content;max-width:100%}
+.hero-subline{display:block;text-align:center}
