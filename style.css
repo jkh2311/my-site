@@ -86,3 +86,17 @@ img{max-width:100%}
 .okbad>div{padding:18px;border-radius:14px;border:1px solid var(--line)}
 .ok{background:#f1fbf6}.bad{background:#fff5f5}
 @media(max-width:640px){.okbad{grid-template-columns:1fr}}
+
+/* V4.4 주민등록증 상세 가이드 */
+.ai-photo-examples{margin:22px 0 30px}
+.ai-photo-examples img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 28px rgba(15,23,42,.06)}
+.ai-photo-examples figcaption{margin-top:10px;font-size:13px;line-height:1.65;color:#667085}
+.quick-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}
+.quick-fact{padding:18px;border:1px solid var(--line);border-radius:14px;background:#f8fafc}
+.quick-fact strong{display:block;font-size:14px;margin-bottom:6px}.quick-fact span{font-size:14px;color:#475467}
+.application-tabs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+.application-card{padding:24px;border:1px solid var(--line);border-radius:17px;background:#fff}
+.application-card.online{border-top:4px solid #2467df}.application-card.offline{border-top:4px solid #16925c}
+.warning-box{padding:18px 20px;border-radius:14px;background:#fff8e8;border:1px solid #f3d491;margin:20px 0}
+@media(max-width:850px){.quick-facts{grid-template-columns:1fr 1fr}.application-tabs{grid-template-columns:1fr}}
+@media(max-width:520px){.quick-facts{grid-template-columns:1fr}}
