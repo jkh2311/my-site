@@ -15,6 +15,7 @@ img{max-width:100%}
 .main-nav a{font-size:14px;color:#4c5668}.main-nav a:hover{color:#111827}
 .hero{background:var(--soft);padding:100px 0 105px;border-bottom:1px solid #edf0f4}
 .eyebrow,.section-label{margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:1.2px;color:#667085}
+.hero .eyebrow{text-align:center}
 .hero h1{max-width:780px;margin:0;font-size:clamp(40px,6vw,66px);line-height:1.16;letter-spacing:-2.6px;color:#111827}
 .hero-description{max-width:730px;margin:26px 0 0;font-size:18px;color:#667085}
 .hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
