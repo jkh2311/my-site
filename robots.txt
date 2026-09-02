@@ -3,3 +3,5 @@ Allow: /
 
 Sitemap: https://haninelife.com/sitemap.xml
 Sitemap: https://haninelife.com/rss.xml
+
+#DaumWebMasterTool:f2e4c541db1cf43c4bfa0e88d7e4e61571a96c55a43e633044c7c01b8f65389b:hQm4jsh/DU2xT0xEsL0zjw==
