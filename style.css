@@ -349,3 +349,8 @@ img{max-width:100%}
   .article-search-input-row{width:100%}
   .article-search-results{top:90px;left:20px;right:20px;width:auto}
 }
+
+/* V5.8 admin editor + active contact form */
+.form-card,.admin-card{padding:26px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.04)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-field{display:flex;flex-direction:column;gap:7px}.form-field.full{grid-column:1/-1}.form-field label{font-weight:800;font-size:14px}.form-field input,.form-field select,.form-field textarea{width:100%;padding:12px 13px;border:1px solid #cfd8e6;border-radius:10px;background:#fff;font:inherit}.form-field textarea{min-height:180px;resize:vertical}.form-help{font-size:13px;color:#667085;line-height:1.6}.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.form-status{margin-top:14px;padding:12px 14px;border-radius:10px;background:#f4f7fb;color:#344054;display:none}.admin-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.admin-editor{min-height:420px;padding:20px;border:1px solid #cfd8e6;border-radius:12px;background:#fff;line-height:1.8;outline:none}.admin-editor:focus{border-color:#1f62dd;box-shadow:0 0 0 3px rgba(31,98,221,.10)}.admin-note{padding:15px;border-radius:12px;background:#fff7e8;border:1px solid #f0d7a1;line-height:1.65;margin-bottom:18px}.admin-list{display:grid;gap:10px;margin:16px 0}.admin-list button{text-align:left;padding:12px;border:1px solid var(--line);background:#fff;border-radius:10px;cursor:pointer}.admin-list button:hover{background:#f4f7fb}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}}
