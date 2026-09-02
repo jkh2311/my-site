@@ -100,3 +100,14 @@ img{max-width:100%}
 .warning-box{padding:18px 20px;border-radius:14px;background:#fff8e8;border:1px solid #f3d491;margin:20px 0}
 @media(max-width:850px){.quick-facts{grid-template-columns:1fr 1fr}.application-tabs{grid-template-columns:1fr}}
 @media(max-width:520px){.quick-facts{grid-template-columns:1fr}}
+
+/* V4.5 category pages + financial guides */
+.category-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.category-tabs a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#344054;font-weight:750}
+.category-tabs a:hover,.category-tabs a.active{background:#1f62dd;color:#fff;border-color:#1f62dd}
+.category-list [hidden]{display:none!important}
+.empty-category{text-align:center;padding:60px 24px;border:1px dashed #cbd5e1;border-radius:18px;background:#f8fafc}
+.empty-category .empty-icon{font-size:38px}.empty-category h2{margin:10px 0}.empty-category p{color:#667085;margin-bottom:22px}
+.secondary-cta{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;margin:16px 0 24px;border:1px solid #cbdcf8;border-radius:14px;background:#f5f9ff}
+.secondary-cta a{font-weight:800;color:#185ccb}
+@media(max-width:640px){.category-tabs{gap:8px}.category-tabs a{min-height:38px;padding:0 13px;font-size:13px}.secondary-cta{align-items:flex-start;flex-direction:column}}
