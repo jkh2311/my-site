@@ -138,3 +138,13 @@ img{max-width:100%}
 .qa-mini-item{padding:14px 0;border-top:1px solid #e2e8f0}.qa-mini-item:first-of-type{border-top:0;padding-top:0}
 .qa-q{font-weight:850;color:#182230;margin-bottom:6px}.qa-a{color:#475467;line-height:1.72}
 @media(max-width:640px){.article-cover{border-radius:15px}.article-main-title{font-size:29px}.article-opening-qa{padding:18px}}
+
+/* V4.8 richer AI hero visuals + detailed photo specs */
+.photo-detail-box{margin:24px 0 30px;padding:24px;border:1px solid #d9e4f4;border-radius:18px;background:#fbfdff}
+.photo-detail-box h2{margin-top:0}
+.photo-spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.photo-spec-grid>div{padding:16px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.photo-spec-grid strong{display:block;color:#1552a4;font-size:13px;margin-bottom:6px}
+.photo-spec-grid span{font-size:14px;line-height:1.55;color:#344054}
+@media(max-width:850px){.photo-spec-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.photo-spec-grid{grid-template-columns:1fr}}
