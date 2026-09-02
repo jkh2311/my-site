@@ -367,3 +367,6 @@ img{max-width:100%}
 /* V6.5 hero copy refinement */
 .hero h1{width:fit-content;max-width:100%}
 .hero-subline{display:block;text-align:center}
+
+/* HANINE hero eyebrow alignment */
+.hero .eyebrow{width:min(100%,650px);text-align:center}
