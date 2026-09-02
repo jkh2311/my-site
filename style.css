@@ -172,3 +172,37 @@ img{max-width:100%}
   .article-cover{border-radius:14px}
   .article-cover img{aspect-ratio:16/9}
 }
+
+/* V5.0 — sharp, full-frame article photos. Never zoom/crop hero images. */
+.article-cover{
+  width:100%;
+  margin:12px 0 26px;
+  padding:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:#f7f9fc;
+  box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+.article-cover img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  image-rendering:auto;
+}
+.article-cover::before,
+.article-cover::after{display:none!important;content:none!important}
+.article-cover *:not(img){display:none!important}
+@media(max-width:640px){
+  .article-cover{border-radius:14px}
+  .article-cover img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+  }
+}
