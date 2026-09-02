@@ -370,3 +370,8 @@ img{max-width:100%}
 
 /* HANINE hero eyebrow alignment */
 .hero .eyebrow{width:min(100%,650px);text-align:center}
+
+/* Exact center: eyebrow aligned to the visual center of hero title */
+.hero-title-group{width:fit-content;max-width:100%;}
+.hero-title-group .eyebrow{width:100%;text-align:center;}
+.hero-title-group h1{width:fit-content;max-width:100%;}
