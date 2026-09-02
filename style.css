@@ -206,3 +206,27 @@ img{max-width:100%}
     object-fit:contain!important;
   }
 }
+
+/* V5.1 — title-card cover matching the requested example */
+.article-cover{
+  margin:12px 0 26px;
+  padding:0;
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:#f4f7fb;
+  box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+.article-cover img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:640px){
+  .article-cover{border-radius:14px}
+  .article-cover img{width:100%!important;height:auto!important;object-fit:contain!important}
+}
