@@ -1,10 +1,28 @@
-실행 방법
-1) ZIP 압축을 풉니다.
-2) 폴더를 VS Code로 엽니다.
-3) index.html을 브라우저에서 열면 됩니다.
-4) VS Code Live Server가 설치되어 있다면 index.html에서 Open with Live Server를 사용해도 됩니다.
+한이네생활정보 AdSense 준비용 스타터 V4
 
-현재는 PC에서 확인하는 정적 사이트 데모입니다.
-AdSense 심사를 받으려면 나중에 도메인/호스팅을 연결하여 인터넷에서 접속 가능하게 공개해야 합니다.
-AdSense 승인 후 Google에서 받은 코드는 각 HTML 파일의 <head> 부분 주석 위치에 삽입할 수 있습니다.
-개인정보처리방침은 예시이므로 실제 운영환경에 맞게 수정해야 합니다.
+도메인: https://haninelife.com
+구성:
+- index.html : 메인
+- articles.html : 글 목록
+- about.html : 사이트 소개
+- contact.html : 문의
+- privacy.html : 개인정보처리방침
+- articles/ : 실제 글 5개
+- robots.txt / sitemap.xml : 검색엔진 기본 설정
+- CNAME : GitHub Pages 사용자 지정 도메인
+- style.css : 전체 디자인
+
+적용 방법
+1) 압축을 풉니다.
+2) 현재 GitHub Desktop으로 Clone한 my-site 폴더를 엽니다.
+3) .git 폴더는 절대 삭제하지 않습니다.
+4) my-site 안의 기존 웹 파일들을 백업한 뒤, 이 ZIP 안의 파일/폴더를 my-site 안으로 복사해 덮어씁니다.
+5) Live Server로 확인합니다.
+6) GitHub Desktop에서 Commit -> Push origin.
+7) GitHub Actions의 Pages 배포 완료 후 https://haninelife.com 에서 확인합니다.
+
+주의
+- 이 ZIP은 '승인 보장' 파일이 아닙니다.
+- AdSense 신청 전 실제로 도움이 되는 고유 글을 더 추가하는 것을 권장합니다.
+- contact.html의 문의 메일은 실제 운영 메일을 만든 뒤 추가하세요.
+- 행정 제도는 바뀔 수 있으므로 공식 출처를 주기적으로 확인하세요.
