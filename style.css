@@ -230,3 +230,29 @@ img{max-width:100%}
   .article-cover{border-radius:14px}
   .article-cover img{width:100%!important;height:auto!important;object-fit:contain!important}
 }
+
+/* V5.2 — V4.7-style clean image hero */
+.article-cover{
+  margin:12px 0 28px;
+  padding:0;
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:#f4f7fb;
+  box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+.article-cover img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.rule-photo{margin:18px 0 20px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.rule-photo img{display:block;width:100%;height:auto}
+.rule-photo figcaption{padding:10px 14px;color:#667085;font-size:13px;line-height:1.6}
+.photo-guide-pro{margin:26px 0 34px;padding:24px;border:1px solid #d9e4f4;border-radius:18px;background:#fbfdff}
+.photo-guide-pro h2{margin-top:0}
+@media(max-width:640px){.article-cover{border-radius:14px}.photo-guide-pro{padding:18px}}
