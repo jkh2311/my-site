@@ -378,10 +378,10 @@ img{max-width:100%}
 
 /* Header brand logo + HAN symbol */
 .logo-image{display:flex;align-items:center;gap:8px;line-height:1;flex:0 1 auto;min-width:0}
-.logo-image .brand-symbol{display:block;width:42px;height:42px;flex:0 0 42px;object-fit:contain}
+.logo-image .brand-symbol{display:block;width:52px;height:52px;flex:0 0 52px;object-fit:contain}
 .logo-image .brand-wordmark{display:block;width:min(520px,46vw);height:auto;max-height:58px;object-fit:contain;object-position:left center;min-width:0}
-@media(max-width:900px){.logo-image .brand-symbol{width:38px;height:38px;flex-basis:38px}.logo-image .brand-wordmark{width:min(430px,54vw);max-height:52px}}
-@media(max-width:640px){.logo-image{width:100%;gap:6px}.logo-image .brand-symbol{width:34px;height:34px;flex-basis:34px}.logo-image .brand-wordmark{width:min(calc(100% - 40px),430px);max-height:48px}}
+@media(max-width:900px){.logo-image .brand-symbol{width:46px;height:46px;flex-basis:46px}.logo-image .brand-wordmark{width:min(430px,54vw);max-height:52px}}
+@media(max-width:640px){.logo-image{width:100%;gap:6px}.logo-image .brand-symbol{width:40px;height:40px;flex-basis:40px}.logo-image .brand-wordmark{width:min(calc(100% - 46px),430px);max-height:48px}}
 
 
 /* V6.5 article sidebar + slightly larger header slogan */
