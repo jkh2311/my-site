@@ -47,3 +47,22 @@ img{max-width:100%}
 .contact-box{padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff}
 @media(max-width:900px){.category-grid{grid-template-columns:repeat(2,1fr)}.article-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr;gap:25px}.list-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.container,.article-wrap{width:min(100% - 28px,var(--max))}.header-inner{min-height:auto;padding:13px 0;align-items:flex-start;flex-direction:column;gap:7px}.main-nav{width:100%;overflow-x:auto;gap:18px}.hero{padding:65px 0 70px}.hero h1{font-size:39px;letter-spacing:-1.7px}.hero-description{font-size:16px}.section{padding:60px 0}.category-grid{grid-template-columns:1fr}.category-card{min-height:auto}.page-hero{padding:52px 0 35px}.page-hero h1,.article-header h1{font-size:34px}.footer-inner{flex-direction:column}.article-body h2{font-size:24px}}
+
+
+/* V4.2 HAN-I BRANDING */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.72fr);gap:54px;align-items:center}
+.hero-copy{min-width:0}
+.hani-card{margin:0;position:relative;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 22px 60px rgba(24,32,51,.13);border:1px solid rgba(23,32,51,.08)}
+.hani-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 42%}
+.hani-card figcaption{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:baseline;gap:10px;padding:12px 14px;border-radius:13px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.hani-card figcaption strong{font-size:19px}.hani-card figcaption span{font-size:12px;color:#667085}
+.hani-about{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;padding:24px;margin-bottom:38px;border:1px solid var(--line);border-radius:18px;background:#f8fafc}
+.hani-about img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 36%;border-radius:16px}
+.hani-about h2{margin:0 0 8px}
+.issue-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:38px 0 24px;padding:25px 26px;border-radius:16px;background:linear-gradient(135deg,#1659dc,#2c71ed);color:#fff;box-shadow:0 14px 34px rgba(31,97,221,.2)}
+.issue-cta strong{display:block;font-size:21px;line-height:1.35}
+.issue-cta p{margin:6px 0 0;color:rgba(255,255,255,.84)}
+.issue-cta-button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:11px;background:#fff;color:#1758cf;font-weight:850;white-space:nowrap;box-shadow:0 5px 16px rgba(0,0,0,.12)}
+.issue-cta-button:hover{transform:translateY(-1px)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:34px}.hani-card{max-width:520px}.hani-about{grid-template-columns:180px 1fr}}
+@media(max-width:640px){.hani-card{max-width:none}.hani-about{grid-template-columns:1fr}.hani-about img{max-height:320px}.issue-cta{align-items:stretch;flex-direction:column}.issue-cta-button{width:100%}}
