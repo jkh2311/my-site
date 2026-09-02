@@ -358,9 +358,7 @@ img{max-width:100%}
 /* V5.9 admin auto publish */
 #editor-card[hidden]{display:none}.admin-card hr{border-color:var(--line)}
 
-
-/* V6.4 publish datetime */
-.article-date{display:block;margin:7px 0 3px;color:#6b7280;font-size:.82rem;font-weight:500;letter-spacing:-.01em}
-.article-list-card .article-date,.article-card .article-date{line-height:1.4}
-.post-publish-meta{margin:.35rem 0 .55rem;color:#6b7280;font-size:.92rem}
-.post-publish-meta time{font-variant-numeric:tabular-nums}
+/* V6.4 게시일 표시 */
+.article-published{margin:.45rem 0 .5rem!important;font-size:.84rem!important;color:#6b7280!important;}
+.article-published time{font-variant-numeric:tabular-nums;}
+.article-published-detail{margin:.35rem 0 1rem;color:#6b7280;font-size:.92rem;}

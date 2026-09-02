@@ -1,14 +1,16 @@
-한이네생활정보 V6.4 - 게시일시 자동 표시
+한이네생활정보 V6.4 - 게시일/시간 자동 표시 패치
 
-변경사항
-- 게시글 목록 카드에 게시일 표시
-- 관리자에서 새 글 발행 시 한국시간(Asia/Seoul) 기준 연/월/일/시/분 자동 기록
-- 기존 글 수정 시 최초 게시일은 유지하고 수정일시를 별도 기록
-- 새 관리자 게시글 본문 상단에도 게시/수정 일시 표시
-- article-index.json에 publishedAt / updatedAt 저장
-- RSS 새 항목에 pubDate 자동 기록
+변경 내용
+1. 생활정보 카드에 게시일 표시
+2. 새 글은 Cloudflare Worker가 한국시간(Asia/Seoul) 기준 발행 시각을 자동 기록
+3. 새 글 예: 게시일 2026년 9월 2일 16:30
+4. 기존 8개 글은 과거 정확한 발행 시간이 저장되어 있지 않아 '게시일 2026년 9월 2일 · 시간 기록 없음'으로 표시
+5. 새 글의 RSS에는 pubDate도 자동 기록
 
-중요
-- 기존 8개 글은 과거 정확한 발행 '시간'을 저장하지 않았으므로 2026. 9. 2. 날짜만 표시합니다. 임의의 시간을 만들어 넣지 않았습니다.
-- 앞으로 발행하는 글부터는 시:분까지 자동 표시됩니다.
-- ZIP 덮어쓰기 후 GitHub Commit/Push, 그리고 WORKER_DELETE_CODE.js 전체를 Cloudflare Worker에 덮어쓰기 후 배포하세요.
+적용 방법
+- 이 ZIP의 파일/폴더를 my-site 루트에 덮어쓰기
+- GitHub Desktop에서 Commit → Push origin
+- Cloudflare Worker에는 WORKER_DELETE_CODE.js 전체 코드를 다시 배포
+
+주의
+- robots.txt는 이 패치 ZIP에 포함하지 않았습니다. Daum 인증키가 들어간 현재 robots.txt를 보호하기 위한 것입니다.
