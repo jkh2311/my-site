@@ -10,7 +10,7 @@
 <meta property="og:description" content="주민등록증, 증명서, 생활 행정 절차 등 일상에 필요한 정보를 이해하기 쉽게 정리하는 한이네생활정보입니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haninelife.com/">
-<link rel="stylesheet" href="/style.css?v=58">
+<link rel="stylesheet" href="/style.css?v=59">
 </head>
 <body>
 <header class="site-header"><div class="container header-inner">
@@ -75,7 +75,8 @@
 
 <script>
 (function(){
-  const ARTICLE_INDEX = [{"title": "자동차 보험료 계산·조회·가입 방법 총정리", "description": "자동차보험료를 온라인으로 비교하고 조회한 뒤 실제 가입하는 순서, 준비정보, 다이렉트와 오프라인 가입 차이, 갱신 시 확인할 점을 자세히 정리합니다.", "category": "금융·보험", "url": "/articles/car-insurance-guide.html"}, {"title": "운전면허증 신규 발급·갱신·재발급 방법 총정리", "description": "운전면허증 신규 발급, 갱신, 적성검사, 재발급의 온라인·방문 절차를 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/driver-license-guide.html"}, {"title": "외국인등록증 신규 발급·재발급 방법 총정리", "description": "외국인등록증 신규 발급, 재발급, 체류지 변경의 기본 절차와 준비물을 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/foreigner-registration-guide.html"}, {"title": "건강보험료 미납 조회 및 납부 방법 총정리", "description": "국민건강보험 보험료 미납 여부를 조회하고 온라인·가상계좌·카드·인터넷지로·방문으로 납부하는 순서를 자세히 설명합니다.", "category": "금융·보험", "url": "/articles/health-insurance-arrears.html"}, {"title": "주민등록증 신규·재발급 신청 방법 총정리", "description": "주민등록증 신규 발급과 재발급을 온라인·방문 방식으로 자세히 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/id-card-issue.html"}, {"title": "여권 최초 발급·재발급 신청 방법 총정리", "description": "여권 최초 발급과 재발급의 준비물, 온라인 신청, 방문 신청, 수령 절차를 정리합니다.", "category": "생활·행정 · 신분증", "url": "/articles/passport-issue.html"}, {"title": "여권 사진 규격과 준비 방법 총정리", "description": "여권 사진 크기, 얼굴 길이, 배경, 표정, 안경과 온라인 신청용 파일 규격을 공식 기준으로 쉽게 정리합니다.", "category": "생활·행정", "url": "/articles/passport-photo-guide.html"}, {"title": "주민등록 등본·초본 발급 방법 총정리", "description": "주민등록표 등본과 초본의 차이, 인터넷·방문·무인발급기 신청 방법, 수수료를 정리합니다.", "category": "생활·행정", "url": "/articles/resident-copy.html"}];
+  let ARTICLE_INDEX = [{"title": "자동차 보험료 계산·조회·가입 방법 총정리", "description": "자동차보험료를 온라인으로 비교하고 조회한 뒤 실제 가입하는 순서, 준비정보, 다이렉트와 오프라인 가입 차이, 갱신 시 확인할 점을 자세히 정리합니다.", "category": "금융·보험", "url": "/articles/car-insurance-guide.html"}, {"title": "운전면허증 신규 발급·갱신·재발급 방법 총정리", "description": "운전면허증 신규 발급, 갱신, 적성검사, 재발급의 온라인·방문 절차를 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/driver-license-guide.html"}, {"title": "외국인등록증 신규 발급·재발급 방법 총정리", "description": "외국인등록증 신규 발급, 재발급, 체류지 변경의 기본 절차와 준비물을 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/foreigner-registration-guide.html"}, {"title": "건강보험료 미납 조회 및 납부 방법 총정리", "description": "국민건강보험 보험료 미납 여부를 조회하고 온라인·가상계좌·카드·인터넷지로·방문으로 납부하는 순서를 자세히 설명합니다.", "category": "금융·보험", "url": "/articles/health-insurance-arrears.html"}, {"title": "주민등록증 신규·재발급 신청 방법 총정리", "description": "주민등록증 신규 발급과 재발급을 온라인·방문 방식으로 자세히 설명합니다.", "category": "생활·행정 · 신분증", "url": "/articles/id-card-issue.html"}, {"title": "여권 최초 발급·재발급 신청 방법 총정리", "description": "여권 최초 발급과 재발급의 준비물, 온라인 신청, 방문 신청, 수령 절차를 정리합니다.", "category": "생활·행정 · 신분증", "url": "/articles/passport-issue.html"}, {"title": "여권 사진 규격과 준비 방법 총정리", "description": "여권 사진 크기, 얼굴 길이, 배경, 표정, 안경과 온라인 신청용 파일 규격을 공식 기준으로 쉽게 정리합니다.", "category": "생활·행정", "url": "/articles/passport-photo-guide.html"}, {"title": "주민등록 등본·초본 발급 방법 총정리", "description": "주민등록표 등본과 초본의 차이, 인터넷·방문·무인발급기 신청 방법, 수수료를 정리합니다.", "category": "생활·행정", "url": "/articles/resident-copy.html"}];
+  fetch('/article-index.json?v=' + Date.now(), {cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(Array.isArray(d)) ARTICLE_INDEX=d}).catch(()=>{});
   const input = document.getElementById('site-article-search');
   const btn = document.getElementById('site-article-search-btn');
   const results = document.getElementById('site-article-search-results');
