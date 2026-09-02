@@ -420,3 +420,66 @@ img{max-width:100%}
   aspect-ratio:auto;
   object-fit:contain;
 }
+
+/* FINAL HANI MASCOT CARD */
+.hani-card{
+  overflow:hidden;
+  background:#fff;
+}
+.hani-card > img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:50% 42%;
+}
+.hani-card figcaption.hani-footer{
+  position:static !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  min-height:76px;
+  padding:13px 16px;
+  border-radius:0;
+  background:#fff;
+  backdrop-filter:none;
+  box-shadow:none;
+}
+.hani-card .hani-mark{
+  display:flex;
+  width:42px;
+  height:42px;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 42px;
+}
+.hani-card .hani-mark img{
+  width:42px !important;
+  height:42px !important;
+  object-fit:contain !important;
+  aspect-ratio:auto !important;
+}
+.hani-card .hani-mascot-text{
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  white-space:nowrap;
+  font-style:normal;
+}
+.hani-card .hani-mascot-text b{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:-.35px;
+  color:#0D1B3D;
+}
+.hani-card .hani-mascot-text em{
+  font-size:13px;
+  font-weight:750;
+  font-style:normal;
+  letter-spacing:-.25px;
+  color:rgb(6,185,169);
+}
