@@ -125,3 +125,16 @@ img{max-width:100%}
 .notice-blue{padding:16px 18px;border-radius:13px;background:#eef5ff;border:1px solid #c8dcff;color:#16478b}
 @media(max-width:800px){.article-visual>img{height:290px}.article-visual-overlay{left:4%;right:4%;bottom:18px}.article-visual-title{padding:17px 18px}.compare-grid,.compare-grid.three{grid-template-columns:1fr}}
 @media(max-width:520px){.article-visual>img{height:250px}.article-visual-title{font-size:24px;border-width:3px}.visual-note{font-size:13px}}
+
+/* V4.7 clean article cover + title/date/Q&A opening */
+.article-cover{margin:12px 0 28px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#f3f6fa;box-shadow:0 14px 34px rgba(15,23,42,.08)}
+.article-cover img{display:block;width:100%;height:auto;max-height:620px;object-fit:cover}
+.article-main-title{margin:30px 0 10px;font-size:clamp(30px,4.3vw,48px);line-height:1.18;letter-spacing:-.045em;color:#102a4f}
+.article-updated{display:flex;flex-direction:column;gap:4px;margin:0 0 24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.article-updated strong{font-size:15px;color:#164f9d;text-decoration:underline;text-underline-offset:3px}
+.article-updated span{font-size:13px;color:#667085}
+.article-opening-qa{margin:24px 0 32px;padding:24px;border:1px solid #d9e4f4;border-radius:18px;background:linear-gradient(180deg,#fbfdff,#f5f9ff)}
+.article-opening-qa h2{margin:0 0 16px;font-size:20px}
+.qa-mini-item{padding:14px 0;border-top:1px solid #e2e8f0}.qa-mini-item:first-of-type{border-top:0;padding-top:0}
+.qa-q{font-weight:850;color:#182230;margin-bottom:6px}.qa-a{color:#475467;line-height:1.72}
+@media(max-width:640px){.article-cover{border-radius:15px}.article-main-title{font-size:29px}.article-opening-qa{padding:18px}}
