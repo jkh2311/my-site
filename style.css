@@ -515,3 +515,12 @@ img{max-width:100%}
 .article-hashtag-list{display:flex;flex-wrap:wrap;gap:8px}
 .article-hashtag-list span{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #d7e1ef;border-radius:999px;background:#fff;color:#31547b;font-size:13px;font-weight:700;line-height:1.2}
 @media(max-width:700px){.article-hashtags{padding:18px 16px}.article-hashtag-list{gap:7px}.article-hashtag-list span{font-size:12px;padding:6px 9px}}
+
+/* POPULAR-POSTS-V1 */
+.popular-posts{margin-top:28px;padding-top:24px;border-top:1px solid var(--line,#e5e7eb)}
+.popular-posts h2{margin:0 0 14px;color:#0D1B3D;font-size:20px}
+.popular-post-list{display:grid;gap:8px}
+.popular-post-item{display:flex;gap:12px;align-items:center;padding:12px 14px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;text-decoration:none!important}
+.popular-rank{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#0D1B3D;color:#fff;font-weight:800}
+.popular-copy{display:flex;min-width:0;flex-direction:column;gap:3px}.popular-copy strong{color:#0D1B3D;line-height:1.4}.popular-copy em{font-style:normal;font-size:12px;color:#64748b}
+.popular-loading{margin:0;color:#64748b;font-size:13px}
