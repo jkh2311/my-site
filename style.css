@@ -560,3 +560,10 @@ img{max-width:100%}
 .article-pagination button{min-width:40px;height:40px;padding:0 12px;border:1px solid #d8e0eb;border-radius:9px;background:#fff;color:#334155;font-weight:700;cursor:pointer}
 .article-pagination button.active{background:#1f5fbf;color:#fff;border-color:#1f5fbf}
 .article-pagination button:disabled{opacity:.42;cursor:default}
+
+
+/* RETIREMENT-CALCULATOR-CTA-V2 */
+.retirement-calculator-cta-wrap{margin:18px 0 4px!important}
+.article .retirement-calculator-cta{display:flex!important;width:100%!important;min-height:54px;box-sizing:border-box;align-items:center;justify-content:center;padding:14px 22px!important;border-radius:10px!important;background:#1769e8!important;border:1px solid #1769e8!important;color:#fff!important;font-size:16px!important;font-weight:800!important;text-align:center;text-decoration:none!important;box-shadow:0 5px 14px rgba(23,105,232,.18)}
+.article .retirement-calculator-cta:hover{background:#0f58c9!important;border-color:#0f58c9!important;transform:translateY(-1px)}
+@media(max-width:700px){.article .retirement-calculator-cta{min-height:52px;font-size:15px!important;padding:13px 16px!important}}
