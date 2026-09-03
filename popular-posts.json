@@ -6,24 +6,6 @@
     "seed": 1000
   },
   {
-    "title": "2026 기초생활수급자 조건·생계급여 금액·소득기준·신청방법·신청링크",
-    "url": "/articles/2026-basic-livelihood-benefit.html",
-    "category": "지원·복지",
-    "seed": 983
-  },
-  {
-    "title": "2026 청년월세 지원 신청방법·지원금액·소득조건·선정일·신청링크",
-    "url": "/articles/2026-youth-rent-support.html",
-    "category": "지원·복지",
-    "seed": 966
-  },
-  {
-    "title": "실업급여 신청방법·수급조건·지급액 계산·고용24 신청링크·구직활동 꿀팁",
-    "url": "/articles/unemployment-benefit-apply.html",
-    "category": "노동·고용",
-    "seed": 949
-  },
-  {
     "title": "2026 추석 고속도로 통행료 면제 총정리｜무료 기간·이용방법·귀성길 꿀팁",
     "url": "/articles/2026-chuseok-highway-toll-free.html",
     "category": "교통정보",
@@ -40,30 +22,6 @@
     "url": "/articles/chuseok-open-hospital-pharmacy.html",
     "category": "생활·행정",
     "seed": 915
-  },
-  {
-    "title": "2026 부모급여 신청방법·0세·1세 지급액·어린이집 이용·신청링크",
-    "url": "/articles/2026-parent-benefit.html",
-    "category": "지원·복지",
-    "seed": 898
-  },
-  {
-    "title": "2026 기초연금 신청방법·수급자격·소득인정액·선정기준·신청링크",
-    "url": "/articles/2026-basic-pension.html",
-    "category": "지원·복지",
-    "seed": 881
-  },
-  {
-    "title": "전기요금 조회·납부방법·복지할인 대상·신청링크·전기세 절약 꿀팁",
-    "url": "/articles/electricity-bill-check-discount.html",
-    "category": "생활요금",
-    "seed": 864
-  },
-  {
-    "title": "보이스피싱 피해 신고·계좌 지급정지 방법·신고전화·피해구제·예방법",
-    "url": "/articles/voice-phishing-account-freeze.html",
-    "category": "안전·보안",
-    "seed": 847
   },
   {
     "title": "추석 무료주차장 찾는 방법·조회링크·공공주차장 이용 꿀팁",
@@ -136,54 +94,6 @@
     "url": "/articles/car-inspection-period-penalty.html",
     "category": "생활·행정",
     "seed": 643
-  },
-  {
-    "title": "2026 자동차세 조회·납부방법·위택스 납부링크·연납 할인·절약 꿀팁",
-    "url": "/articles/2026-car-tax-payment-prepay.html",
-    "category": "금융·보험",
-    "seed": 626
-  },
-  {
-    "title": "도시가스 요금 조회·납부방법·요금할인·캐시백 신청방법·절약 꿀팁",
-    "url": "/articles/city-gas-bill-cashback.html",
-    "category": "생활요금",
-    "seed": 609
-  },
-  {
-    "title": "2026 주거급여 신청방법·소득기준·지원금액 확인·신청링크·꿀팁",
-    "url": "/articles/2026-housing-benefit-apply.html",
-    "category": "지원·복지",
-    "seed": 592
-  },
-  {
-    "title": "2026 장애인연금 신청방법·지원금액·대상조건·선정기준·신청링크",
-    "url": "/articles/2026-disability-pension.html",
-    "category": "지원·복지",
-    "seed": 575
-  },
-  {
-    "title": "2026 육아휴직 급여 신청방법·월 250만원·200만원·160만원·신청링크",
-    "url": "/articles/2026-parental-leave-pay.html",
-    "category": "노동·고용",
-    "seed": 558
-  },
-  {
-    "title": "2026 배우자 출산휴가·육아휴직 신청방법·급여·사용조건·고용24 링크",
-    "url": "/articles/2026-spouse-birth-leave-parental.html",
-    "category": "노동·고용",
-    "seed": 541
-  },
-  {
-    "title": "국민내일배움카드 신청방법·지원금액 300~500만원·사용처·고용24 신청링크",
-    "url": "/articles/national-training-card-guide.html",
-    "category": "노동·고용",
-    "seed": 524
-  },
-  {
-    "title": "2026 예비군 훈련 일정 조회·훈련비·연기방법·조회링크·준비물 꿀팁",
-    "url": "/articles/2026-reserve-forces-training.html",
-    "category": "병역·예비군",
-    "seed": 507
   },
   {
     "title": "2026 온누리상품권 추석 할인 총정리｜10% 특별할인·구매방법·사용처·꿀팁",
