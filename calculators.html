@@ -130,11 +130,11 @@
 </script><script>
 (function(){
  const tools=[['미래 투자가치 계산기','미래가치 투자 수익률 목표금액 자산가치','/articles/future-investment-value-calculator-guide.html#future-value-calculator'],['복리 계산기','복리 이자 투자 수익률 72의 법칙 적립식','/articles/compound-interest-calculator-guide.html#compound-calculator'],['1억 만들기 계산기','1억 목표 종잣돈 월적립금 수익률','/articles/one-hundred-million-calculator-guide.html#hundred-calculator'],
-  ['실수령액(급여) 계산기','월급 급여 실수령액 4대보험 소득세','#salary-calculator'],['전세자금대출 계산기','전세 대출 이자 월이자','#jeonse-loan-calculator'],['퇴직금 계산기','퇴직금 평균임금 퇴사 퇴직','#retirement-calculator'],['부가세 계산기','부가세 부가가치세 공급가액 세금','#vat-calculator'],['환율 계산기','환율 달러 원화 엔화 유로 외화 환전','#exchange-calculator'],['대출 이자 계산기','대출 이자 원리금 원금균등 만기일시','#loan-calculator'],['연말정산 간이 계산기','연말정산 환급 세액공제 소득공제','#yearend-calculator'],['종합소득세 자동 계산기','종합소득세 소득세 세율 사업자','#income-tax-calculator'],['BMI(체질량지수) 계산기','BMI 체질량지수 키 몸무게','#bmi-calculator'],['할인율·소비자가 계산기','할인 할인율 정가 판매가 소비자가','#discount-calculator'],['재산세 계산기','재산세 주택 건축물 토지 과세표준','#property-tax-calculator'],['자동차세 계산기','자동차세 차량세 배기량 cc 차령','#car-tax-calculator']
+  ['실수령액(급여) 계산기','월급 급여 실수령액 4대보험 소득세','#salary-calculator'],['전세자금대출 계산기','전세 대출 이자 월이자','#jeonse-loan-calculator'],['퇴직금 계산기','퇴직금 평균임금 퇴사 퇴직','#retirement-calculator'],['부가세 계산기','부가세 부가가치세 공급가액 세금','#vat-calculator'],['환율 계산기','환율 달러 원화 엔화 유로 외화 환전','#exchange-calculator'],['대출 이자 계산기','대출 이자 원리금 원금균등 만기일시','/articles/loan-interest-calculator-guide.html#loan-calculator-main'],['연말정산 간이 계산기','연말정산 환급 세액공제 소득공제','#yearend-calculator'],['종합소득세 자동 계산기','종합소득세 소득세 세율 사업자','#income-tax-calculator'],['BMI(체질량지수) 계산기','BMI 체질량지수 키 몸무게','#bmi-calculator'],['할인율·소비자가 계산기','할인 할인율 정가 판매가 소비자가','#discount-calculator'],['재산세 계산기','재산세 주택 건축물 토지 과세표준','#property-tax-calculator'],['자동차세 계산기','자동차세 차량세 배기량 cc 차령','#car-tax-calculator']
  ].map(x=>({name:x[0],keywords:x[1],url:x[2]}));
  const categoryData={invest:{title:'투자·재테크 모음',items:['/articles/compound-interest-calculator-guide.html#compound-calculator','/articles/future-investment-value-calculator-guide.html#future-value-calculator','/articles/one-hundred-million-calculator-guide.html#hundred-calculator']},
    work:{title:'직장·급여 모음',items:['#salary-calculator','#retirement-calculator','#yearend-calculator']},
-   finance:{title:'대출·금융 모음',items:['#jeonse-loan-calculator','#loan-calculator','#exchange-calculator']},
+   finance:{title:'대출·금융 모음',items:['#jeonse-loan-calculator','/articles/loan-interest-calculator-guide.html#loan-calculator-main','#exchange-calculator']},
    tax:{title:'세금 모음',items:['#vat-calculator','#income-tax-calculator','#property-tax-calculator','#car-tax-calculator']},
    life:{title:'생활·건강 모음',items:['#bmi-calculator','#discount-calculator']}
  };
@@ -143,7 +143,7 @@
    '#retirement-calculator':'입사일·퇴직일과 퇴직 전 3개월 임금을 입력해 예상 퇴직금을 계산합니다.',
    '#yearend-calculator':'총급여·기납부세액·공제액을 입력해 예상 환급 또는 추가납부액을 계산합니다.',
    '#jeonse-loan-calculator':'전세대출 금액·금리·기간에 따른 월 이자와 상환액을 계산합니다.',
-   '#loan-calculator':'원리금균등·원금균등·만기일시상환 방식별 이자와 납입액을 비교합니다.',
+   '/articles/loan-interest-calculator-guide.html#loan-calculator-main':'원리금균등·원금균등·만기일시상환 방식별 이자와 납입액을 비교합니다.',
    '#exchange-calculator':'주요 통화의 최신 공개 기준환율을 불러와 금액을 환산합니다.',
    '#vat-calculator':'공급가액 또는 합계금액을 기준으로 부가가치세와 공급가액을 계산합니다.',
    '#income-tax-calculator':'종합소득금액과 공제액을 입력해 기본세율 기준 소득세를 계산합니다.',
