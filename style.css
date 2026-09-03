@@ -507,3 +507,11 @@ img{max-width:100%}
 @media(min-width:1050px){.category-grid{grid-template-columns:repeat(5,1fr)}}
 @media(max-width:1049px) and (min-width:700px){.category-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:699px){.category-grid{grid-template-columns:1fr}}
+
+
+/* V6.6 article related hashtags */
+.article-hashtags{margin-top:34px;padding:22px 24px;border:1px solid #dce4ef;border-radius:14px;background:#f8fafc}
+.article-hashtags h2{margin:0 0 14px;font-size:20px;color:#0D1B3D}
+.article-hashtag-list{display:flex;flex-wrap:wrap;gap:8px}
+.article-hashtag-list span{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #d7e1ef;border-radius:999px;background:#fff;color:#31547b;font-size:13px;font-weight:700;line-height:1.2}
+@media(max-width:700px){.article-hashtags{padding:18px 16px}.article-hashtag-list{gap:7px}.article-hashtag-list span{font-size:12px;padding:6px 9px}}
