@@ -52,11 +52,11 @@
 <a href="/articles.html?category=tips" data-cat="tips">생활팁</a>
 <a href="/articles.html?category=transport" data-cat="transport">교통정보</a>
 <a href="/articles.html?category=work" data-cat="work">노동·고용</a>
-<a href="/articles.html?category=lifeinfo" data-cat="lifeinfo">생활정보</a>
+<a href="/articles.html?category=financialinfo" data-cat="financialinfo">금융정보</a>
 </div>
 
 <div class="list-grid category-list" id="article-list">
-<a class="card article-card" data-category="lifeinfo" href="/articles/compound-interest-calculator-guide.html"><div class="card-body"><span class="card-kicker">생활정보</span><h2>복리 계산기 사용방법·복리이자 계산·72의 법칙·단리 복리 차이 총정리</h2><p>초기 투자금과 월 적립금, 연 수익률, 투자기간을 입력해 복리 결과를 계산하고 연도별 그래프·표, 단리와 복리 차이, 72의 법칙과 복리 주기를 확인합니다.</p></div></a>
+<a class="card article-card" data-category="financialinfo" href="/articles/compound-interest-calculator-guide.html"><div class="card-body"><span class="card-kicker">금융정보</span><h2>복리 계산기 사용방법·복리이자 계산·72의 법칙·단리 복리 차이 총정리</h2><p>초기 투자금과 월 적립금, 연 수익률, 투자기간을 입력해 복리 결과를 계산하고 연도별 그래프·표, 단리와 복리 차이, 72의 법칙과 복리 주기를 확인합니다.</p></div></a>
 
 <a class="card article-card" data-category="work" href="/articles/retirement-pay-calculation-guide.html"><div class="card-body"><span class="card-kicker">노동·고용</span><h2>퇴직금 계산방법·퇴직금 계산기·평균임금·지급기한 총정리</h2><p>퇴직금 지급대상, 평균임금 계산방법, 퇴직 전 3개월 임금 반영방법, 퇴직금 지급기한과 미지급 대응을 정리하고 한이네생활정보 퇴직금 계산기로 바로 계산할 수 있습니다.</p></div></a>
 
@@ -113,7 +113,9 @@
     support:['지원·복지','정부 지원제도와 복지 신청 관련 글만 모아 보여드립니다.'],
     finance:['금융·보험','건강보험, 자동차보험과 생활 금융 관련 글만 모았습니다.'],
     tips:['생활팁','일상에서 바로 활용할 수 있는 실용적인 생활팁만 모았습니다.'],
-  transport:['교통정보','KTX·기차표·고속도로·교통 이용과 이동에 필요한 정보를 정리합니다.']};
+  transport:['교통정보','KTX·기차표·고속도로·교통 이용과 이동에 필요한 정보를 정리합니다.'],
+    work:['노동·고용','근로·급여·휴가·퇴직 등 직장생활에 필요한 정보를 정리합니다.'],
+    financialinfo:['금융정보','복리·투자·자산관리 등 금융 계산과 활용 정보를 모았습니다.']};
   const current = names[cat] ? cat : 'all';
   document.getElementById('category-title').textContent = names[current][0];
   document.getElementById('category-desc').textContent = names[current][1];
