@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=61">
+<link rel="stylesheet" href="/style.css?v=62">
 </head>
 <body>
 <header class="site-header"><div class="container header-inner">
@@ -23,6 +23,17 @@
 <nav class="main-nav" aria-label="주요 메뉴">
 <a href="/index.html">홈</a><a href="/articles.html">생활정보</a><a href="/about.html">소개</a><a href="/contact.html">문의</a>
 </nav></div></header>
+<div class="article-search-wrap" id="article-search-wrap">
+  <div class="article-search-box">
+    <label for="site-article-search">게시글 조회</label>
+    <div class="article-search-input-row">
+      <input id="site-article-search" type="search" placeholder="2글자 이상 입력" autocomplete="off" aria-label="게시글 조회">
+      <button type="button" id="site-article-search-btn">조회</button>
+    </div>
+    <div class="article-search-results" id="site-article-search-results" hidden></div>
+  </div>
+</div>
+
 <main><div class="article-wrap"><header class="article-header"><span class="tag">생활·행정</span><h1>이사 전후 행정업무 체크리스트</h1><p class="article-meta">최종 검토: 2026-09-02 · 한이네생활정보</p></header>
 <article class="article-body">
 <div class="summary-box"><strong>이사할 때는 ‘주소’가 연결된 서비스를 한 번에 점검하세요.</strong><p>주민등록 관련 절차뿐 아니라 우편물, 금융·보험, 통신, 쇼핑몰 배송지 등 생활 전반의 주소 정보를 함께 정리하면 누락을 줄일 수 있습니다.</p></div>
@@ -51,4 +62,29 @@
 <div><strong>한이네생활정보</strong><p>생활·행정 정보를 이해하기 쉽게 정리합니다.</p></div>
 <div class="footer-links"><a href="/about.html">사이트 소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/contact.html">문의</a></div>
 </div><div class="container copyright">© 2026 한이네생활정보. All rights reserved.</div></footer>
+
+<script>
+(function(){
+  let ARTICLE_INDEX = [];
+  fetch('/article-index.json?v=' + Date.now(), {cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(Array.isArray(d)) ARTICLE_INDEX=d}).catch(()=>{});
+  const input = document.getElementById('site-article-search');
+  const btn = document.getElementById('site-article-search-btn');
+  const results = document.getElementById('site-article-search-results');
+  const wrap = document.getElementById('article-search-wrap');
+  if (!input || !btn || !results || !wrap) return;
+  function esc(str){return String(str).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+  function runSearch(){
+    const q=input.value.trim().toLowerCase();
+    if(q.length<2){results.hidden=false;results.innerHTML='<div class="article-search-message">2글자 이상 입력해주세요.</div>';return;}
+    const found=ARTICLE_INDEX.filter(item=>((item.title||'')+' '+(item.description||'')+' '+(item.category||'')).toLowerCase().includes(q));
+    results.hidden=false;
+    if(!found.length){results.innerHTML='<div class="article-search-message">해당 게시글을 찾지 못했습니다.</div>';return;}
+    results.innerHTML=found.map(item=>'<a class="article-search-result" href="'+esc(item.url)+'"><span class="article-search-result-cat">'+esc(item.category||'생활정보')+'</span><strong>'+esc(item.title)+'</strong>'+(item.description?'<small>'+esc(item.description)+'</small>':'')+'</a>').join('');
+  }
+  btn.addEventListener('click',runSearch);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();});
+  input.addEventListener('input',()=>{if(input.value.trim().length>=2)runSearch();else if(!input.value.trim()){results.hidden=true;results.innerHTML='';}});
+  document.addEventListener('click',e=>{if(!wrap.contains(e.target))results.hidden=true;});
+})();
+</script>
 </body></html>

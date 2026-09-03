@@ -3,8 +3,19 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=61"></head><body>
+<link rel="stylesheet" href="/style.css?v=62"></head><body>
 <header class="site-header"><div class="container header-inner"><a class="logo logo-image" href="/index.html" aria-label="한이네생활정보 홈"><img class="brand-symbol" src="/images/hanine-symbol.png" alt="" aria-hidden="true"><img class="brand-wordmark" src="/images/hanine-header-logo.png" alt="한이네생활정보 | 오늘도 하나 알아갑니다"></a><nav class="main-nav"><a href="/index.html">사이트로 돌아가기</a></nav></div></header>
+<div class="article-search-wrap" id="article-search-wrap">
+  <div class="article-search-box">
+    <label for="site-article-search">게시글 조회</label>
+    <div class="article-search-input-row">
+      <input id="site-article-search" type="search" placeholder="2글자 이상 입력" autocomplete="off" aria-label="게시글 조회">
+      <button type="button" id="site-article-search-btn">조회</button>
+    </div>
+    <div class="article-search-results" id="site-article-search-results" hidden></div>
+  </div>
+</div>
+
 <main><section class="page-hero"><div class="container"><p class="section-label">ADMIN</p><h1>게시글 관리</h1><p>로그인 후 새 글을 발행하거나 기존 게시글을 수정·삭제할 수 있습니다.</p></div></section><section class="section"><div class="container">
 <div class="admin-note"><strong>V5.9 자동 발행:</strong> 발행하면 서버가 GitHub 저장소에 게시글을 커밋하고 sitemap.xml과 게시글 검색 목록을 함께 갱신합니다. GitHub 토큰은 이 HTML에 저장하지 않습니다.</div>
 <div class="admin-card" id="login-card"><h2>관리자 로그인</h2><div class="form-grid"><div class="form-field"><label>관리자 API 주소</label><input id="api" placeholder="https://haninelife-admin.계정.workers.dev"></div><div class="form-field"><label>관리자 비밀번호</label><input id="pw" type="password" autocomplete="current-password"></div></div><div class="form-actions"><button class="btn btn-primary" id="login">로그인</button></div><div class="form-status" id="login-status"></div></div>
@@ -29,4 +40,29 @@ function form(){if(mode==='new'&&!$('slug').value)$('slug').value=autoSlug();ret
 $('delete').onclick=async()=>{if(mode!=='edit'||!current)return st('삭제할 기존 게시글을 먼저 불러오세요.');const title=$('title').value.trim()||current;if(!confirm('정말 삭제할까요?\n\n'+title+'\n\n삭제하면 GitHub의 게시글 파일, 게시글 목록, 검색 목록, sitemap.xml에서 함께 제거됩니다.'))return;try{$('delete').disabled=true;$('publish').disabled=true;st('GitHub에서 게시글을 삭제 중입니다...');await call('/api/delete',{method:'POST',body:JSON.stringify({slug:current})});const x=await call('/api/posts');fill(x.posts);mode='new';current='';$('title').value='';$('slug').value='';$('slug').disabled=false;$('desc').value='';$('body').innerHTML='<h2>핵심 내용</h2><p>여기에 내용을 작성하세요.</p>';$('delete').hidden=true;st('게시글 삭제 완료! 검색 목록과 sitemap에서도 제거했습니다.')}catch(e){st('삭제 실패: '+e.message)}finally{$('delete').disabled=false;$('publish').disabled=false}};
 $('publish').onclick=async()=>{const d=form();if(!d.title)return st('게시글 제목을 입력하세요.');if(!confirm(mode==='new'?'새 게시글을 GitHub에 바로 발행할까요?':'수정 내용을 GitHub에 바로 저장할까요?'))return;try{$('publish').disabled=true;st('GitHub에 저장 중입니다...');const j=await call('/api/publish',{method:'POST',body:JSON.stringify(d)});st('발행 완료! '+j.url);const x=await call('/api/posts');fill(x.posts);mode='edit';current=j.slug;$('slug').disabled=true}catch(e){st('발행 실패: '+e.message)}finally{$('publish').disabled=false}};
 $('api').value=localStorage.getItem('hani-admin-api')||'';
-</script></body></html>
+</script>
+<script>
+(function(){
+  let ARTICLE_INDEX = [];
+  fetch('/article-index.json?v=' + Date.now(), {cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(Array.isArray(d)) ARTICLE_INDEX=d}).catch(()=>{});
+  const input = document.getElementById('site-article-search');
+  const btn = document.getElementById('site-article-search-btn');
+  const results = document.getElementById('site-article-search-results');
+  const wrap = document.getElementById('article-search-wrap');
+  if (!input || !btn || !results || !wrap) return;
+  function esc(str){return String(str).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+  function runSearch(){
+    const q=input.value.trim().toLowerCase();
+    if(q.length<2){results.hidden=false;results.innerHTML='<div class="article-search-message">2글자 이상 입력해주세요.</div>';return;}
+    const found=ARTICLE_INDEX.filter(item=>((item.title||'')+' '+(item.description||'')+' '+(item.category||'')).toLowerCase().includes(q));
+    results.hidden=false;
+    if(!found.length){results.innerHTML='<div class="article-search-message">해당 게시글을 찾지 못했습니다.</div>';return;}
+    results.innerHTML=found.map(item=>'<a class="article-search-result" href="'+esc(item.url)+'"><span class="article-search-result-cat">'+esc(item.category||'생활정보')+'</span><strong>'+esc(item.title)+'</strong>'+(item.description?'<small>'+esc(item.description)+'</small>':'')+'</a>').join('');
+  }
+  btn.addEventListener('click',runSearch);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();});
+  input.addEventListener('input',()=>{if(input.value.trim().length>=2)runSearch();else if(!input.value.trim()){results.hidden=true;results.innerHTML='';}});
+  document.addEventListener('click',e=>{if(!wrap.contains(e.target))results.hidden=true;});
+})();
+</script>
+</body></html>
