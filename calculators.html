@@ -38,6 +38,7 @@
     <button type="button" class="calculator-category-btn" data-category="work" aria-expanded="false">직장·급여 모음 <span>3</span></button>
     <button type="button" class="calculator-category-btn" data-category="finance" aria-expanded="false">대출·금융 모음 <span>3</span></button>
     <button type="button" class="calculator-category-btn" data-category="tax" aria-expanded="false">세금 모음 <span>4</span></button>
+    <button type="button" class="calculator-category-btn" data-category="invest" aria-expanded="false">투자·재테크 모음 <span>1</span></button>
     <button type="button" class="calculator-category-btn" data-category="life" aria-expanded="false">생활·건강 모음 <span>2</span></button>
   </div>
   <div class="calculator-category-panel" id="calculator-category-panel" hidden>
@@ -48,6 +49,7 @@
     <div class="calculator-category-scroll" id="calculator-category-items"></div>
   </div>
 </section>
+<section class="calculator-tool" id="compound-calculator" hidden><div class="calculator-tool-head"><h2>복리 계산기</h2><button type="button" class="calculator-close" data-close-calculator>계산기 닫기 ×</button></div><p>초기 투자금·월 적립금·연 수익률·기간을 입력해 예상 미래가치를 계산합니다.</p><div class="calc-grid"><label>초기 투자금<input id="miniCpP" inputmode="numeric" placeholder="예: 10,000,000"></label><label>월 적립금<input id="miniCpM" inputmode="numeric" placeholder="예: 300,000"></label><label>연 수익률(%)<input id="miniCpR" type="number" step="0.1" value="5"></label><label>기간(년)<input id="miniCpY" type="number" value="10"></label></div><div class="calc-actions"><button type="button" id="miniCpCalc">복리 계산하기</button><a class="calc-secondary" href="/articles/compound-interest-calculator-guide.html#compound-calculator">그래프·연도별 표까지 자세히 보기 →</a></div><div class="calc-result-box"><span>예상 만기 자산</span><strong id="miniCpResult">0원</strong></div></section>
 <section class="calculator-tool" hidden="" id="salary-calculator"><div class="calculator-tool-head"><h2>실수령액(급여) 계산기</h2><button aria-label="실수령액(급여) 계산기 닫기" class="calculator-close" data-close-calculator="" type="button">계산기 닫기 ×</button></div>
 <p class="calc-note"><strong>2026년 현재 보험료율 반영.</strong> 국민연금 근로자 부담 4.75%, 건강보험 근로자 부담 3.595%, 장기요양은 건강보험료에 2026년 장기요양보험료율을 반영하고, 고용보험 근로자 부담 0.9%를 적용합니다. 소득세는 실제 간이세액표와 개인별 공제에 따라 달라지므로 별도 입력 또는 간이 추정 중 선택할 수 있습니다.</p>
 <div class="calc-grid"><div class="calc-field"><label for="salaryGross">월 급여(세전)</label><input id="salaryGross" inputmode="numeric" placeholder="예: 3,500,000"/></div><div class="calc-field"><label for="salaryNonTax">비과세 월액</label><input id="salaryNonTax" inputmode="numeric" placeholder="예: 200,000"/><small>식대 등 실제 비과세 인정액만 입력하세요.</small></div><div class="calc-field"><label for="salaryIncomeTax">월 소득세(선택)</label><input id="salaryIncomeTax" inputmode="numeric" placeholder="비우면 간이 추정"/><small>급여명세서·홈택스 간이세액표 금액을 알면 입력하는 것이 가장 정확합니다.</small></div><div class="calc-field"><label for="salaryDependents">공제대상 인원(본인 포함)</label><input id="salaryDependents" max="20" min="1" type="number" value="1"/></div></div>
@@ -126,16 +128,16 @@
 })();
 </script><script>
 (function(){
- const tools=[
+ const tools=[{name:'복리 계산기',keywords:'복리 이자 투자 수익률 72의 법칙 적립식',url:'#compound-calculator'},
   ['실수령액(급여) 계산기','월급 급여 실수령액 4대보험 소득세','#salary-calculator'],['전세자금대출 계산기','전세 대출 이자 월이자','#jeonse-loan-calculator'],['퇴직금 계산기','퇴직금 평균임금 퇴사 퇴직','#retirement-calculator'],['부가세 계산기','부가세 부가가치세 공급가액 세금','#vat-calculator'],['환율 계산기','환율 달러 원화 엔화 유로 외화 환전','#exchange-calculator'],['대출 이자 계산기','대출 이자 원리금 원금균등 만기일시','#loan-calculator'],['연말정산 간이 계산기','연말정산 환급 세액공제 소득공제','#yearend-calculator'],['종합소득세 자동 계산기','종합소득세 소득세 세율 사업자','#income-tax-calculator'],['BMI(체질량지수) 계산기','BMI 체질량지수 키 몸무게','#bmi-calculator'],['할인율·소비자가 계산기','할인 할인율 정가 판매가 소비자가','#discount-calculator'],['재산세 계산기','재산세 주택 건축물 토지 과세표준','#property-tax-calculator'],['자동차세 계산기','자동차세 차량세 배기량 cc 차령','#car-tax-calculator']
  ].map(x=>({name:x[0],keywords:x[1],url:x[2]}));
- const categoryData={
+ const categoryData={invest:{title:'투자·재테크 모음',items:['#compound-calculator']},
    work:{title:'직장·급여 모음',items:['#salary-calculator','#retirement-calculator','#yearend-calculator']},
    finance:{title:'대출·금융 모음',items:['#jeonse-loan-calculator','#loan-calculator','#exchange-calculator']},
    tax:{title:'세금 모음',items:['#vat-calculator','#income-tax-calculator','#property-tax-calculator','#car-tax-calculator']},
    life:{title:'생활·건강 모음',items:['#bmi-calculator','#discount-calculator']}
  };
- const descriptions={
+ const descriptions={'#compound-calculator':'초기 투자금·월 적립금·수익률·기간으로 복리 미래가치를 계산합니다.',
    '#salary-calculator':'월 급여와 비과세액을 입력해 4대보험과 예상 공제 후 실수령액을 계산합니다.',
    '#retirement-calculator':'입사일·퇴직일과 퇴직 전 3개월 임금을 입력해 예상 퇴직금을 계산합니다.',
    '#yearend-calculator':'총급여·기납부세액·공제액을 입력해 예상 환급 또는 추가납부액을 계산합니다.',
@@ -177,6 +179,10 @@
  function progressiveTax(base){base=Math.max(0,base);if(base<=14000000)return base*.06;if(base<=50000000)return 840000+(base-14000000)*.15;if(base<=88000000)return 6240000+(base-50000000)*.24;if(base<=150000000)return 15360000+(base-88000000)*.35;if(base<=300000000)return 37060000+(base-150000000)*.38;if(base<=500000000)return 94060000+(base-300000000)*.40;if(base<=1000000000)return 174060000+(base-500000000)*.42;return 384060000+(base-1000000000)*.45;}
  function earnedIncomeDeduction(s){if(s<=5000000)return s*.7;if(s<=15000000)return 3500000+(s-5000000)*.4;if(s<=45000000)return 7500000+(s-15000000)*.15;if(s<=100000000)return 12000000+(s-45000000)*.05;return 14750000+(s-100000000)*.02;}
  function simpleMonthlyIncomeTax(taxableMonthly,dependents){const annual=taxableMonthly*12;const earned=Math.max(0,annual-earnedIncomeDeduction(annual));const personal=Math.max(1,dependents)*1500000;const base=Math.max(0,earned-personal);return progressiveTax(base)/12;}
+
+ // compound mini
+ ['miniCpP','miniCpM'].forEach(id=>{const el=document.getElementById(id);el.addEventListener('input',()=>{const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?Number(raw).toLocaleString('ko-KR'):'';});});
+ document.getElementById('miniCpCalc').addEventListener('click',()=>{let P=nval('miniCpP'),m=nval('miniCpM'),r=(Number(document.getElementById('miniCpR').value)||0)/100,y=Number(document.getElementById('miniCpY').value)||0;if(y<=0){alert('기간을 입력해주세요.');return;}let v=P;for(let i=0;i<y*12;i++){v*=1+r/12;v+=m;}document.getElementById('miniCpResult').textContent=won(v);});
  // salary
  document.getElementById('calcSalary').addEventListener('click',()=>{const gross=nval('salaryGross'),non=Math.min(gross,nval('salaryNonTax'));if(gross<=0){alert('월 급여를 입력해주세요.');return;}const taxable=Math.max(0,gross-non);const pensionBasis=Math.min(6590000,Math.max(410000,taxable));const pension=pensionBasis*.0475;const health=taxable*.03595;const longterm=health*(.009448/.0719);const employment=taxable*.009;const dep=Number(document.getElementById('salaryDependents').value)||1;const manual=nval('salaryIncomeTax');const income=manual>0?manual:simpleMonthlyIncomeTax(taxable,dep);const local=income*.1;const total=pension+health+longterm+employment+income+local;document.getElementById('salaryResult').textContent=won(Math.max(0,gross-total));document.getElementById('salaryDetails').innerHTML='<table class="result-table"><tr><th>국민연금</th><td>'+won(pension)+'</td></tr><tr><th>건강보험</th><td>'+won(health)+'</td></tr><tr><th>장기요양보험</th><td>'+won(longterm)+'</td></tr><tr><th>고용보험</th><td>'+won(employment)+'</td></tr><tr><th>소득세 '+(manual?'(직접입력)':'(간이추정)')+'</th><td>'+won(income)+'</td></tr><tr><th>지방소득세(소득세의 10%)</th><td>'+won(local)+'</td></tr><tr><th>예상 공제 합계</th><td>'+won(total)+'</td></tr></table>';});
  // loan helpers
