@@ -515,3 +515,6 @@ img{max-width:100%}
 .article-hashtag-list{display:flex;flex-wrap:wrap;gap:8px}
 .article-hashtag-list span{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #d7e1ef;border-radius:999px;background:#fff;color:#31547b;font-size:13px;font-weight:700;line-height:1.2}
 @media(max-width:700px){.article-hashtags{padding:18px 16px}.article-hashtag-list{gap:7px}.article-hashtag-list span{font-size:12px;padding:6px 9px}}
+
+/* V67 30 articles */
+.category-tabs{display:flex;flex-wrap:wrap;gap:8px}.category-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important}.article-updated span{display:block;margin-top:6px;line-height:1.65}
