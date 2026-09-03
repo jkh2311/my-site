@@ -128,6 +128,7 @@
   });
 })();
 </script><script>
+/* LOAN-ARTICLE-DIRECT-LINK-V1 */
 (function(){
  const tools=[['미래 투자가치 계산기','미래가치 투자 수익률 목표금액 자산가치','/articles/future-investment-value-calculator-guide.html#future-value-calculator'],['복리 계산기','복리 이자 투자 수익률 72의 법칙 적립식','/articles/compound-interest-calculator-guide.html#compound-calculator'],['1억 만들기 계산기','1억 목표 종잣돈 월적립금 수익률','/articles/one-hundred-million-calculator-guide.html#hundred-calculator'],
   ['실수령액(급여) 계산기','월급 급여 실수령액 4대보험 소득세','#salary-calculator'],['전세자금대출 계산기','전세 대출 이자 월이자','#jeonse-loan-calculator'],['퇴직금 계산기','퇴직금 평균임금 퇴사 퇴직','#retirement-calculator'],['부가세 계산기','부가세 부가가치세 공급가액 세금','#vat-calculator'],['환율 계산기','환율 달러 원화 엔화 유로 외화 환전','#exchange-calculator'],['대출 이자 계산기','대출 이자 원리금 원금균등 만기일시','/articles/loan-interest-calculator-guide.html#loan-calculator-main'],['연말정산 간이 계산기','연말정산 환급 세액공제 소득공제','#yearend-calculator'],['종합소득세 자동 계산기','종합소득세 소득세 세율 사업자','#income-tax-calculator'],['BMI(체질량지수) 계산기','BMI 체질량지수 키 몸무게','#bmi-calculator'],['할인율·소비자가 계산기','할인 할인율 정가 판매가 소비자가','#discount-calculator'],['재산세 계산기','재산세 주택 건축물 토지 과세표준','#property-tax-calculator'],['자동차세 계산기','자동차세 차량세 배기량 cc 차령','#car-tax-calculator']
@@ -172,7 +173,7 @@
  const calculatorTools=[...document.querySelectorAll('.calculator-tool')];
  function openCalc(scroll=true){const id=(location.hash||'').slice(1),target=calculatorTools.find(el=>el.id===id);calculatorTools.forEach(el=>el.hidden=el!==target);if(target&&scroll)requestAnimationFrame(()=>target.scrollIntoView({behavior:'smooth',block:'start'}));}
  function closeCalc(){calculatorTools.forEach(el=>el.hidden=true);if(location.hash)history.replaceState(null,'',location.pathname+location.search);document.querySelector('.calculator-search-card')?.scrollIntoView({behavior:'smooth',block:'start'});}
- document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a)setTimeout(()=>openCalc(true),0);const c=e.target.closest('[data-close-calculator]');if(c)closeCalc();});window.addEventListener('hashchange',()=>openCalc(true));openCalc(Boolean(location.hash));
+ document.addEventListener('click',e=>{const direct=e.target.closest('a[href="/articles/loan-interest-calculator-guide.html#loan-calculator-main"]');if(direct){e.preventDefault();window.location.href=direct.getAttribute('href');return;}const a=e.target.closest('a[href^="#"]');if(a)setTimeout(()=>openCalc(true),0);const c=e.target.closest('[data-close-calculator]');if(c)closeCalc();});window.addEventListener('hashchange',()=>openCalc(true));openCalc(Boolean(location.hash));
  const won=n=>Math.round(Number(n)||0).toLocaleString('ko-KR')+'원';
  const nval=id=>Number((document.getElementById(id)?.value||'').replace(/[^0-9.-]/g,''))||0;
  const moneyIds=['salaryGross','salaryNonTax','salaryIncomeTax','jeonsePrincipal','wage1','wage2','wage3','annualBonus','annualLeave','vatAmount','loanPrincipal','yeSalary','yePrepaid','yeOtherDeduction','yeTaxCredit','incomeAmount','incomeDeduction','incomeCredit','incomePrepaid','discountOriginal','discountSale','propertyBase'];
