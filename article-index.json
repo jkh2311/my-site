@@ -1,5 +1,11 @@
 [
   {
+    "title": "휴대폰 명의도용 확인방법·가입된 통신서비스 조회·명의도용 차단방법",
+    "url": "/articles/phone-identity-theft-check-block-guide.html",
+    "category": "안전·보안",
+    "description": "Msafer에서 내 명의 휴대폰·알뜰폰·인터넷 등 가입 통신서비스를 확인하고 신규 개통을 차단하는 방법, 명의도용 발견 시 통신사 정지·신고·경찰 ECRM 대응 순서를 정리합니다."
+  },
+  {
     "title": "배우자 유산·사산휴가 신청방법·휴가기간·급여·달라진 점",
     "url": "/articles/spouse-miscarriage-stillbirth-leave-guide.html",
     "category": "지원·복지",
@@ -110,5 +116,11 @@
     "category": "생활·행정",
     "url": "/articles/resident-copy.html",
     "publishedAt": "2026-09-02"
+  },
+  {
+    "title": "2026 추석 고속도로 통행료 면제 총정리｜무료 기간·이용방법·귀성길 꿀팁",
+    "url": "/articles/2026-chuseok-highway-toll-free.html",
+    "category": "교통정보",
+    "description": "2026 추석 고속도로 통행료 면제 기간 9월 24~27일, 이용방법, 하이패스·일반차로, ROAD PLUS 교통정보와 내비게이션 활용 꿀팁을 정리합니다."
   }
 ]

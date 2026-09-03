@@ -548,3 +548,9 @@ img{max-width:100%}
 @media(max-width:700px){.lead-line{padding:18px 8px}.lead-line strong{font-size:18px}.article-cover-banner,.article-cover-banner img{max-height:230px}}
 
 .article-cover img[src*="single-parent-family-support-hero"]{width:100%;max-height:330px;object-fit:cover;object-position:center;display:block}
+
+/* ARTICLE-SECTION-ICON-V1 */
+.article-section-with-icon{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:center;margin:12px 0 24px;padding:18px 20px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}
+.article-section-with-icon>img{width:78px;height:78px;object-fit:contain;border-radius:12px}
+.article-section-with-icon p:first-child{margin-top:0}.article-section-with-icon p:last-child{margin-bottom:0}
+@media(max-width:700px){.article-section-with-icon{grid-template-columns:62px 1fr;gap:12px;padding:15px}.article-section-with-icon>img{width:56px;height:56px}}
