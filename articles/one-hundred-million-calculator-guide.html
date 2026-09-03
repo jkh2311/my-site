@@ -86,7 +86,7 @@ const num=id=>Number((($(id)?.value)||'').replace(/[^0-9.-]/g,''))||0;
 function draw(rows){
   const svg=$('hundredChart'); if(!svg||!rows.length)return;
   const W=900,H=360,p={l:78,r:24,t:24,b:50},pw=W-p.l-p.r,ph=H-p.t-p.b;
-  const max=Math.max(T*1.06,...rows.map(x=>Math.max(x.value,x.paid))*1.08,1);
+  const max=Math.max(T*1.06, ...rows.map(x=>Math.max(x.value,x.paid)*1.08), 1);
   const X=i=>p.l+pw*i/Math.max(1,rows.length-1),Y=v=>p.t+ph-(v/max)*ph;
   const fmt=v=>v>=1e8?(v/1e8).toFixed(1).replace('.0','')+'억':v>=1e4?Math.round(v/1e4)+'만':Math.round(v).toLocaleString('ko-KR');
   let out='<defs><linearGradient id="hmFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f8b8d" stop-opacity=".26"/><stop offset="100%" stop-color="#0f8b8d" stop-opacity=".03"/></linearGradient></defs>';
