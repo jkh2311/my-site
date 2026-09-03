@@ -493,3 +493,4 @@ img{max-width:100%}
   .article-search-wrap{top:0}
   .article-search-box{padding-top:8px;padding-bottom:8px}
 }
+.home-pagination{display:flex;justify-content:center;gap:8px;margin-top:26px}.home-pagination button{min-width:38px;height:38px;border:1px solid #d7dfeb;border-radius:9px;background:#fff;color:#344054;font-weight:800;cursor:pointer}.home-pagination button.active{background:#1f62dd;color:#fff;border-color:#1f62dd}

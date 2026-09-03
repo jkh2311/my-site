@@ -65,15 +65,16 @@
 
 <section class="section alt"><div class="container">
 <div class="section-heading"><p class="section-label">LATEST CONTENT</p><h2>최근 생활정보</h2><p>공식 안내를 확인한 뒤 실제 이용자가 궁금해할 내용을 중심으로 정리합니다.</p></div>
-<div class="article-grid"><article class="card article-card"><span class="tag">교통정보</span><time class="article-date">게시 2026. 9. 3.</time><h3>2026 추석 KTX·기차표 예매 일정 및 예매 방법 꿀팁 총정리</h3><p>KTX·일반열차 예매 일정, PC·모바일 예매방법, 결제기간과 예매 성공 꿀팁까지 정리했습니다.</p><a class="more" href="/articles/2026-chuseok-ktx-train-reservation.html">자세히 보기 →</a></article>
+<div class="article-grid" id="home-latest-grid"><article class="card article-card"><span class="tag">지원·복지</span><time class="article-date">게시 2026. 9. 3.</time><h3>2026 근로장려금 상반기 신청 총정리</h3><p>신청대상·신청기간·최대 115만 원·지급일과 신청방법을 정리했습니다.</p><a class="more" href="/articles/2026-earned-income-tax-credit-half-year.html">자세히 보기 →</a></article>
+<article class="card article-card"><span class="tag">교통정보</span><time class="article-date">게시 2026. 9. 3.</time><h3>2026 추석 KTX·기차표 예매 일정 및 예매 방법 꿀팁 총정리</h3><p>KTX·일반열차 예매 일정, PC·모바일 예매방법, 결제기간과 예매 성공 꿀팁까지 정리했습니다.</p><a class="more" href="/articles/2026-chuseok-ktx-train-reservation.html">자세히 보기 →</a></article>
 <article class="card article-card"><span class="tag">생활·행정</span><time class="article-date">게시 2026. 9. 2.</time><h3>여권 최초 발급·재발급</h3><p>최초 발급과 온라인·방문 재발급 절차를 한 번에 정리했습니다.</p><a class="more" href="/articles/passport-issue.html">자세히 보기 →</a></article>
 <article class="card article-card"><span class="tag">생활·행정</span><time class="article-date">게시 2026. 9. 2.</time><h3>운전면허증 발급·갱신·재발급</h3><p>신규 취득부터 갱신과 분실 재발급까지 단계별로 안내합니다.</p><a class="more" href="/articles/driver-license-guide.html">자세히 보기 →</a></article>
-
 <article class="card article-card"><span class="tag">생활·행정</span><time class="article-date">게시 2026. 9. 2.</time><h3>주민등록증 신규·재발급 신청 방법 총정리</h3><p>신규·재발급 차이부터 정부24 온라인 신청, 주민센터 방문과 수령까지 상세하게 설명합니다.</p><a class="more" href="/articles/id-card-issue.html">자세히 보기 →</a></article>
 <article class="card article-card"><span class="tag">생활·행정</span><time class="article-date">게시 2026. 9. 2.</time><h3>주민등록 등본·초본 발급 방법</h3><p>인터넷·방문·무인민원발급기 이용 방법을 실제 순서대로 따라 할 수 있게 정리했습니다.</p><a class="more" href="/articles/resident-copy.html">자세히 보기 →</a></article>
 <article class="card article-card"><span class="tag">금융·보험</span><time class="article-date">게시 2026. 9. 2.</time><h3>건강보험료 미납 조회 및 납부</h3><p>미납 조회부터 카드·계좌·가상계좌·지로·방문 납부까지 상세하게 설명합니다.</p><a class="more" href="/articles/health-insurance-arrears.html">자세히 보기 →</a></article>
-<article class="card article-card"><span class="tag">금융·보험</span><time class="article-date">게시 2026. 9. 2.</time><h3>자동차 보험료 계산·조회·가입</h3><p>보험료 비교, 보험다모아 조회, 다이렉트·상담 가입과 갱신 전 확인 방법을 정리했습니다.</p><a class="more" href="/articles/car-insurance-guide.html">자세히 보기 →</a></article>
-</div></div></section>
+<article class="card article-card"><span class="tag">금융·보험</span><time class="article-date">게시 2026. 9. 2.</time><h3>자동차 보험료 계산·조회·가입</h3><p>보험료 비교, 보험다모아 조회, 다이렉트·상담 가입과 갱신 전 확인 방법을 정리했습니다.</p><a class="more" href="/articles/car-insurance-guide.html">자세히 보기 →</a></article></div>
+<div class="home-pagination" id="home-pagination" aria-label="최근 생활정보 페이지"></div>
+</div></section>
 
 <section class="trust"><div class="container trust-grid"><div><p class="section-label">HANINE LIFE</p><h2>정보는 이해하기 쉬워야 합니다.</h2></div>
 <p>한이네생활정보는 공식 기관 안내를 우선 확인하고, 단순 복사보다 신청 전에 필요한 준비사항과 헷갈리는 부분을 쉽게 풀어 설명하는 것을 목표로 합니다.</p></div></section>
@@ -135,4 +136,18 @@
   });
 })();
 </script>
-</body></html>
+<script>
+(function(){
+ const grid=document.getElementById('home-latest-grid'), pager=document.getElementById('home-pagination');
+ if(!grid||!pager)return;
+ const cards=[...grid.querySelectorAll('.article-card')], perPage=6;
+ const pages=Math.max(1,Math.ceil(cards.length/perPage));
+ function show(page){
+   cards.forEach((c,i)=>c.style.display=(i>=(page-1)*perPage&&i<page*perPage)?'':'none');
+   pager.innerHTML='';
+   if(pages<=1)return;
+   for(let n=1;n<=pages;n++){const b=document.createElement('button');b.type='button';b.textContent=n;b.className=n===page?'active':'';b.onclick=()=>{show(n);grid.scrollIntoView({behavior:'smooth',block:'start'});};pager.appendChild(b);}
+ }
+ show(1);
+})();
+</script></body></html>
