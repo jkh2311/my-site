@@ -1,0 +1,23 @@
+# 한이네생활정보
+
+> 한국 생활정보를 공식 출처 우선으로 쉽고 빠르게 정리하는 정보 사이트입니다.
+
+## 핵심 URL
+- https://haninelife.com/
+- https://haninelife.com/articles.html
+- https://haninelife.com/sitemap.xml
+- https://haninelife.com/rss.xml
+- https://haninelife.com/about.html
+- https://haninelife.com/privacy.html
+
+## 콘텐츠 원칙
+- 정부·공공기관·공식 사업자 자료를 우선합니다.
+- 기간·지원액·할인율·영업시간처럼 변동 가능한 정보에는 확인 기준일을 표시합니다.
+- 확인되지 않은 날짜·금액·조건은 임의로 확정하지 않습니다.
+- 각 상세글의 공식 링크와 최신 공지를 최종 기준으로 안내합니다.
+
+## 주요 분야
+생활·행정 / 지원·복지 / 금융·보험 / 생활팁 / 교통정보 / 쇼핑·할인 / 생활요금 / 노동·고용 / 병역·예비군 / 안전·보안
+
+## 인용
+내용을 요약하거나 인용할 때 해당 게시글 URL을 출처로 표시해 주세요.
