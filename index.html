@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=68">
+<link rel="stylesheet" href="/style.css?v=69">
 <link rel="canonical" href="https://haninelife.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="한이네생활정보">
@@ -68,6 +68,49 @@
   }
 }
 </style>
+
+<style id="desktop-hero-editorial-v1">
+@media (min-width:700px){
+  .hero-copy{display:flex;flex-direction:column;align-items:flex-start;}
+  .hero-title-group{margin:0 auto;text-align:center;}
+  .hero-title-group h1{text-align:center;}
+  .hero-subline{margin-top:8px;line-height:1.08;letter-spacing:-1.8px;}
+  .hero-subline .hero-tip,
+  .hero-subline .hero-summary{
+    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+    font-style:normal;font-weight:800;
+  }
+  .hero-subline .hero-tip{color:#11857f;}
+  .hero-subline .hero-summary{color:#3757a5;}
+  .hero-subline .hero-dot{color:#a2acbb;font-size:.72em;vertical-align:.12em;margin:0 .08em;}
+
+  .hero-description.hero-description-refined{
+    width:min(100%,720px);max-width:720px;margin:28px auto 0!important;
+    padding:0!important;text-align:center!important;color:#526174;
+    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+  }
+  .hero-description-refined .hero-desc-main,
+  .hero-description-refined .hero-desc-sub,
+  .hero-description-refined .hero-desc-point{display:block;text-align:center;width:100%;}
+  .hero-description-refined .hero-desc-main{font-size:18px;line-height:1.55;letter-spacing:-.45px;font-weight:600;color:#4b586c;}
+  .hero-description-refined .hero-desc-sub{margin-top:7px;font-size:19px;line-height:1.5;letter-spacing:-.55px;font-weight:700;color:#29364a;}
+  .hero-description-refined .hero-desc-point{margin-top:9px;}
+  .hero-description-refined .hero-desc-prefix{display:inline!important;width:auto!important;font-size:15px;line-height:1.55;font-weight:500;color:#6e7888;}
+  .hero-description-refined .hero-desc-brand{display:inline!important;width:auto!important;margin-left:5px;font-size:18px;line-height:1.45;font-weight:800;letter-spacing:-.5px;color:#315f72;}
+  .hero-description-refined em{font-style:normal;}
+  .hero-word-info{
+    display:inline-block;padding:0 .10em;
+    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+    font-weight:900;font-size:1.12em;color:#d05d47;letter-spacing:-.08em;
+    transform:translateY(-.02em);
+  }
+  .hero-word-organize{
+    display:inline-block;font-weight:900;color:#11857f;
+    font-size:1.08em;letter-spacing:-.07em;
+    border-bottom:2px solid rgba(17,133,127,.22);padding-bottom:1px;
+  }
+}
+</style>
 </head>
 <body>
 <header class="site-header"><div class="container header-inner">
@@ -92,9 +135,9 @@
 <div class="hero-copy">
 <div class="hero-title-group">
 <p class="eyebrow">HANINE LIFE INFORMATION</p>
-<h1>알아두면 유용한 생활정보<span class="hero-subline">꿀팁 · 총정리</span></h1>
+<h1>알아두면 유용한 생활정보<span class="hero-subline"><em class="hero-tip">꿀팁</em><span class="hero-dot"> · </span><em class="hero-summary">총정리</em></span></h1>
 </div>
-<p class="hero-description hero-description-refined"><span class="hero-desc-main">정보 찾느라 헤매고 계신가요?</span><span class="hero-desc-sub">한눈에 보기 쉽게 정리!</span><span class="hero-desc-point"><span class="hero-desc-prefix">필요한 순간,</span><span class="hero-desc-brand">한이네생활정보에서!</span></span></p>
+<p class="hero-description hero-description-refined"><span class="hero-desc-main"><em class="hero-word-info">정보</em> 찾느라 헤매고 계신가요?</span><span class="hero-desc-sub">한눈에 보기 쉽게 <em class="hero-word-organize">정리!</em></span><span class="hero-desc-point"><span class="hero-desc-prefix">필요한 순간,</span><span class="hero-desc-brand">한이네생활정보에서!</span></span></p>
 <div class="hero-buttons"><a class="btn btn-primary" href="/articles.html">생활정보 전체보기</a><a class="btn btn-secondary" href="/about.html">사이트 소개</a><a class="btn btn-secondary" href="/calculators.html">계산기 모음</a></div>
 </div>
 <figure class="hani-card">
