@@ -853,3 +853,37 @@ img{max-width:100%}
     color:#536174;font-size:12.5px;font-weight:600;line-height:1.55;letter-spacing:-.3px;
   }
 }
+
+
+/* V7.0 — mobile hero refined typography, no boxed intro */
+@media(max-width:700px){
+  .hero-subline{display:none!important}
+  .hero-description-refined{
+    width:min(100%,360px)!important;
+    margin:20px auto 0!important;
+    padding:5px 10px 2px!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    text-align:center!important;
+  }
+  .hero-description-refined:before,.hero-description-refined:after{display:none!important;content:none!important}
+  .hero-description-refined .hero-desc-main{
+    font-size:17px!important;font-weight:700!important;line-height:1.55!important;letter-spacing:-.6px!important;color:#18243d!important;
+  }
+  .hero-description-refined .hero-desc-sub{
+    margin-top:7px!important;font-size:16px!important;font-weight:800!important;line-height:1.5!important;letter-spacing:-.55px!important;color:#27877e!important;
+  }
+  .hero-description-refined .hero-desc-sub:after{
+    content:""!important;display:block!important;width:42px!important;height:1px!important;margin:14px auto 12px!important;background:linear-gradient(90deg,transparent,rgba(13,27,61,.28),transparent)!important;
+  }
+  .hero-description-refined .hero-desc-point{margin:0 auto!important;padding:0!important;background:none!important;color:inherit!important}
+  .hero-description-refined .hero-desc-prefix{
+    display:block!important;font-size:12.5px!important;font-weight:600!important;line-height:1.55!important;letter-spacing:-.25px!important;color:#667085!important;
+  }
+  .hero-description-refined .hero-desc-brand{
+    display:block!important;margin-top:2px!important;font-size:19px!important;font-weight:800!important;line-height:1.45!important;letter-spacing:-.75px!important;color:#315d7a!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.7);
+  }
+}
