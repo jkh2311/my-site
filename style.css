@@ -2089,3 +2089,134 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   .content-category-menu a{font-size:14px!important;}
   .subcategory-filter button{font-size:13.5px!important;font-weight:850!important;}
 }
+
+/* MOBILE-DARK-ARTICLE-AUDIT-V79
+   Mobile article dark-mode cleanup across all existing posts.
+   Keep panels aligned with the site dark palette, remove light/white borders,
+   and keep article text readable. Also prevent recent-post titles from clipping.
+*/
+@media (max-width: 700px){
+  html.dark-mode .article-main,
+  html.dark-mode .article-layout,
+  html.dark-mode .article,
+  html.dark-mode .article-body,
+  html.dark-mode .article-content,
+  html.dark-mode .article-sidebar,
+  html.dark-mode .article-sidebar > *,
+  html.dark-mode .popular-posts,
+  html.dark-mode .article-hashtags{
+    background-color:#0f172a!important;
+    color:#e8eef7!important;
+    border-color:#334155!important;
+  }
+
+  /* Common content panels used throughout the current article library */
+  html.dark-mode .article :is(
+    .guide-step,.guide-steps,.info-card,.info-grid>div,.method-box,.tip-box,.warning-box,
+    .notice,.notice-blue,.summary-box,.summary-card,.quick-fact,.quick-facts>div,.compare-card,
+    .source-box,.secondary-cta,.mobile-note,.train-card,.scb-card,.quiz-item,.faq-item,.faq-box,
+    .article-opening-qa,.qa-mini-item,.article-toc,.article-hashtags,.popular-post-item,
+    .article-content-box,.content-card,.photo-rule,.photo-detail-box,.photo-diagram,.photo-guide-pro,
+    .passport-strict,.spec-precision-box,.spec-table,.spec-caution,.rule-photo,
+    .compound-tool,.compound-inputs,.compound-summary,.compound-big,.compound-summary-grid>div,
+    .compound-chart-wrap,.compound-year-table-card,.compound-guide-section,.compound-explain-section,
+    .compound-rule-section,.compound-why-section,.compound-step-card,.compound-tip-box,.interest-card,
+    .why-grid>div,.rule72-grid>div,.loan-panel,.loan-info-card,.loan-note,.loan-schedule-card,
+    .calculator-box,.result-box,.calc-note,.calc-warning,.wage-box,.date-alert,.status-box,.compare-note,
+    .yesno,.reality-box,.money-box,.eligibility-split>div,.number-strip>div,.quick-check>div,
+    .money-route>div,.timeline-loan>div,.rent-check>div,.flow-line>div,.money-focus>div
+  ){
+    background:#111c2e!important;
+    background-color:#111c2e!important;
+    border-color:#334155!important;
+    color:#e8eef7!important;
+    box-shadow:none!important;
+  }
+
+  /* Catch legacy article panels that used inline light backgrounds. */
+  html.dark-mode .article div[style*="background"],
+  html.dark-mode .article section[style*="background"],
+  html.dark-mode .article aside[style*="background"]{
+    background:#111c2e!important;
+    background-color:#111c2e!important;
+    border-color:#334155!important;
+  }
+
+  /* Text inside article cards should remain bright/readable on phones. */
+  html.dark-mode .article :is(h1,h2,h3,h4,h5,h6,strong,b,label,dt,th){color:#f7f9fc!important;}
+  html.dark-mode .article :is(p,li,dd,td,figcaption,small,span){color:#d5deea!important;}
+  html.dark-mode .article a:not(.direct-btn):not(.btn):not(.official-btn):not(.issue-cta-button){color:#8ec5ff!important;}
+
+  /* No bright white outlines in mobile dark mode. */
+  html.dark-mode .article :is(table,thead,tbody,tr,td,th),
+  html.dark-mode .sidebar-card,
+  html.dark-mode .recent-post-item,
+  html.dark-mode .popular-post-item{
+    border-color:#334155!important;
+  }
+  html.dark-mode .sidebar-card{
+    background:#111827!important;
+    color:#e8eef7!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .recent-post-item{
+    background:transparent!important;
+    color:#e8eef7!important;
+  }
+  html.dark-mode .recent-post-item strong{color:#f7f9fc!important;}
+  html.dark-mode .recent-post-item small{color:#aebbd0!important;}
+
+  /* Recent posts: use full width and show the complete post title instead of clipping it. */
+  .article-sidebar,
+  .sidebar-card,
+  .recent-post-list,
+  .recent-post-item,
+  .recent-post-item > span{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+  }
+  .recent-post-list{gap:4px!important;}
+  .recent-post-item{
+    grid-template-columns:64px minmax(0,1fr)!important;
+    align-items:start!important;
+    padding:10px 0!important;
+    white-space:normal!important;
+  }
+  .recent-post-item img{
+    width:64px!important;
+    height:48px!important;
+    object-fit:cover!important;
+    flex:none!important;
+  }
+  .recent-post-item strong{
+    display:block!important;
+    -webkit-line-clamp:unset!important;
+    -webkit-box-orient:initial!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    white-space:normal!important;
+    word-break:keep-all!important;
+    overflow-wrap:anywhere!important;
+    font-size:13px!important;
+    line-height:1.48!important;
+  }
+  .recent-post-item small{
+    display:block!important;
+    margin-top:4px!important;
+    white-space:normal!important;
+  }
+
+  /* The update/reference strip should merge with the page, not look like a white box. */
+  html.dark-mode .article .article-updated,
+  html.dark-mode .article .article-update-note,
+  html.dark-mode .article .article-source-note{
+    background:#0f172a!important;
+    background-color:#0f172a!important;
+    border-color:#0f172a!important;
+    color:#d5deea!important;
+    box-shadow:none!important;
+  }
+}
