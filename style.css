@@ -1664,3 +1664,28 @@ html.dark-mode .hero-word-organize{color:#39c5b8!important;}
 html.dark-mode .hero-desc-brand{color:#79b8ff!important;}
 html.dark-mode .hero-tip{color:#37b7ad!important;}
 html.dark-mode .hero-summary{color:#6ea4ff!important;}
+
+
+/* DARK-MODE-V4-TARGETED — header wordmark background + about page lower area only */
+html.dark-mode .brand-wordmark{
+  content:url('/images/hanine-header-logo-dark.png')!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  opacity:1!important;
+}
+/* Keep the lower text area on About visually continuous with the dark page background. */
+html.dark-mode body.about-page .section,
+html.dark-mode body.about-page .section > .container,
+html.dark-mode body.about-page .section .prose{
+  background:#0f172a!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+/* The Hani introduction card remains a distinct card, as requested. */
+html.dark-mode body.about-page .hani-about{
+  background:#172033!important;
+  border-color:#334155!important;
+}
