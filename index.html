@@ -152,14 +152,26 @@
 (function(){
  const grid=document.getElementById('home-latest-grid'), pager=document.getElementById('home-pagination');
  if(!grid||!pager)return;
- const cards=[...grid.querySelectorAll('.article-card')], perPage=6;
- const pages=Math.max(1,Math.ceil(cards.length/perPage));
+ const cards=[...grid.querySelectorAll('.article-card')];
+ let currentPage=1;
+ const getPerPage=()=>window.matchMedia('(max-width:699px)').matches?5:6;
  function show(page){
-   cards.forEach((c,i)=>c.style.display=(i>=(page-1)*perPage&&i<page*perPage)?'':'none');
+   const perPage=getPerPage();
+   const pages=Math.max(1,Math.ceil(cards.length/perPage));
+   currentPage=Math.min(Math.max(1,page),pages);
+   cards.forEach((c,i)=>c.style.display=(i>=(currentPage-1)*perPage&&i<currentPage*perPage)?'':'none');
    pager.innerHTML='';
    if(pages<=1)return;
-   for(let n=1;n<=pages;n++){const b=document.createElement('button');b.type='button';b.textContent=n;b.className=n===page?'active':'';b.onclick=()=>{show(n);grid.scrollIntoView({behavior:'smooth',block:'start'});};pager.appendChild(b);}
+   for(let n=1;n<=pages;n++){
+     const b=document.createElement('button');b.type='button';b.textContent=n;b.className=n===currentPage?'active':'';
+     b.onclick=()=>{show(n);grid.scrollIntoView({behavior:'smooth',block:'start'});};pager.appendChild(b);
+   }
  }
+ let wasMobile=window.matchMedia('(max-width:699px)').matches;
+ window.addEventListener('resize',()=>{
+   const isMobile=window.matchMedia('(max-width:699px)').matches;
+   if(isMobile!==wasMobile){wasMobile=isMobile;show(1);}
+ });
  show(1);
 })();
 </script></body></html>
