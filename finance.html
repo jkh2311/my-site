@@ -5,8 +5,8 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733846223035917" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>금융 시세 | 원달러 환율·코스피·코스닥·나스닥·NYSE - 한이네생활정보</title>
-  <meta name="description" content="현재 시각과 함께 원달러 환율, 코스피, 코스닥, 나스닥 종합지수, NYSE 종합지수를 한눈에 확인합니다.">
+  <title>금융 | 한이네생활정보</title>
+  <meta name="description" content="한이네생활정보 금융 페이지입니다. 금융 시세 기능은 향후 업데이트 예정입니다.">
   <link rel="icon" href="/favicon.ico?v=3" sizes="any">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -19,10 +19,21 @@
   <link rel="canonical" href="https://haninelife.com/finance.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="한이네생활정보">
-  <meta property="og:title" content="금융 시세 | 원달러 환율·코스피·코스닥·나스닥·NYSE">
-  <meta property="og:description" content="현재 시각 기준 주요 환율과 국내외 증시 지수를 한눈에 확인하세요.">
+  <meta property="og:title" content="금융 | 한이네생활정보">
+  <meta property="og:description" content="금융 시세 기능은 향후 업데이트 예정입니다.">
   <meta property="og:url" content="https://haninelife.com/finance.html">
   <meta property="og:image" content="https://haninelife.com/images/hanine-header-logo.png">
+
+<style>
+.finance-coming-soon{max-width:760px;margin:28px auto 64px;padding:34px 36px;border:1px solid rgba(56,189,248,.22);border-radius:24px;background:linear-gradient(135deg,rgba(14,165,233,.08),rgba(99,102,241,.06));display:flex;gap:20px;align-items:flex-start;box-shadow:0 16px 40px rgba(15,23,42,.06)}
+.finance-coming-icon{flex:0 0 auto;width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-size:24px;font-weight:800;background:#0f172a;color:#fff}
+.finance-coming-soon h2{margin:5px 0 10px;font-size:clamp(1.35rem,2.5vw,1.75rem);line-height:1.35}
+.finance-coming-soon p{margin:0;line-height:1.75;color:#64748b}
+html.dark-mode .finance-coming-soon,body.dark-mode .finance-coming-soon{background:#111827;border-color:#1f2937;box-shadow:none}
+html.dark-mode .finance-coming-icon,body.dark-mode .finance-coming-icon{background:#1e293b;color:#e2e8f0}
+html.dark-mode .finance-coming-soon p,body.dark-mode .finance-coming-soon p{color:#94a3b8}
+@media(max-width:640px){.finance-coming-soon{margin-top:18px;padding:24px 22px;border-radius:20px;gap:15px}.finance-coming-icon{width:40px;height:40px;border-radius:13px;font-size:20px}}
+</style>
 </head>
 <body class="finance-page">
 <header class="site-header"><div class="container header-inner">
@@ -32,58 +43,19 @@
 
 <main>
 <section class="finance-hero"><div class="container">
-  <p class="finance-kicker">MARKET SNAPSHOT</p>
-  <h1>오늘의 금융 시세</h1>
-  <p class="finance-intro">원·달러 환율과 한국·미국 주요 지수를 Yahoo Finance 기준으로 간결하게 확인하세요.</p>
+  <p class="finance-kicker">FINANCE</p>
+  <h1>금융</h1>
+  <p class="finance-intro">환율과 국내외 주요 지수 정보를 더 안정적이고 보기 편한 방식으로 준비하고 있습니다.</p>
 </div></section>
 
 <section class="section finance-market-section"><div class="container">
-  <div class="finance-section-head">
-    <div><span class="finance-eyebrow">주요 시세</span><h2>환율·증시 지수</h2></div>
-    <div class="finance-refresh-wrap"><span class="finance-live-badge" id="financeLiveBadge">● 60초 자동 갱신</span><button type="button" class="finance-refresh" onclick="loadAllMarkets(true)">새로고침</button></div>
-  </div>
-  <p class="finance-data-note">시세 출처는 <strong>Yahoo Finance</strong>입니다. 거래소 상황에 따라 실시간 또는 지연 시세가 표시될 수 있으며, 장 마감·휴장 중에는 최근 거래값이 표시됩니다.</p>
-
-  <section class="finance-market-group" aria-labelledby="kr-market-title">
-    <div class="finance-group-head"><div><span class="finance-group-dot kr"></span><h3 id="kr-market-title">한국 시장</h3></div><span>환율 · KOSPI · KOSDAQ</span></div>
-    <div class="finance-widget-grid finance-grid-kr">
-      <article class="finance-market-card" data-market="usdkrw">
-        <div class="market-card-head"><div><span>USD / KRW</span><h4>원·달러 환율</h4></div></div>
-        <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
-        <a class="market-source-link" href="https://finance.yahoo.com/quote/KRW=X/" target="_blank" rel="noopener">Yahoo Finance →</a>
-      </article>
-      <article class="finance-market-card" data-market="kospi">
-        <div class="market-card-head"><div><span>KOSPI</span><h4>코스피</h4></div></div>
-        <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
-        <a class="market-source-link" href="https://finance.yahoo.com/quote/%5EKS11/" target="_blank" rel="noopener">Yahoo Finance →</a>
-      </article>
-      <article class="finance-market-card" data-market="kosdaq">
-        <div class="market-card-head"><div><span>KOSDAQ</span><h4>코스닥</h4></div></div>
-        <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
-        <a class="market-source-link" href="https://finance.yahoo.com/quote/%5EKQ11/" target="_blank" rel="noopener">Yahoo Finance →</a>
-      </article>
+  <div class="finance-coming-soon" role="status" aria-live="polite">
+    <span class="finance-coming-icon" aria-hidden="true">↗</span>
+    <div>
+      <span class="finance-eyebrow">FINANCE UPDATE</span>
+      <h2>금융 시세 기능은 향후 업데이트 예정입니다.</h2>
+      <p>더 안정적인 데이터 제공 방식을 검토한 뒤 원·달러 환율과 국내외 주요 지수 정보를 다시 제공할 예정입니다.</p>
     </div>
-  </section>
-
-  <section class="finance-market-group" aria-labelledby="us-market-title">
-    <div class="finance-group-head"><div><span class="finance-group-dot us"></span><h3 id="us-market-title">미국 시장</h3></div><span>NASDAQ · NYSE</span></div>
-    <div class="finance-widget-grid finance-grid-us">
-      <article class="finance-market-card" data-market="nasdaq">
-        <div class="market-card-head"><div><span>NASDAQ Composite</span><h4>나스닥</h4></div></div>
-        <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
-        <a class="market-source-link" href="https://finance.yahoo.com/quote/%5EIXIC/" target="_blank" rel="noopener">Yahoo Finance →</a>
-      </article>
-      <article class="finance-market-card" data-market="nyse">
-        <div class="market-card-head"><div><span>NYSE Composite</span><h4>NYSE</h4></div></div>
-        <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
-        <a class="market-source-link" href="https://finance.yahoo.com/quote/%5ENYA/" target="_blank" rel="noopener">Yahoo Finance →</a>
-      </article>
-    </div>
-  </section>
-
-  <div class="finance-guide-box">
-    <strong>참고</strong>
-    <p>환율과 지수는 계속 움직입니다. 실제 환전·매매를 할 때는 이용하는 은행이나 증권사의 최종 체결 시세를 확인하세요.</p>
   </div>
 </div></section>
 </main>
@@ -93,123 +65,4 @@
 <div class="footer-links"><a href="/about.html">사이트 소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/contact.html">문의</a></div>
 </div><div class="container copyright">© 2026 한이네생활정보. All rights reserved.</div></footer>
 <script src="/dark-mode.js?v=3"></script>
-<script>
-(function(){
-  const markets={
-    usdkrw:{symbol:'KRW=X',decimals:2},
-    kospi:{symbol:'^KS11',decimals:2},
-    kosdaq:{symbol:'^KQ11',decimals:2},
-    nasdaq:{symbol:'^IXIC',decimals:2},
-    nyse:{symbol:'^NYA',decimals:2}
-  };
-
-  const PROXIES = [
-    url => 'https://proxy.killcors.com/?url=' + encodeURIComponent(url),
-    url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
-  ];
-
-  async function fetchJson(url, timeoutMs=12000){
-    const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(), timeoutMs);
-    try{
-      const r=await fetch(url,{cache:'no-store',signal:controller.signal,headers:{'Accept':'application/json'}});
-      if(!r.ok) throw new Error('HTTP '+r.status);
-      const d=await r.json();
-      if(!d || !d.chart) throw new Error('Invalid Yahoo payload');
-      return d;
-    } finally { clearTimeout(timer); }
-  }
-
-  async function getYahoo(symbol){
-    const target='https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(symbol)+'?range=1d&interval=1m&includePrePost=true&events=div%2Csplits';
-    const attempts=[target, ...PROXIES.map(fn=>fn(target))];
-    let lastError;
-    for(const url of attempts){
-      try{
-        const data=await fetchJson(url);
-        const result=data?.chart?.result?.[0];
-        if(!result?.meta) throw new Error('No Yahoo result');
-        const returned=result.meta.symbol || '';
-        if(returned && returned.toUpperCase() !== symbol.toUpperCase()) throw new Error('Symbol mismatch');
-        return data;
-      }catch(e){ lastError=e; }
-    }
-    throw lastError || new Error('Yahoo fetch failed');
-  }
-
-  function setBadge(text, state='ok'){
-    const el=document.getElementById('financeLiveBadge');
-    if(!el) return;
-    el.textContent=text;
-    el.dataset.state=state;
-  }
-
-  function show(key,q){
-    const card=document.querySelector('[data-market="'+key+'"]'); if(!card) return;
-    const val=card.querySelector('.market-value'), ch=card.querySelector('.market-change'), tm=card.querySelector('.market-time');
-    if(!q || !Number.isFinite(q.price)){
-      val.textContent='불러오지 못했습니다';
-      ch.textContent='잠시 후 자동으로 다시 시도합니다';
-      ch.className='market-change neutral';
-      tm.textContent='Yahoo Finance';
-      return;
-    }
-    val.textContent=q.price.toLocaleString('ko-KR',{maximumFractionDigits:q.decimals,minimumFractionDigits:q.decimals});
-    const diff=q.diff, ratio=q.ratio, up=ratio>0, down=ratio<0, sign=up?'+':'';
-    ch.textContent=sign+diff.toLocaleString('ko-KR',{maximumFractionDigits:2,minimumFractionDigits:2})+' ('+sign+ratio.toFixed(2)+'%)';
-    ch.className='market-change '+(up?'up':down?'down':'neutral');
-    tm.textContent=q.time ? 'Yahoo Finance · '+q.time+' 기준' : 'Yahoo Finance';
-  }
-
-  async function loadOne(key){
-    const cfg=markets[key];
-    try{
-      const d=await getYahoo(cfg.symbol);
-      const result=d?.chart?.result?.[0];
-      const m=result?.meta;
-      if(!m) throw new Error('No market data');
-      let price=Number(m.regularMarketPrice);
-      if(!Number.isFinite(price)){
-        const arr=result?.indicators?.quote?.[0]?.close || [];
-        for(let i=arr.length-1;i>=0;i--){ if(Number.isFinite(arr[i])){price=arr[i];break;} }
-      }
-      const prev=Number(m.chartPreviousClose ?? m.previousClose ?? m.regularMarketPreviousClose);
-      const diff=Number.isFinite(prev)?price-prev:0;
-      const ratio=Number.isFinite(prev)&&prev!==0?diff/prev*100:0;
-      const zone=m.exchangeTimezoneName||'UTC';
-      const epoch=Number(m.regularMarketTime);
-      let time='';
-      if(Number.isFinite(epoch)){
-        try{time=new Intl.DateTimeFormat('ko-KR',{timeZone:zone,month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(epoch*1000));}catch(_){ }
-      }
-      show(key,{price,diff,ratio,time,decimals:cfg.decimals});
-      return true;
-    }catch(e){ show(key,null); return false; }
-  }
-
-  let loading=false;
-  window.loadAllMarkets=async function(manual=false){
-    if(loading) return;
-    loading=true;
-    setBadge(manual?'● 새로고침 중':'● 시세 불러오는 중','loading');
-    if(manual){
-      document.querySelectorAll('.finance-market-card').forEach(card=>{
-        card.querySelector('.market-value').textContent='불러오는 중';
-        card.querySelector('.market-change').textContent='Yahoo Finance 최신값 확인 중';
-        card.querySelector('.market-change').className='market-change';
-        card.querySelector('.market-time').textContent='';
-      });
-    }
-    const results=await Promise.all(Object.keys(markets).map(loadOne));
-    const ok=results.filter(Boolean).length;
-    if(ok===results.length) setBadge('● 60초 자동 갱신','ok');
-    else if(ok>0) setBadge('● 일부 시세 재시도 중','warn');
-    else setBadge('● 연결 재시도 중','error');
-    loading=false;
-  };
-
-  loadAllMarkets(false);
-  setInterval(()=>loadAllMarkets(false),60000);
-})();
-</script>
 </body></html>
