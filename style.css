@@ -2390,3 +2390,76 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   html.dark-mode .article [style*="border:2px solid #"],
   html.dark-mode .article [style*="border: 2px solid #"]{border-color:#334155!important;}
 }
+
+/* MOBILE-RECENT-VERTICAL-LIST-V82
+   Mobile article footer recent posts: items stack vertically; each item stays a horizontal row. */
+@media (max-width:700px){
+  .article-sidebar .recent-post-list{
+    display:flex!important;
+    flex-direction:column!important;
+    flex-wrap:nowrap!important;
+    gap:8px!important;
+    overflow:visible!important;
+    width:100%!important;
+    max-width:100%!important;
+    padding:0!important;
+    margin:0!important;
+    scroll-snap-type:none!important;
+  }
+  .article-sidebar .recent-post-item{
+    display:grid!important;
+    grid-template-columns:64px minmax(0,1fr)!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    flex:none!important;
+    gap:10px!important;
+    align-items:center!important;
+    padding:9px 0!important;
+    margin:0!important;
+    border:0!important;
+    border-bottom:1px solid #e7ebf1!important;
+    border-radius:0!important;
+    background:transparent!important;
+    overflow:visible!important;
+    scroll-snap-align:none!important;
+  }
+  .article-sidebar .recent-post-item:last-child{border-bottom:0!important;}
+  .article-sidebar .recent-post-item img{
+    width:64px!important;
+    height:48px!important;
+    min-width:64px!important;
+    border-radius:8px!important;
+    object-fit:cover!important;
+  }
+  .article-sidebar .recent-post-item > span{
+    display:block!important;
+    min-width:0!important;
+    width:100%!important;
+    overflow:visible!important;
+  }
+  .article-sidebar .recent-post-item strong{
+    display:block!important;
+    width:100%!important;
+    font-size:13.5px!important;
+    line-height:1.45!important;
+    white-space:normal!important;
+    word-break:keep-all!important;
+    overflow-wrap:break-word!important;
+    -webkit-line-clamp:unset!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+  }
+  .article-sidebar .recent-post-item small{
+    display:block!important;
+    margin-top:3px!important;
+    font-size:11.5px!important;
+  }
+  html.dark-mode .article-sidebar .recent-post-item{
+    background:transparent!important;
+    border-color:#27364b!important;
+    color:#e8eef7!important;
+  }
+  html.dark-mode .article-sidebar .recent-post-item strong{color:#f7f9fc!important;}
+  html.dark-mode .article-sidebar .recent-post-item small{color:#aebbd0!important;}
+}
