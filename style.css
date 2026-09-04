@@ -819,29 +819,37 @@ img{max-width:100%}
   #home-latest-grid .article-card h3{font-size:13.5px!important}
 }
 
-/* V6.8 — refined mobile homepage intro */
+/* V6.9 — modern editorial mobile homepage intro */
 @media(max-width:700px){
   .hero-description-refined{
     width:min(100%,350px)!important;
-    margin:16px auto 0!important;
-    padding:16px 14px 15px;
+    margin:17px auto 0!important;
+    padding:18px 15px 17px!important;
     box-sizing:border-box;
     text-align:center!important;
-    border:1px solid #e3e9ef;
-    border-radius:16px;
-    background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(248,251,253,.92));
-    box-shadow:0 8px 24px rgba(13,27,61,.055);
+    border:1px solid rgba(13,27,61,.09);
+    border-radius:18px;
+    background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(246,250,250,.96));
+    box-shadow:0 10px 30px rgba(13,27,61,.06);
   }
-  .hero-description-refined span{display:block;text-align:center}
+  .hero-description-refined span{display:block!important;width:100%!important;text-align:center!important}
+  .hero-description-refined .hero-desc-main,
+  .hero-description-refined .hero-desc-sub,
+  .hero-description-refined .hero-desc-point{
+    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif!important;
+    word-break:keep-all;
+  }
   .hero-description-refined .hero-desc-main{
-    color:#0D1B3D;font-size:15px;font-weight:800;line-height:1.45;letter-spacing:-.35px;
+    color:#17243f;font-size:17px;font-weight:700;line-height:1.5;letter-spacing:-.55px;
   }
   .hero-description-refined .hero-desc-sub{
-    margin-top:5px;color:#5f6b7a;font-size:13px;line-height:1.65;letter-spacing:-.2px;
+    position:relative;margin-top:9px!important;color:#168378;font-size:15px;font-weight:700;line-height:1.45;letter-spacing:-.45px;
   }
-  .hero-description-refined .hero-desc-sub b{color:#0f766e;font-weight:800}
+  .hero-description-refined .hero-desc-sub:after{
+    content:"";display:block;width:30px;height:1px;margin:11px auto 0;background:rgba(13,27,61,.18);
+  }
   .hero-description-refined .hero-desc-point{
-    width:max-content;max-width:100%;margin:10px auto 0;padding:5px 10px;
-    border-radius:999px;background:#edf7f5;color:#0f766e;font-size:11.5px;font-weight:800;line-height:1.4;
+    margin:10px auto 0!important;padding:0!important;background:none!important;border-radius:0!important;
+    color:#536174;font-size:12.5px;font-weight:600;line-height:1.55;letter-spacing:-.3px;
   }
 }
