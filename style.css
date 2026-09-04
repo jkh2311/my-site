@@ -1048,3 +1048,249 @@ html.dark-mode .dark-mode-toggle:hover{background:#fff!important;color:#0b1020!i
   .main-nav .dark-mode-toggle .dark-mode-label,header nav .dark-mode-toggle .dark-mode-label{display:none!important}
   .main-nav .dark-mode-toggle .dark-mode-icon,header nav .dark-mode-toggle .dark-mode-icon{font-size:15px}
 }
+
+/* DARK-MODE-V2-CONTRAST-FIX — readable UI everywhere, PC + mobile */
+html.dark-mode .page-hero,
+html.dark-mode .prose,
+html.dark-mode .hani-about,
+html.dark-mode .form-card,
+html.dark-mode .admin-card,
+html.dark-mode .contact-box,
+html.dark-mode .notice,
+html.dark-mode .summary-box,
+html.dark-mode .guide-step,
+html.dark-mode .method-box,
+html.dark-mode .photo-rule,
+html.dark-mode .photo-diagram,
+html.dark-mode .quick-fact,
+html.dark-mode .application-card,
+html.dark-mode .secondary-cta,
+html.dark-mode .compare-card,
+html.dark-mode .notice-blue,
+html.dark-mode .photo-detail-box,
+html.dark-mode .photo-spec-grid>div,
+html.dark-mode .rule-photo,
+html.dark-mode .photo-guide-pro,
+html.dark-mode .passport-strict,
+html.dark-mode .quick-photo-cards>div,
+html.dark-mode .empty-category,
+html.dark-mode .article-hashtags,
+html.dark-mode .popular-post-item,
+html.dark-mode .article-toc,
+html.dark-mode .article-section-with-icon,
+html.dark-mode .compound-tool,
+html.dark-mode .compound-inputs,
+html.dark-mode .compound-summary,
+html.dark-mode .compound-big,
+html.dark-mode .compound-summary-grid>div,
+html.dark-mode .compound-chart-wrap,
+html.dark-mode .compound-year-table-card,
+html.dark-mode .compound-guide-section,
+html.dark-mode .compound-explain-section,
+html.dark-mode .compound-rule-section,
+html.dark-mode .compound-why-section,
+html.dark-mode .compound-step-card,
+html.dark-mode .interest-card,
+html.dark-mode .rule72-grid div,
+html.dark-mode .why-grid>div,
+html.dark-mode .calculator-search-card,
+html.dark-mode .calculator-category-panel,
+html.dark-mode .calculator-tool,
+html.dark-mode .calc-intro,
+html.dark-mode .calc-details,
+html.dark-mode .calc-result,
+html.dark-mode .calc-result-box,
+html.dark-mode .calc-note,
+html.dark-mode .calc-warning,
+html.dark-mode .wage-box{
+  background:#172033!important;
+  border-color:#334155!important;
+  color:#e6edf7!important;
+  box-shadow:none!important;
+}
+
+/* Light hero/section blocks that previously washed text out */
+html.dark-mode .page-hero,
+html.dark-mode .page-hero .container,
+html.dark-mode .page-hero .prose{
+  background:#111827!important;
+  color:#e6edf7!important;
+}
+html.dark-mode .page-hero h1,
+html.dark-mode .page-hero h2,
+html.dark-mode .page-hero h3,
+html.dark-mode .page-hero p,
+html.dark-mode .page-hero .section-label,
+html.dark-mode .page-hero .eyebrow{
+  color:#e6edf7!important;
+}
+html.dark-mode .page-hero p{color:#bac6d8!important}
+html.dark-mode .section-label{color:#91a4bf!important}
+
+/* General text contrast inside dark cards/panels */
+html.dark-mode .hani-about h1,
+html.dark-mode .hani-about h2,
+html.dark-mode .hani-about h3,
+html.dark-mode .form-card h1,
+html.dark-mode .form-card h2,
+html.dark-mode .form-card h3,
+html.dark-mode .calculator-search-card h1,
+html.dark-mode .calculator-search-card h2,
+html.dark-mode .calculator-search-card h3,
+html.dark-mode .calculator-category-panel h2,
+html.dark-mode .calculator-category-panel h3,
+html.dark-mode .calculator-tool h2,
+html.dark-mode .calculator-tool h3,
+html.dark-mode .article-hashtags h2,
+html.dark-mode .popular-posts h2,
+html.dark-mode .article-toc strong,
+html.dark-mode .info-card strong,
+html.dark-mode .compound-section-head h2,
+html.dark-mode .compound-step-card h3,
+html.dark-mode .interest-card h3,
+html.dark-mode .why-grid h3,
+html.dark-mode .rule72-grid b{
+  color:#f5f8fc!important;
+}
+html.dark-mode .hani-about p,
+html.dark-mode .hani-about span,
+html.dark-mode .form-card p,
+html.dark-mode .form-card .form-help,
+html.dark-mode .calculator-search-card p,
+html.dark-mode .calculator-category-panel p,
+html.dark-mode .calculator-tool p,
+html.dark-mode .calc-intro,
+html.dark-mode .calc-details,
+html.dark-mode .compound-section-head p,
+html.dark-mode .compound-step-card p,
+html.dark-mode .interest-card p,
+html.dark-mode .why-grid p,
+html.dark-mode .popular-copy em,
+html.dark-mode .lead-line p{
+  color:#bac6d8!important;
+}
+
+/* Forms */
+html.dark-mode .form-field label,
+html.dark-mode .calc-field label,
+html.dark-mode .inline-check,
+html.dark-mode .calculator-search-card label{
+  color:#e6edf7!important;
+}
+html.dark-mode input,
+html.dark-mode select,
+html.dark-mode textarea,
+html.dark-mode .form-field input,
+html.dark-mode .form-field select,
+html.dark-mode .form-field textarea,
+html.dark-mode .calculator-search-row input{
+  background:#0b1220!important;
+  color:#f5f8fc!important;
+  border-color:#475569!important;
+  caret-color:#f5f8fc!important;
+}
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder{color:#8291a8!important;opacity:1!important}
+html.dark-mode select option{background:#0b1220!important;color:#f5f8fc!important}
+html.dark-mode .form-status{background:#202b3d!important;color:#e6edf7!important}
+
+/* Calculator hub/category panels */
+html.dark-mode .calculator-category-btn,
+html.dark-mode .calculator-category-close,
+html.dark-mode .calculator-close,
+html.dark-mode .calc-reset,
+html.dark-mode .calc-secondary{
+  background:#202b3d!important;
+  border-color:#475569!important;
+  color:#f5f8fc!important;
+}
+html.dark-mode .calculator-category-btn:hover,
+html.dark-mode .calculator-category-close:hover,
+html.dark-mode .calculator-close:hover,
+html.dark-mode .calc-reset:hover,
+html.dark-mode .calc-secondary:hover{background:#29364b!important}
+html.dark-mode .calculator-tool{background:#172033!important}
+html.dark-mode .calculator-tool-head,
+html.dark-mode .calculator-category-head,
+html.dark-mode .calculator-category-panel-head{border-color:#334155!important}
+html.dark-mode .mini-badge{background:#26354a!important;color:#a9d0ff!important}
+html.dark-mode .calc-note.warning,
+html.dark-mode .warning-box,
+html.dark-mode .admin-note{background:#2a2416!important;border-color:#6b5730!important;color:#f5d991!important}
+
+/* Tables */
+html.dark-mode table,
+html.dark-mode .table,
+html.dark-mode .result-table,
+html.dark-mode .compound-year-table{background:#172033!important;color:#e6edf7!important}
+html.dark-mode th,
+html.dark-mode .table th,
+html.dark-mode .result-table th,
+html.dark-mode .compound-year-table thead th{background:#202b3d!important;color:#f5f8fc!important;border-color:#3b4a60!important}
+html.dark-mode td,
+html.dark-mode .table td,
+html.dark-mode .result-table td,
+html.dark-mode .compound-year-table tbody td{background:#172033!important;color:#dce6f3!important;border-color:#334155!important}
+html.dark-mode tr:hover td,
+html.dark-mode .compound-year-table tbody tr:hover td{background:#1d293a!important}
+
+/* Pills/tabs/cards which stayed white */
+html.dark-mode .category-tabs a,
+html.dark-mode .article-pagination button,
+html.dark-mode .home-pagination button,
+html.dark-mode .article-hashtag-list span,
+html.dark-mode .interest-flow b{
+  background:#202b3d!important;
+  color:#dce6f3!important;
+  border-color:#3b4a60!important;
+}
+html.dark-mode .category-tabs a.active,
+html.dark-mode .home-pagination button.active{background:#2563eb!important;color:#fff!important;border-color:#2563eb!important}
+html.dark-mode .popular-post-item:hover{background:#202b3d!important}
+
+/* Keep primary/accent buttons readable */
+html.dark-mode .btn-primary,
+html.dark-mode .calc-primary,
+html.dark-mode .calculator-search-row button,
+html.dark-mode .article-search-input-row button{
+  background:#2563eb!important;
+  color:#fff!important;
+  border-color:#2563eb!important;
+}
+html.dark-mode .btn-secondary{background:#202b3d!important;color:#f5f8fc!important;border-color:#475569!important}
+
+/* Search bar text and sticky shell */
+html.dark-mode .article-search-box>label{color:#aebbd0!important}
+html.dark-mode .article-search-wrap{background:#111827!important;border-color:#2c3a50!important}
+html.dark-mode .article-search-box{background:#111827!important}
+html.dark-mode .article-search-results{background:#111827!important;border-color:#334155!important}
+html.dark-mode .article-search-result-cat,
+html.dark-mode .article-search-message{color:#9fb0c8!important}
+
+/* Header/logo/mascot details */
+html.dark-mode .hani-card{background:#172033!important;border-color:#334155!important}
+html.dark-mode .hani-card figcaption{background:#172033!important;color:#e6edf7!important}
+html.dark-mode .hani-card figcaption span{color:#bac6d8!important}
+
+/* Links retain clear accessible blue/teal accents */
+html.dark-mode a{color:#8cc5ff!important}
+html.dark-mode a:hover{color:#b8dcff!important}
+html.dark-mode .article-hashtag-list span{color:#9ccaff!important}
+html.dark-mode .compound-section-badge,
+html.dark-mode .interest-card.compound .interest-label{background:#153b38!important;color:#86e1d7!important}
+html.dark-mode .compound-tip-box{background:#15342f!important;border-color:#285b54!important}
+html.dark-mode .compound-tip-box p{color:#c0ddd8!important}
+html.dark-mode .compound-explain-note{background:#18283a!important}
+html.dark-mode .rule72-hero .rule72-note{background:#202b3d!important;color:#dce6f3!important;border-color:#3b4a60!important}
+
+/* Ensure dark-mode button is always visible in both desktop and mobile */
+html.dark-mode .dark-mode-toggle,
+.dark-mode-toggle{visibility:visible!important;opacity:1!important}
+
+@media(max-width:699px){
+  html.dark-mode .page-hero{background:#111827!important}
+  html.dark-mode .form-card,
+  html.dark-mode .hani-about,
+  html.dark-mode .calculator-search-card,
+  html.dark-mode .calculator-category-panel{background:#172033!important;color:#e6edf7!important}
+}
