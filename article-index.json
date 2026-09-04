@@ -4,265 +4,303 @@
     "description": "2026년 8월 31일부터 시범운영이 시작된 소상공인 특화 신용평가(SCB)를 정리합니다. 매출·업종·상권 등 새 평가기준, 대출승인·한도·금리 우대 가능성, 참여은행과 적용일정을 공식자료 기준으로 확인하세요.",
     "category": "금융정보",
     "url": "/articles/small-business-loan-scb-changes.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "대출·보증"
   },
   {
     "title": "청년미래적금 혜택 달라진점 총정리",
     "description": "청년미래적금의 기존 혜택과 2027년 예산안에서 발표된 변경안을 비교합니다. 대상, 월 10·30·50만원 납입 시 정부기여금, 기존 가입자 소급 적용 계획, 적용 예정시기와 신청·확인 방법을 정리합니다.",
     "category": "금융정보",
     "url": "/articles/youth-future-savings-benefit-changes.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "적금·연금"
   },
   {
     "title": "캐시워크 돈버는퀴즈 오늘 정답｜9월 4일 실시간 업데이트",
     "description": "2026년 9월 4일 캐시워크 돈버는퀴즈 정답을 브랜드별로 빠르게 확인하세요. 당함량, 피지컬·점프업·모두의창업·건강돌봄지원, 알룰로스 등 오늘 확인된 정답과 참여 전 유의사항을 정리합니다.",
     "category": "IT/생활꿀팁",
     "url": "/articles/cashwalk-money-quiz-2026-09-04.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "앱테크"
   },
   {
     "title": "연 4.5% 청년대출 나왔다! 최대 500만원 받는 조건",
     "description": "청년 미래이음 대출의 만 19~34세 신청대상, 연 4.5% 이내 금리, 최대 500만원 한도, 최대 11년 이용기간과 미소금융 신청방법을 정리합니다.",
     "category": "금융정보",
     "url": "/articles/youth-future-link-loan-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "대출·보증"
   },
   {
     "title": "햇살론 일반보증 자격·한도·금리",
     "description": "2026 햇살론 일반보증의 소득·신용 자격, 최대 1,500만원 한도, 대출금리와 보증료, 상환방식, 신청 순서를 공식 기준으로 정리합니다.",
     "category": "금융정보",
     "url": "/articles/hessal-loan-general-guarantee-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "대출·보증"
   },
   {
     "title": "햇살론 특례보증 자격·신청방법",
     "description": "2026 햇살론 특례보증의 연소득·신용 자격, 최대 1,000만원 한도, 12.5%·사회적배려대상자 9.9% 금리, 성실상환 혜택과 신청방법을 정리합니다.",
     "category": "금융정보",
     "url": "/articles/hessal-loan-special-guarantee-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "대출·보증"
   },
   {
     "title": "전세특례보증 조건·한도·신청방법",
     "description": "정책서민금융 이용자를 위한 전세특례보증의 소득·상환 조건, 최대 8천만원 보증한도, 협약은행, 예상한도 조회와 신청 순서를 정리합니다.",
     "category": "부동산정보",
     "url": "/articles/rent-special-guarantee-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "전세·보증"
   },
   {
     "title": "전기차 주행가능거리, 기본 1000km 예상",
     "description": "현재 전기차 주행가능거리와 전고체 배터리 상용화 이후 1,000km급 주행거리 가능성, 제조사·고체전해질·상용화 시점을 정리합니다.",
     "category": "자동차정보",
     "url": "/articles/electric-car-range-solid-state-battery-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "전기차"
   },
   {
     "title": "전기차 보조금 언제 나올까? 조회·신청방법 한눈에",
     "description": "2026 전기차 보조금 잔여 물량 조회부터 국비·지방비, 신청방법, 정부 예산과 지역별 추경·추가 공고 확인 방법까지 정리합니다.",
     "category": "지원금/정책",
     "url": "/articles/electric-car-subsidy-check-apply-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "지원금·혜택"
   },
   {
     "title": "무료 상생보험 가입대상·신청방법",
     "description": "2026년 9월 출시되는 무료 상생보험의 대상 지역, 소상공인·취약계층 가입대상, 신용생명보험과 지역 맞춤형 손해보험, 신청·확인 방법을 정리합니다.",
     "category": "금융정보",
     "url": "/articles/free-mutual-insurance-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "보험"
   },
   {
     "title": "개인정보 유출 확인하는 방법",
     "description": "내 아이디·이메일과 비밀번호가 유출됐는지 털린 내 정보 찾기에서 확인하는 방법과 유출 확인 후 비밀번호 변경, 2단계 인증, 명의도용 예방 순서를 정리합니다.",
     "category": "IT/생활꿀팁",
     "url": "/articles/personal-data-leak-check-guide.html",
-    "publishedAt": "2026-09-04"
+    "publishedAt": "2026-09-04",
+    "subcategory": "보안"
   },
   {
     "title": "대출이자 계산기 사용방법·금리·기간별 상환액·총 이자 총정리",
     "description": "대출금액, 연 금리, 대출기간, 상환방식을 입력해 월 상환액과 총 이자, 회차별 상환 스케줄을 계산하고 Excel 파일로 내려받는 방법을 정리합니다.",
     "category": "금융정보",
     "url": "/articles/loan-interest-calculator-guide.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "대출·보증"
   },
   {
     "title": "1억 만들기 계산기 사용방법·월 적립금·수익률·목표 도달 기간 총정리",
     "description": "현재 자산과 월 적립금, 연 수익률을 입력해 1억 원까지 걸리는 예상 기간과 연도별 자산 성장 과정을 계산합니다.",
     "category": "금융정보",
     "url": "/articles/one-hundred-million-calculator-guide.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "금융계산"
   },
   {
     "title": "미래 투자가치 계산기 사용방법·수익률 계산·목표금액 도달 기간 총정리",
     "description": "현재 투자금과 월 추가 투자금, 목표 수익률, 투자기간을 입력해 미래 투자가치를 계산하고 연도별 그래프·표와 투자수익을 확인합니다.",
     "category": "금융정보",
     "url": "/articles/future-investment-value-calculator-guide.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "금융계산"
   },
   {
     "title": "복리 계산기 사용방법·복리이자 계산·72의 법칙·단리 복리 차이 총정리",
     "description": "초기 투자금과 월 적립금, 연 수익률, 투자기간을 입력해 복리 결과를 계산하고 연도별 그래프·표, 단리와 복리 차이, 72의 법칙과 복리 주기를 확인합니다.",
     "category": "금융정보",
     "url": "/articles/compound-interest-calculator-guide.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "금융계산"
   },
   {
     "title": "퇴직금 계산방법·퇴직금 계산기·평균임금·지급기한 총정리",
     "description": "퇴직금 지급대상, 평균임금 계산방법, 퇴직 전 3개월 임금 반영방법, 퇴직금 지급기한과 미지급 대응을 정리하고 한이네생활정보 퇴직금 계산기로 바로 계산할 수 있습니다.",
     "category": "지원금/정책",
     "url": "/articles/retirement-pay-calculation-guide.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "고용·근로"
   },
   {
     "title": "국민연금 예상수령액 조회방법·납부내역·가입기간 확인·예상연금 조회 바로가기",
     "url": "/articles/national-pension-expected-payment-history-guide.html",
     "category": "금융정보",
     "description": "국민연금 노령연금 수령 기준과 출생연도별 수급개시연령, 최소 가입기간 10년, 보험료 납부내역·가입기간·예상수령액 조회방법과 국민연금공단 바로가기를 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "적금·연금"
   },
   {
     "title": "자동차 과태료·범칙금 조회방법·미납내역 확인·납부 바로가기",
     "url": "/articles/vehicle-fines-penalties-lookup-payment-guide.html",
     "category": "자동차정보",
     "description": "경찰청 교통민원24(이파인)에서 자동차 과태료·범칙금과 미납내역을 조회하고 납부하는 방법, 과태료와 범칙금 차이, 대표 기준, 납부순서와 억울한 과태료 이의제기 방법을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "교통·과태료"
   },
   {
     "title": "숨은 보험금 조회방법·내보험찾아줌 조회·보험금 청구방법",
     "url": "/articles/hidden-insurance-myinsurance-find-guide.html",
     "category": "금융정보",
     "description": "생명보험협회·손해보험협회 내보험찾아줌에서 가입 보험과 미청구보험금을 조회하는 방법, 조회순서, 상속인 조회, 숨은 보험금 확인 후 보험사 청구방법과 필요서류를 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "보험"
   },
   {
     "title": "휴대폰 명의도용 확인방법·가입된 통신서비스 조회·명의도용 차단방법",
     "url": "/articles/phone-identity-theft-check-block-guide.html",
     "category": "IT/생활꿀팁",
     "description": "Msafer에서 내 명의 휴대폰·알뜰폰·인터넷 등 가입 통신서비스를 확인하고 신규 개통을 차단하는 방법, 명의도용 발견 시 통신사 정지·신고·경찰 ECRM 대응 순서를 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "보안"
   },
   {
     "title": "배우자 유산·사산휴가 신청방법·휴가기간·급여·달라진 점",
     "url": "/articles/spouse-miscarriage-stillbirth-leave-guide.html",
     "category": "지원금/정책",
     "description": "2026년 9월 18일부터 신설되는 배우자 유산·사산휴가의 대상, 5일 휴가·최초 3일 유급, 필요서류, 회사 신청방법, 우선지원대상기업 고용보험 급여와 현재 기준 달라지는 점을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "고용·근로"
   },
   {
     "title": "가족돌봄휴가·가족돌봄 지원 대상·신청방법·사용방법 총정리",
     "url": "/articles/family-care-leave-support-guide.html",
     "category": "지원금/정책",
     "description": "가족돌봄휴가 대상 가족, 사용사유, 연간 10일·가족돌봄휴직 90일, 신청방법과 순서, 무급 원칙, 아이돌봄서비스 등 실제 활용 가능한 가족돌봄 지원을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "고용·근로"
   },
   {
     "title": "2026 한부모가족 지원금 신청방법·소득기준·아동양육비·신청 바로가기",
     "url": "/articles/2026-single-parent-family-support.html",
     "category": "지원금/정책",
     "description": "2026 한부모가족 지원금 소득기준 65%, 아동양육비 월 23만원, 추가양육비·학용품비·생활보조금과 복지로 신청방법·신청순서를 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "지원금·혜택"
   },
   {
     "title": "2026 온누리상품권 추석 할인 총정리｜10% 특별할인·구매방법·사용처·꿀팁",
     "url": "/articles/2026-chuseok-onnuri-giftcard-discount.html",
     "category": "IT/생활꿀팁",
     "description": "2026 추석 디지털온누리상품권 10% 특별할인, 최대 120만원 구매, 구매방법·사용처·소득공제와 알뜰 사용 꿀팁을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "생활꿀팁"
   },
   {
     "title": "2026 추석 숙박쿠폰·교통 할인 총정리｜숙박 할인권·KTX 10%·예약 꿀팁",
     "url": "/articles/2026-chuseok-stay-transport-discount.html",
     "category": "여행/맛집",
     "description": "2026 추석 비수도권 숙박쿠폰 8만여 장, KTX 평균 10% 운임 인하, 예약방법과 공식 확인 링크·여행비 절약 꿀팁을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "예약"
   },
   {
     "title": "2026 추석 임금체불 생계비 융자 총정리｜연 1.0%·신청방법·대지급금 꿀팁",
     "url": "/articles/2026-chuseok-wage-arrears-living-loan.html",
     "category": "지원금/정책",
     "description": "2026 추석 임금체불 근로자 생계비 융자 연 1.0% 한시금리, 재직·퇴직자 요건, 신청방법, 대지급금 7일 신속지급과 상담번호를 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "고용·근로"
   },
   {
     "title": "2026 추석 농축산물 할인 총정리｜최대 40%·농할상품권 20%·온누리 30% 환급",
     "url": "/articles/2026-chuseok-agricultural-products-discount.html",
     "category": "지원금/정책",
     "description": "2026 추석 농축산물 최대 40% 할인, 농할상품권 20%, 온누리상품권 30% 환급 총정리",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "지원금·혜택"
   },
   {
     "title": "2026 근로장려금 상반기 신청 총정리｜대상·신청기간·최대 115만원·지급일",
     "description": "2026 근로장려금 상반기 신청 대상, 신청기간, 최대 115만원, 지급일과 홈택스·손택스 신청방법을 정리합니다.",
     "category": "지원금/정책",
     "url": "/articles/2026-earned-income-tax-credit-half-year.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "지원금·혜택"
   },
   {
     "title": "추석 KTX 기차표 예매 방법·일정·예약 꿀팁 총정리",
     "description": "2026 추석 KTX와 일반열차 예매 일정, PC·모바일 예매 방법, 결제기간과 예매 성공 꿀팁을 정리합니다.",
     "category": "여행/맛집",
     "url": "/articles/2026-chuseok-ktx-train-reservation.html",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "예약"
   },
   {
     "title": "자동차 보험료 계산·조회·가입 방법 총정리",
     "description": "자동차보험료를 온라인으로 비교하고 조회한 뒤 실제 가입하는 순서, 준비정보, 다이렉트와 오프라인 가입 차이, 갱신 시 확인할 점을 자세히 정리합니다.",
     "category": "자동차정보",
     "url": "/articles/car-insurance-guide.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "자동차보험"
   },
   {
     "title": "운전면허증 신규 발급·갱신·재발급 방법 총정리",
     "description": "운전면허증 신규 발급, 갱신, 적성검사, 재발급의 온라인·방문 절차를 설명합니다.",
-    "category": "자동차정보",
+    "category": "생활정보",
     "url": "/articles/driver-license-guide.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "신분증·발급"
   },
   {
     "title": "외국인등록증 신규 발급·재발급 방법 총정리",
     "description": "외국인등록증 신규 발급, 재발급, 체류지 변경의 기본 절차와 준비물을 설명합니다.",
     "category": "생활정보",
     "url": "/articles/foreigner-registration-guide.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "신분증·발급"
   },
   {
     "title": "건강보험료 미납 조회 및 납부 방법 총정리",
     "description": "국민건강보험 보험료 미납 여부를 조회하고 온라인·가상계좌·카드·인터넷지로·방문으로 납부하는 순서를 자세히 설명합니다.",
     "category": "건강정보",
     "url": "/articles/health-insurance-arrears.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "건강보험"
   },
   {
     "title": "주민등록증 신규·재발급 신청 방법 총정리",
     "description": "주민등록증 신규 발급과 재발급을 온라인·방문 방식으로 자세히 설명합니다.",
     "category": "생활정보",
     "url": "/articles/id-card-issue.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "신분증·발급"
   },
   {
     "title": "여권 최초 발급·재발급 신청 방법 총정리",
     "description": "여권 최초 발급과 재발급의 준비물, 온라인 신청, 방문 신청, 수령 절차를 정리합니다.",
-    "category": "여행/맛집",
+    "category": "생활정보",
     "url": "/articles/passport-issue.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "신분증·발급"
   },
   {
     "title": "여권 사진 규격과 준비 방법 총정리",
     "description": "여권 사진 크기, 얼굴 길이, 배경, 표정, 안경과 온라인 신청용 파일 규격을 공식 기준으로 쉽게 정리합니다.",
-    "category": "여행/맛집",
+    "category": "생활정보",
     "url": "/articles/passport-photo-guide.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "규격·준비"
   },
   {
     "title": "주민등록 등본·초본 발급 방법 총정리",
     "description": "주민등록표 등본과 초본의 차이, 인터넷·방문·무인발급기 신청 방법, 수수료를 정리합니다.",
     "category": "생활정보",
     "url": "/articles/resident-copy.html",
-    "publishedAt": "2026-09-02"
+    "publishedAt": "2026-09-02",
+    "subcategory": "서류발급"
   },
   {
     "title": "2026 추석 고속도로 통행료 면제 총정리｜무료 기간·이용방법·귀성길 꿀팁",
     "url": "/articles/2026-chuseok-highway-toll-free.html",
     "category": "자동차정보",
     "description": "2026 추석 고속도로 통행료 면제 기간 9월 24~27일, 이용방법, 하이패스·일반차로, ROAD PLUS 교통정보와 내비게이션 활용 꿀팁을 정리합니다.",
-    "publishedAt": "2026-09-03"
+    "publishedAt": "2026-09-03",
+    "subcategory": "교통·과태료"
   }
 ]
