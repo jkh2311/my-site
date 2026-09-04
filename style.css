@@ -943,30 +943,108 @@ img{max-width:100%}
   #article-list .article-published{display:block!important;font-size:9.5px!important;line-height:1.35!important;margin:2px 0 0!important;color:#8a94a3!important;}
 }
 
-/* EYE-COMFORT-MODE-V2 — neutral dark screen dimmer, PC + mobile */
-.eye-comfort-toggle{
+/* DARK-MODE-V1 — true dark theme, PC + mobile */
+.dark-mode-toggle{
   appearance:none;-webkit-appearance:none;border:1px solid #d8dee8;background:#fff;color:#344054;
   min-height:36px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
   gap:6px;font:inherit;font-size:12.5px;font-weight:800;line-height:1;white-space:nowrap;cursor:pointer;
   box-shadow:0 1px 2px rgba(16,24,40,.04);transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
   touch-action:manipulation;-webkit-tap-highlight-color:transparent;
 }
-.eye-comfort-toggle:hover{background:#f4f6f8;border-color:#b9c2cf;color:#172033}
-.eye-comfort-toggle:focus-visible{outline:3px solid rgba(54,95,145,.24);outline-offset:2px}
-.eye-comfort-toggle .eye-comfort-icon{font-size:15px;line-height:1}
+.dark-mode-toggle:hover{background:#f4f6f8;border-color:#b9c2cf;color:#172033}
+.dark-mode-toggle:focus-visible{outline:3px solid rgba(54,95,145,.24);outline-offset:2px}
+.dark-mode-toggle .dark-mode-icon{font-size:15px;line-height:1}
 
-/* Darkens the entire page without the previous yellow tint. */
-html.eye-comfort-mode::after{
-  content:"";position:fixed;inset:0;z-index:2147483646;pointer-events:none;
-  background:rgba(5,10,20,.38);
+html.dark-mode{color-scheme:dark;background:#0b1020}
+html.dark-mode body{background:#0f172a!important;color:#dbe4f0!important}
+html.dark-mode .site-header,
+html.dark-mode .article-search-wrap,
+html.dark-mode footer,
+html.dark-mode .site-footer{background:#111827!important;border-color:#2b3548!important;color:#dbe4f0!important}
+html.dark-mode .site-header a,
+html.dark-mode .main-nav a,
+html.dark-mode header nav a,
+html.dark-mode footer a{color:#dbe4f0!important}
+html.dark-mode .brand-wordmark{filter:brightness(0) invert(1) opacity(.94)}
+html.dark-mode .brand-symbol{filter:brightness(1.15)}
+
+html.dark-mode main,
+html.dark-mode .hero,
+html.dark-mode .section,
+html.dark-mode .article-main,
+html.dark-mode .content-section,
+html.dark-mode .latest-section,
+html.dark-mode .category-section{background-color:#0f172a!important;color:#dbe4f0!important}
+
+html.dark-mode h1,html.dark-mode h2,html.dark-mode h3,html.dark-mode h4,
+html.dark-mode strong,html.dark-mode b{color:#f4f7fb!important}
+html.dark-mode p,html.dark-mode li,html.dark-mode dd,html.dark-mode dt,
+html.dark-mode .lead,html.dark-mode .article-published,html.dark-mode .article-published-detail,
+html.dark-mode .eyebrow,html.dark-mode .muted,html.dark-mode small{color:#b9c5d6!important}
+
+html.dark-mode .card,
+html.dark-mode .article-card,
+html.dark-mode .category-card,
+html.dark-mode .calculator-card,
+html.dark-mode .calc-card,
+html.dark-mode .info-card,
+html.dark-mode .summary-card,
+html.dark-mode .side-card,
+html.dark-mode .sidebar-card,
+html.dark-mode .toc,
+html.dark-mode .article-opening-qa,
+html.dark-mode .qa-mini-item,
+html.dark-mode .article-updated,
+html.dark-mode .lead-line,
+html.dark-mode .spec-precision-box,
+html.dark-mode .spec-table,
+html.dark-mode .loan-calculator,
+html.dark-mode .calculator-box,
+html.dark-mode .result-box,
+html.dark-mode .article-search-box,
+html.dark-mode .article-search-results,
+html.dark-mode table,
+html.dark-mode thead,
+html.dark-mode tbody,
+html.dark-mode tr,
+html.dark-mode td,
+html.dark-mode th{
+  background-color:#172033!important;
+  border-color:#334155!important;
+  color:#dbe4f0!important;
+  box-shadow:none!important;
 }
-html.eye-comfort-mode .eye-comfort-toggle{background:#172033;border-color:#445066;color:#fff}
+html.dark-mode .lead-line{border-top-color:#334155!important;border-bottom-color:#334155!important}
+html.dark-mode .article-search-result{background:#172033!important;border-color:#334155!important;color:#e5edf7!important}
+html.dark-mode .article-search-result:hover{background:#202b3d!important}
+
+html.dark-mode input,html.dark-mode select,html.dark-mode textarea{
+  background:#0b1220!important;color:#f3f6fb!important;border-color:#3b475a!important;
+}
+html.dark-mode input::placeholder,html.dark-mode textarea::placeholder{color:#7f8da3!important}
+html.dark-mode button:not(.dark-mode-toggle),
+html.dark-mode .btn:not(.btn-primary){border-color:#3b475a!important}
+
+html.dark-mode a{color:#8ec5ff}
+html.dark-mode .tag,html.dark-mode .badge,html.dark-mode .chip{filter:brightness(.88) saturate(.9)}
+html.dark-mode img:not(.brand-wordmark):not(.brand-symbol){filter:brightness(.88) contrast(1.03)}
+html.dark-mode .article-cover img,html.dark-mode .article-cover-banner img{filter:brightness(.82) contrast(1.04)}
+
+html.dark-mode .hero-description-refined .hero-desc-main,
+html.dark-mode .hero-description-refined .hero-desc-sub,
+html.dark-mode .hero-description-refined .hero-desc-prefix{color:#bdc9d8!important}
+html.dark-mode .hero-description-refined .hero-desc-brand{color:#79b8ff!important;text-shadow:none!important}
+html.dark-mode .hero-title-group h1{color:#f3f6fb!important}
+html.dark-mode .hero-title-group .eyebrow{color:#8c9ab0!important}
+
+html.dark-mode .dark-mode-toggle{background:#eef2f7!important;border-color:#eef2f7!important;color:#111827!important}
+html.dark-mode .dark-mode-toggle:hover{background:#fff!important;color:#0b1020!important}
 
 @media(max-width:699px){
-  .main-nav .eye-comfort-toggle{
+  .main-nav .dark-mode-toggle,header nav .dark-mode-toggle{
     flex:0 0 auto!important;display:inline-flex!important;visibility:visible!important;opacity:1!important;
     min-width:36px;min-height:32px;padding:0 9px;border-radius:999px;position:relative;z-index:3;
   }
-  .main-nav .eye-comfort-toggle .eye-comfort-label{display:none}
-  .main-nav .eye-comfort-toggle .eye-comfort-icon{font-size:15px}
+  .main-nav .dark-mode-toggle .dark-mode-label,header nav .dark-mode-toggle .dark-mode-label{display:none!important}
+  .main-nav .dark-mode-toggle .dark-mode-icon,header nav .dark-mode-toggle .dark-mode-icon{font-size:15px}
 }
