@@ -1,7 +1,14 @@
 [
   {
+    "title": "전기차 주행가능거리, 기본 1000km 예상",
+    "description": "현재 전기차 주행가능거리와 전고체 배터리 상용화 이후 1,000km급 주행거리 가능성, 제조사·고체전해질·상용화 시점을 정리합니다.",
+    "category": "교통정보",
+    "url": "/articles/electric-car-range-solid-state-battery-guide.html",
+    "publishedAt": "2026-09-04"
+  },
+  {
     "title": "전기차 보조금 언제 나올까? 조회·신청방법 한눈에",
-    "description": "2026 전기차 보조금이 우리 지역에 얼마나 남았는지 확인하는 방법부터 차종별 국비·지방비, 예상 보조금 계산, 신청 순서와 주의사항까지 정리합니다.",
+    "description": "2026 전기차 보조금 잔여 물량 조회부터 국비·지방비, 신청방법, 정부 예산과 지역별 추경·추가 공고 확인 방법까지 정리합니다.",
     "category": "교통정보",
     "url": "/articles/electric-car-subsidy-check-apply-guide.html",
     "publishedAt": "2026-09-04"
