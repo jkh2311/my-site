@@ -2591,3 +2591,101 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     margin-top:3px!important;
   }
 }
+
+/* PC-ARTICLE-LAYOUT + DARK-PANEL-CONTRAST-V85
+   Fix calculator article desktop collapse and normalize bright article cards in dark mode. */
+@media (min-width: 981px){
+  .article-main{width:100%!important;min-width:0!important;}
+  .article-main > .article-layout,
+  .article-main > .container.article-layout{
+    width:min(1180px,calc(100% - 40px))!important;
+    max-width:1180px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,820px) minmax(260px,300px)!important;
+    gap:42px!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+  }
+  .article-main > .article-layout > .article,
+  .article-main > .article-layout > .article-content,
+  .article-main > .container.article-layout > .article,
+  .article-main > .container.article-layout > .article-content{
+    display:block!important;
+    width:100%!important;
+    max-width:820px!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    writing-mode:horizontal-tb!important;
+    text-orientation:mixed!important;
+  }
+  .article-main > .article-layout > .article-sidebar,
+  .article-main > .container.article-layout > .article-sidebar{
+    width:100%!important;
+    min-width:0!important;
+    max-width:300px!important;
+    box-sizing:border-box!important;
+  }
+  .article-content :is(h1,h2,h3,p,li,span,strong,small,a),
+  .article :is(h1,h2,h3,p,li,span,strong,small,a){
+    writing-mode:horizontal-tb!important;
+    text-orientation:mixed!important;
+  }
+}
+
+/* The three newer articles used their own pale card colors. Override them on ALL dark-mode sizes. */
+html.dark-mode .article :is(
+  .scb-date,.scb-card,.bank-list span,.eligibility-split>div,.number-strip>div,
+  .money-focus>div,.special-route>div,.rate-stairs>div,
+  .answer-now,.quiz-item,.how-card>div
+){
+  background:#111c2e!important;
+  background-color:#111c2e!important;
+  border-color:#334155!important;
+  color:#e8eef7!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article :is(.scb-green,.compare-note,.status-box){
+  background:#10231f!important;
+  border-color:#2f6658!important;
+  color:#e8eef7!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article :is(.scb-warn,.date-alert,.warning-card,.live-note){
+  background:#211c12!important;
+  border-color:#6b592e!important;
+  color:#e8eef7!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article .decision{
+  background:#111c2e!important;
+  border-color:#43566f!important;
+  color:#e8eef7!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article .answer-chip{
+  background:#2a2612!important;
+  border:1px solid #665a21!important;
+  color:#ffe58a!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article :is(
+  .scb-card strong,.number-strip strong,.money-focus b,.special-route strong,.rate-stairs strong,
+  .quiz-item b,.answer-now h2,.warning-card strong,.decision strong
+){color:#f8fafc!important;}
+html.dark-mode .article :is(.scb-table,.change-table,.support-table){
+  background:#111c2e!important;
+  border-color:#334155!important;
+  color:#e8eef7!important;
+}
+html.dark-mode .article :is(.scb-table th,.change-table th,.support-table th){
+  background:#202b3d!important;
+  border-color:#334155!important;
+  color:#f8fafc!important;
+}
+html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
+  background:#111c2e!important;
+  border-color:#334155!important;
+  color:#dbe4f0!important;
+}
