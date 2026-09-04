@@ -2017,3 +2017,19 @@ html.dark-mode .content-category-menu a.active{background:#17355e!important;colo
 
 /* SCB hero must be the banner only, not a full-page screenshot */
 .article-cover-banner img[src*="small-business-loan-scb-hero"]{width:100%!important;height:auto!important;object-fit:contain!important;display:block!important}
+
+
+/* CATEGORY-CALCULATOR-HOME-FIX-V76 */
+@media (min-width:901px){
+  .content-category-menu{gap:7px!important;}
+  .content-category-menu a{font-size:14px!important;font-weight:800!important;padding:8px 10px!important;letter-spacing:-.35px!important;}
+}
+.home-article-link{color:inherit!important;text-decoration:none!important;cursor:pointer;}
+.home-article-link:hover{border-color:#b7c7dc!important;box-shadow:0 9px 24px rgba(15,23,42,.08)!important;transform:translateY(-1px);}
+.home-article-link:focus-visible{outline:3px solid rgba(31,98,221,.28);outline-offset:2px;}
+html.dark-mode .home-article-link:hover{border-color:#4d6380!important;box-shadow:0 9px 24px rgba(0,0,0,.28)!important;}
+.calculators-page .calc-page{display:block!important;width:100%!important;}
+.calculators-page .calc-page>.container{width:min(100% - 36px,var(--max))!important;margin-inline:auto!important;}
+@media(max-width:900px){
+  .content-category-menu a{font-size:14px!important;font-weight:800!important;}
+}
