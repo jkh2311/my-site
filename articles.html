@@ -120,7 +120,8 @@
     tips:['생활팁','일상에서 바로 활용할 수 있는 실용적인 생활팁만 모았습니다.'],
   transport:['교통정보','KTX·기차표·고속도로·교통 이용과 이동에 필요한 정보를 정리합니다.'],
     work:['노동·고용','근로·급여·휴가·퇴직 등 직장생활에 필요한 정보를 정리합니다.'],
-    financialinfo:['금융정보','복리·투자·자산관리 등 금융 계산과 활용 정보를 모았습니다.']};
+    financialinfo:['금융정보','복리·투자·자산관리 등 금융 계산과 활용 정보를 모았습니다.'],
+    safety:['안전·보안','개인정보 유출, 명의도용, 계정 보안처럼 일상에서 꼭 확인해야 할 안전 정보를 모았습니다.']};
   const current = names[cat] ? cat : 'all';
   document.getElementById('category-title').textContent = names[current][0];
   document.getElementById('category-desc').textContent = names[current][1];
@@ -206,7 +207,7 @@
     pager.setAttribute('aria-label','게시글 페이지 이동');
     list.insertAdjacentElement('afterend',pager);
   }
-  const labelMap={all:'전체',admin:'생활·행정',support:'지원·복지',finance:'금융·보험',tips:'생활팁',transport:'교통정보',shopping:'쇼핑·할인',utility:'생활요금',work:'노동·고용',military:'병역·예비군',safety:'안전·보안'};
+  const labelMap={all:'전체',admin:'생활·행정',support:'지원·복지',finance:'금융·보험',tips:'생활팁',transport:'교통정보',shopping:'쇼핑·할인',utility:'생활요금',work:'노동·고용',financialinfo:'금융정보',military:'병역·예비군',safety:'안전·보안'};
   function render(){
     const filtered=cards.filter(c=>currentCategory==='all'||c.dataset.category===currentCategory);
     const pages=Math.max(1,Math.ceil(filtered.length/perPage));

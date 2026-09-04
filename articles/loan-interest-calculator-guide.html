@@ -138,4 +138,5 @@ $('loanScheduleRows').addEventListener('click',e=>{const row=e.target.closest('t
 $('loanScheduleRows').addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const row=e.target.closest('tr');if(!row)return;e.preventDefault();row.click();});
 $('loanExcelBtn').addEventListener('click',()=>{if(!schedule.length)return; const rows=[['회차','납입액','상환원금','이자','잔액'],...schedule.map(x=>[x.i,Math.round(x.pay),Math.round(x.principal),Math.round(x.interest),Math.round(x.balance)])]; const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); let xml='<?xml version="1.0"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="상환스케줄"><Table>'; rows.forEach((r,ri)=>{xml+='<Row>';r.forEach(v=>{const num=typeof v==='number';xml+='<Cell><Data ss:Type="'+(num?'Number':'String')+'">'+esc(v)+'</Data></Cell>'});xml+='</Row>'}); xml+='</Table></Worksheet></Workbook>'; const blob=new Blob(['\ufeff'+xml],{type:'application/vnd.ms-excel'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='대출상환스케줄.xls';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),500);});
 calc();
-})();</script></body></html>
+})();</script><script src="/article-sidebar.js?v=1"></script>
+</body></html>

@@ -218,4 +218,5 @@
 })();
 </script>
 <script>/* AUTO-CATEGORY-COUNTS-V1 */(async()=>{try{const r=await fetch('/article-index.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();const m={'생활·행정':'admin','지원·복지':'support','금융·보험':'finance','금융정보':'financialinfo','생활팁':'tips','교통정보':'transport','쇼핑·할인':'shopping','생활요금':'utility','노동·고용':'work','병역·예비군':'military','안전·보안':'safety'};const box=document.querySelector('.sidebar-categories');if(!box)return;const all=box.querySelector('a[href="/articles.html"] b');if(all)all.textContent=d.length;Object.entries(m).forEach(([label,key])=>{const el=box.querySelector(`a[href="/articles.html?category=${key}"] b`);if(el)el.textContent=d.filter(x=>x.category===label).length;});}catch(e){}})();</script>
+<script src="/article-sidebar.js?v=1"></script>
 </body></html>
