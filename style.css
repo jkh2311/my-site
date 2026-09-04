@@ -2463,3 +2463,58 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   html.dark-mode .article-sidebar .recent-post-item strong{color:#f7f9fc!important;}
   html.dark-mode .article-sidebar .recent-post-item small{color:#aebbd0!important;}
 }
+
+/* V83: Cashwalk article mobile dark-mode contrast fix */
+@media (max-width: 768px){
+  html.dark-mode .article .answer-now{
+    background:#111c2e!important;
+    border-color:#334155!important;
+    color:#e7eef8!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article .quiz-grid{
+    background:transparent!important;
+  }
+  html.dark-mode .article .quiz-item{
+    background:#111c2e!important;
+    border-color:#334155!important;
+    color:#e7eef8!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article .quiz-item b{
+    color:#f8fafc!important;
+  }
+  html.dark-mode .article .answer-chip{
+    background:#2a2612!important;
+    border:1px solid #665a21!important;
+    color:#ffe58a!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article .live-note{
+    background:#1e1b12!important;
+    border-color:#665a21!important;
+    color:#e7eef8!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article .live-note strong,
+  html.dark-mode .article .live-note b{
+    color:#ffe58a!important;
+  }
+  html.dark-mode .article .how-card{
+    background:transparent!important;
+  }
+  html.dark-mode .article .how-card>div{
+    background:#111c2e!important;
+    border:1px solid #334155!important;
+    color:#e7eef8!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article .how-card>div b{
+    color:#f8fafc!important;
+  }
+  html.dark-mode .article .answer-now :is(h2,h3,p,span),
+  html.dark-mode .article .live-note :is(p,span),
+  html.dark-mode .article .how-card :is(p,span){
+    color:#d5deea!important;
+  }
+}
