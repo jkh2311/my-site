@@ -1728,3 +1728,24 @@ html.dark-mode body.calculators-page header nav a:hover{
   background:transparent!important;
   background-color:transparent!important;
 }
+
+/* ARTICLE-HERO-FULL-VISIBILITY-V1 — 대표 AI 이미지는 잘리지 않고 전체가 보이도록 */
+.article-cover-banner{
+  max-height:none!important;
+  overflow:visible!important;
+  background:#fff;
+}
+.article-cover-banner img{
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+}
+@media(max-width:700px){
+  .article-cover-banner,.article-cover-banner img{
+    max-height:none!important;
+    height:auto!important;
+  }
+}
