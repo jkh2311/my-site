@@ -13,7 +13,8 @@
     ['utility','생활요금'],
     ['work','노동·고용'],
     ['military','병역·예비군'],
-    ['safety','안전·보안']
+    ['safety','안전·보안'],
+    ['apptech','앱테크']
   ];
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function categoryMatches(value,label){
