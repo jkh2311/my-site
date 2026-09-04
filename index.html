@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=66">
+<link rel="stylesheet" href="/style.css?v=68">
 <link rel="canonical" href="https://haninelife.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="한이네생활정보">
@@ -26,6 +26,48 @@
 <meta property="og:url" content="https://haninelife.com/">
 <meta property="og:image" content="https://haninelife.com/images/hanine-header-logo.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://haninelife.com/#website","url":"https://haninelife.com/","name":"한이네생활정보","inLanguage":"ko-KR"},{"@type":"Organization","@id":"https://haninelife.com/#organization","name":"한이네생활정보","url":"https://haninelife.com/","logo":{"@type":"ImageObject","url":"https://haninelife.com/images/hanine-header-logo.png"}}]}</script>
+
+<style id="mobile-hero-final-override">
+@media (max-width:700px){
+  /* Mobile title: remove the secondary slogan only on mobile */
+  .hero-title-group .hero-subline{display:none!important;}
+
+  /* Mobile intro: no box, centered editorial layout */
+  .hero-description.hero-description-refined{
+    width:100%!important;max-width:360px!important;
+    margin:20px auto 0!important;padding:0 8px!important;
+    background:none!important;border:0!important;border-radius:0!important;
+    box-shadow:none!important;text-align:center!important;
+  }
+  .hero-description.hero-description-refined::before,
+  .hero-description.hero-description-refined::after{display:none!important;content:none!important;}
+  .hero-description-refined .hero-desc-main{
+    display:block!important;font-size:17px!important;font-weight:700!important;
+    line-height:1.55!important;letter-spacing:-.55px!important;color:#18243d!important;
+  }
+  .hero-description-refined .hero-desc-sub{
+    display:block!important;margin-top:5px!important;font-size:16px!important;font-weight:800!important;
+    line-height:1.5!important;letter-spacing:-.5px!important;color:#2f7f79!important;
+  }
+  .hero-description-refined .hero-desc-sub::after{
+    content:""!important;display:block!important;width:34px!important;height:1px!important;
+    margin:13px auto 10px!important;background:rgba(13,27,61,.22)!important;
+  }
+  .hero-description-refined .hero-desc-point{display:block!important;margin:0!important;padding:0!important;background:none!important;}
+  .hero-description-refined .hero-desc-prefix{
+    display:block!important;font-size:12.5px!important;font-weight:600!important;
+    line-height:1.5!important;letter-spacing:-.2px!important;color:#667085!important;
+  }
+  .hero-description-refined .hero-desc-brand{
+    display:block!important;margin-top:3px!important;
+    font-size:25px!important;font-weight:900!important;line-height:1.25!important;letter-spacing:-1.15px!important;
+    color:#176d75!important;
+    background:linear-gradient(90deg,#164e63 0%,#147d78 52%,#315d7a 100%)!important;
+    -webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;
+    text-shadow:none!important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="site-header"><div class="container header-inner">
