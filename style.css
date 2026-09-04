@@ -1689,3 +1689,20 @@ html.dark-mode body.about-page .hani-about{
   background:#172033!important;
   border-color:#334155!important;
 }
+
+/* BRAND-ICON-STORY-V1 — directly below Hani introduction */
+.brand-icon-story{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;margin:22px 0 34px;padding:22px;border:1px solid #dbe3ee;border-radius:18px;background:#fff}
+.brand-icon-story-visual{display:flex;align-items:center;justify-content:center;min-height:118px;border-radius:14px;background:#f6f8fb}
+.brand-icon-story-visual img{display:block;width:92px;height:92px;object-fit:contain}
+.brand-icon-story-copy .section-label{margin:0 0 6px}
+.brand-icon-story-copy h2{margin:0 0 10px}
+.brand-icon-story-copy p:last-child{margin:0;line-height:1.8}
+html.dark-mode .brand-icon-story{background:#172033!important;border-color:#334155!important}
+html.dark-mode .brand-icon-story-visual{background:#101827!important}
+html.dark-mode .brand-icon-story-visual img{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
+html.dark-mode .brand-icon-story-copy h2,html.dark-mode .brand-icon-story-copy strong{color:#f7f9fc!important}
+html.dark-mode .brand-icon-story-copy p{color:#c1ccda!important}
+/* Dark-mode logo symbol: white '한' strokes, mint checks preserved */
+html.dark-mode .site-header .brand-symbol{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
+html.dark-mode .hani-mark img{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
+@media(max-width:700px){.brand-icon-story{grid-template-columns:86px minmax(0,1fr);gap:14px;padding:16px}.brand-icon-story-visual{min-height:86px}.brand-icon-story-visual img{width:68px;height:68px}.brand-icon-story-copy h2{font-size:19px}}
