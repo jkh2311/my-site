@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=76">
+  <link rel="stylesheet" href="/style.css?v=77">
   <link rel="canonical" href="https://haninelife.com/finance.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="한이네생활정보">
@@ -40,7 +40,7 @@
 <section class="section finance-market-section"><div class="container">
   <div class="finance-section-head">
     <div><span class="finance-eyebrow">주요 시세</span><h2>환율·증시 지수</h2></div>
-    <button type="button" class="finance-refresh" onclick="loadAllMarkets(true)">새로고침</button>
+    <div class="finance-refresh-wrap"><span class="finance-live-badge" id="financeLiveBadge">● 60초 자동 갱신</span><button type="button" class="finance-refresh" onclick="loadAllMarkets(true)">새로고침</button></div>
   </div>
   <p class="finance-data-note">시세 출처는 <strong>Yahoo Finance</strong>입니다. 거래소 상황에 따라 실시간 또는 지연 시세가 표시될 수 있으며, 장 마감·휴장 중에는 최근 거래값이 표시됩니다.</p>
 
@@ -95,7 +95,6 @@
 <script src="/dark-mode.js?v=3"></script>
 <script>
 (function(){
-  const PROXY='https://api.allorigins.win/raw?url=';
   const markets={
     usdkrw:{symbol:'KRW=X',decimals:2},
     kospi:{symbol:'^KS11',decimals:2},
@@ -104,63 +103,113 @@
     nyse:{symbol:'^NYA',decimals:2}
   };
 
-  async function getYahoo(symbol){
-    const url='https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(symbol)+'?range=1d&interval=1m';
+  const PROXIES = [
+    url => 'https://proxy.killcors.com/?url=' + encodeURIComponent(url),
+    url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
+  ];
+
+  async function fetchJson(url, timeoutMs=12000){
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(), timeoutMs);
     try{
-      const r=await fetch(url,{cache:'no-store'});
+      const r=await fetch(url,{cache:'no-store',signal:controller.signal,headers:{'Accept':'application/json'}});
       if(!r.ok) throw new Error('HTTP '+r.status);
-      return await r.json();
-    }catch(e){
-      const r=await fetch(PROXY+encodeURIComponent(url),{cache:'no-store'});
-      if(!r.ok) throw e;
-      return await r.json();
+      const d=await r.json();
+      if(!d || !d.chart) throw new Error('Invalid Yahoo payload');
+      return d;
+    } finally { clearTimeout(timer); }
+  }
+
+  async function getYahoo(symbol){
+    const target='https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(symbol)+'?range=1d&interval=1m&includePrePost=true&events=div%2Csplits';
+    const attempts=[target, ...PROXIES.map(fn=>fn(target))];
+    let lastError;
+    for(const url of attempts){
+      try{
+        const data=await fetchJson(url);
+        const result=data?.chart?.result?.[0];
+        if(!result?.meta) throw new Error('No Yahoo result');
+        const returned=result.meta.symbol || '';
+        if(returned && returned.toUpperCase() !== symbol.toUpperCase()) throw new Error('Symbol mismatch');
+        return data;
+      }catch(e){ lastError=e; }
     }
+    throw lastError || new Error('Yahoo fetch failed');
+  }
+
+  function setBadge(text, state='ok'){
+    const el=document.getElementById('financeLiveBadge');
+    if(!el) return;
+    el.textContent=text;
+    el.dataset.state=state;
   }
 
   function show(key,q){
     const card=document.querySelector('[data-market="'+key+'"]'); if(!card) return;
     const val=card.querySelector('.market-value'), ch=card.querySelector('.market-change'), tm=card.querySelector('.market-time');
     if(!q || !Number.isFinite(q.price)){
-      val.textContent='불러오지 못했습니다'; ch.textContent='Yahoo Finance에서 직접 확인해주세요'; ch.className='market-change neutral'; tm.textContent=''; return;
+      val.textContent='불러오지 못했습니다';
+      ch.textContent='잠시 후 자동으로 다시 시도합니다';
+      ch.className='market-change neutral';
+      tm.textContent='Yahoo Finance';
+      return;
     }
     val.textContent=q.price.toLocaleString('ko-KR',{maximumFractionDigits:q.decimals,minimumFractionDigits:q.decimals});
     const diff=q.diff, ratio=q.ratio, up=ratio>0, down=ratio<0, sign=up?'+':'';
     ch.textContent=sign+diff.toLocaleString('ko-KR',{maximumFractionDigits:2,minimumFractionDigits:2})+' ('+sign+ratio.toFixed(2)+'%)';
     ch.className='market-change '+(up?'up':down?'down':'neutral');
-    tm.textContent=q.time ? '기준 '+q.time+' · Yahoo Finance' : 'Yahoo Finance';
+    tm.textContent=q.time ? 'Yahoo Finance · '+q.time+' 기준' : 'Yahoo Finance';
   }
 
   async function loadOne(key){
     const cfg=markets[key];
     try{
       const d=await getYahoo(cfg.symbol);
-      const result=d&&d.chart&&d.chart.result&&d.chart.result[0];
-      const m=result&&result.meta;
+      const result=d?.chart?.result?.[0];
+      const m=result?.meta;
       if(!m) throw new Error('No market data');
       let price=Number(m.regularMarketPrice);
-      if(!Number.isFinite(price) && result.indicators && result.indicators.quote){
-        const arr=result.indicators.quote[0].close||[];
+      if(!Number.isFinite(price)){
+        const arr=result?.indicators?.quote?.[0]?.close || [];
         for(let i=arr.length-1;i>=0;i--){ if(Number.isFinite(arr[i])){price=arr[i];break;} }
       }
-      const prev=Number(m.chartPreviousClose ?? m.previousClose);
-      const diff=price-prev;
-      const ratio=prev?diff/prev*100:0;
+      const prev=Number(m.chartPreviousClose ?? m.previousClose ?? m.regularMarketPreviousClose);
+      const diff=Number.isFinite(prev)?price-prev:0;
+      const ratio=Number.isFinite(prev)&&prev!==0?diff/prev*100:0;
       const zone=m.exchangeTimezoneName||'UTC';
-      const time=m.regularMarketTime?new Intl.DateTimeFormat('ko-KR',{timeZone:zone,month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(m.regularMarketTime*1000)):'';
+      const epoch=Number(m.regularMarketTime);
+      let time='';
+      if(Number.isFinite(epoch)){
+        try{time=new Intl.DateTimeFormat('ko-KR',{timeZone:zone,month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(epoch*1000));}catch(_){ }
+      }
       show(key,{price,diff,ratio,time,decimals:cfg.decimals});
-    }catch(e){ show(key,null); }
+      return true;
+    }catch(e){ show(key,null); return false; }
   }
 
-  window.loadAllMarkets=async function(){
-    document.querySelectorAll('.finance-market-card').forEach(card=>{
-      card.querySelector('.market-value').textContent='불러오는 중';
-      card.querySelector('.market-change').textContent='잠시만 기다려주세요';
-      card.querySelector('.market-change').className='market-change';
-      card.querySelector('.market-time').textContent='';
-    });
-    await Promise.all(Object.keys(markets).map(loadOne));
+  let loading=false;
+  window.loadAllMarkets=async function(manual=false){
+    if(loading) return;
+    loading=true;
+    setBadge(manual?'● 새로고침 중':'● 시세 불러오는 중','loading');
+    if(manual){
+      document.querySelectorAll('.finance-market-card').forEach(card=>{
+        card.querySelector('.market-value').textContent='불러오는 중';
+        card.querySelector('.market-change').textContent='Yahoo Finance 최신값 확인 중';
+        card.querySelector('.market-change').className='market-change';
+        card.querySelector('.market-time').textContent='';
+      });
+    }
+    const results=await Promise.all(Object.keys(markets).map(loadOne));
+    const ok=results.filter(Boolean).length;
+    if(ok===results.length) setBadge('● 60초 자동 갱신','ok');
+    else if(ok>0) setBadge('● 일부 시세 재시도 중','warn');
+    else setBadge('● 연결 재시도 중','error');
+    loading=false;
   };
-  loadAllMarkets();
+
+  loadAllMarkets(false);
+  setInterval(()=>loadAllMarkets(false),60000);
 })();
 </script>
 </body></html>
