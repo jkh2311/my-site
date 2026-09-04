@@ -35,3 +35,29 @@
   else bind();
   window.addEventListener('pageshow',function(){apply(isOn());},false);
 })();
+
+
+/* CONTENT_CATEGORY_DRAWER_V1 */
+(function(){
+  function initCategoryMenus(){
+    document.querySelectorAll('.content-category-area').forEach(function(area){
+      var btn=area.querySelector('.content-category-toggle');
+      var menu=area.querySelector('.content-category-menu');
+      if(!btn||!menu||btn.dataset.ready==='1') return;
+      btn.dataset.ready='1';
+      btn.addEventListener('click',function(){
+        var open=area.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded',open?'true':'false');
+      });
+      menu.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click',function(){area.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});
+      });
+      document.addEventListener('click',function(e){
+        if(window.innerWidth<=700&&!area.contains(e.target)){area.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}
+      });
+      var q=new URLSearchParams(location.search).get('category');
+      if(q){var active=menu.querySelector('[data-cat="'+CSS.escape(q)+'"]');if(active)active.classList.add('active');}
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initCategoryMenus);else initCategoryMenus();
+})();

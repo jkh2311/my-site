@@ -1,31 +1,31 @@
-<!doctype html><html lang="ko"><head>
-  <!-- Google AdSense site verification -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733846223035917"
-     crossorigin="anonymous"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>관리자 글쓰기 | 한이네생활정보</title><link rel="icon" href="/favicon.ico?v=3" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=74"></head><body>
-<header class="site-header"><div class="container header-inner"><a class="logo logo-image" href="/index.html" aria-label="한이네생활정보 홈"><img class="brand-symbol" src="/images/hanine-symbol.png" alt="" aria-hidden="true"><img class="brand-wordmark" src="/images/hanine-header-logo.png" alt="한이네생활정보 | 오늘도 하나 알아갑니다"></a><nav class="main-nav"><a href="/index.html">사이트로 돌아가기</a></nav></div></header>
+<!DOCTYPE html>
+<html lang="ko"><head>
+<!-- Google AdSense site verification -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733846223035917"></script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="noindex,nofollow" name="robots"/><title>관리자 글쓰기 | 한이네생활정보</title><link href="/favicon.ico?v=3" rel="icon" sizes="any"/>
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<link href="/style.css?v=75" rel="stylesheet"/></head><body>
+<header class="site-header"><div class="container header-inner"><a aria-label="한이네생활정보 홈" class="logo logo-image" href="/index.html"><img alt="" aria-hidden="true" class="brand-symbol" src="/images/hanine-symbol.png"/><img alt="한이네생활정보 | 오늘도 하나 알아갑니다" class="brand-wordmark" src="/images/hanine-header-logo.png"/></a><nav aria-label="주요 메뉴" class="main-nav"><a href="/index.html">홈</a><a href="/about.html">소개</a><a href="/calculators.html">계산기 모음</a><a href="/contact.html">문의</a><button aria-label="다크모드 켜기" aria-pressed="false" class="dark-mode-toggle" title="다크모드 켜기" type="button"><span aria-hidden="true" class="dark-mode-icon">🌙</span><span class="dark-mode-label">다크모드</span></button></nav></div></header>
 <div class="article-search-wrap" id="article-search-wrap">
-  <div class="article-search-box">
-    <label for="site-article-search">게시글 조회</label>
-    <div class="article-search-input-row">
-      <input id="site-article-search" type="search" placeholder="2글자 이상 입력" autocomplete="off" aria-label="게시글 조회">
-      <button type="button" id="site-article-search-btn">조회</button>
-    </div>
-    <div class="article-search-results" id="site-article-search-results" hidden></div>
-  </div>
+<div class="content-category-area"><button aria-controls="content-category-menu" aria-expanded="false" class="content-category-toggle" type="button"><span aria-hidden="true">☰</span> 메뉴</button><nav aria-label="게시물 카테고리" class="content-category-menu" id="content-category-menu"><a data-cat="life" href="/articles.html?category=life">생활정보</a><a data-cat="support" href="/articles.html?category=support">지원금/정책</a><a data-cat="finance" href="/articles.html?category=finance">금융정보</a><a data-cat="health" href="/articles.html?category=health">건강정보</a><a data-cat="property" href="/articles.html?category=property">부동산정보</a><a data-cat="auto" href="/articles.html?category=auto">자동차정보</a><a data-cat="travel" href="/articles.html?category=travel">여행/맛집</a><a data-cat="it" href="/articles.html?category=it">IT/생활꿀팁</a></nav></div>
+<div class="article-search-box">
+<label for="site-article-search">게시글 조회</label>
+<div class="article-search-input-row">
+<input aria-label="게시글 조회" autocomplete="off" id="site-article-search" placeholder="2글자 이상 입력" type="search"/>
+<button id="site-article-search-btn" type="button">조회</button>
 </div>
-
+<div class="article-search-results" hidden="" id="site-article-search-results"></div>
+</div>
+</div>
 <main><section class="page-hero"><div class="container"><p class="section-label">ADMIN</p><h1>게시글 관리</h1><p>로그인 후 새 글을 발행하거나 기존 게시글을 수정·삭제할 수 있습니다.</p></div></section><section class="section"><div class="container">
 <div class="admin-note"><strong>V5.9 자동 발행:</strong> 발행하면 서버가 GitHub 저장소에 게시글을 커밋하고 sitemap.xml과 게시글 검색 목록을 함께 갱신합니다. GitHub 토큰은 이 HTML에 저장하지 않습니다.</div>
-<div class="admin-card" id="login-card"><h2>관리자 로그인</h2><div class="form-grid"><div class="form-field"><label>관리자 API 주소</label><input id="api" placeholder="https://haninelife-admin.계정.workers.dev"></div><div class="form-field"><label>관리자 비밀번호</label><input id="pw" type="password" autocomplete="current-password"></div></div><div class="form-actions"><button class="btn btn-primary" id="login">로그인</button></div><div class="form-status" id="login-status"></div></div>
-<div class="admin-card" id="editor-card" hidden style="margin-top:20px"><div class="form-actions" style="margin-top:0"><button class="btn btn-primary" id="new">+ 새 게시글</button><select id="existing" style="min-width:300px;padding:11px;border:1px solid #cfd8e6;border-radius:10px"><option value="">기존 게시글 선택</option></select><button class="btn btn-secondary" id="load">불러오기</button></div><hr style="margin:22px 0;border:0;border-top:1px solid #e5e7eb">
-<div class="form-grid"><div class="form-field"><label>게시글 제목</label><input id="title" placeholder="제목 끝에는 총정리"></div><div class="form-field"><label>파일명</label><input id="slug" readonly placeholder="새 글 발행 시 자동 생성"><small>새 게시글은 post-날짜-시간 형식으로 자동 생성됩니다.</small></div><div class="form-field"><label>카테고리</label><select id="cat"><option value="admin">생활·행정</option><option value="support">지원·복지</option><option value="finance">금융·보험</option><option value="tips">생활팁</option></select></div><div class="form-field"><label>기준일</label><input id="date" type="date"></div><div class="form-field full"><label>검색 설명</label><input id="desc" maxlength="160"></div></div>
-<h2 style="margin-top:24px">본문</h2><div class="admin-toolbar"><button class="btn btn-secondary" data-cmd="bold">굵게</button><button class="btn btn-secondary" data-cmd="formatBlock" data-val="h2">큰 제목</button><button class="btn btn-secondary" data-cmd="formatBlock" data-val="h3">작은 제목</button><button class="btn btn-secondary" id="link">링크</button></div><div id="body" class="admin-editor" contenteditable="true"><h2>핵심 내용</h2><p>여기에 내용을 작성하세요.</p></div>
-<div class="form-actions"><button class="btn btn-primary" id="publish">GitHub에 바로 발행</button><button class="btn btn-secondary" id="draft">브라우저 임시저장</button><button class="btn btn-secondary" id="delete" hidden style="border-color:#b91c1c;color:#b91c1c">게시글 삭제</button></div><div class="form-status" id="status"></div></div>
+<div class="admin-card" id="login-card"><h2>관리자 로그인</h2><div class="form-grid"><div class="form-field"><label>관리자 API 주소</label><input id="api" placeholder="https://haninelife-admin.계정.workers.dev"/></div><div class="form-field"><label>관리자 비밀번호</label><input autocomplete="current-password" id="pw" type="password"/></div></div><div class="form-actions"><button class="btn btn-primary" id="login">로그인</button></div><div class="form-status" id="login-status"></div></div>
+<div class="admin-card" hidden="" id="editor-card" style="margin-top:20px"><div class="form-actions" style="margin-top:0"><button class="btn btn-primary" id="new">+ 새 게시글</button><select id="existing" style="min-width:300px;padding:11px;border:1px solid #cfd8e6;border-radius:10px"><option value="">기존 게시글 선택</option></select><button class="btn btn-secondary" id="load">불러오기</button></div><hr style="margin:22px 0;border:0;border-top:1px solid #e5e7eb"/>
+<div class="form-grid"><div class="form-field"><label>게시글 제목</label><input id="title" placeholder="제목 끝에는 총정리"/></div><div class="form-field"><label>파일명</label><input id="slug" placeholder="새 글 발행 시 자동 생성" readonly=""/><small>새 게시글은 post-날짜-시간 형식으로 자동 생성됩니다.</small></div><div class="form-field"><label>카테고리</label><select id="cat"><option value="admin">생활·행정</option><option value="support">지원·복지</option><option value="finance">금융·보험</option><option value="tips">생활팁</option></select></div><div class="form-field"><label>기준일</label><input id="date" type="date"/></div><div class="form-field full"><label>검색 설명</label><input id="desc" maxlength="160"/></div></div>
+<h2 style="margin-top:24px">본문</h2><div class="admin-toolbar"><button class="btn btn-secondary" data-cmd="bold">굵게</button><button class="btn btn-secondary" data-cmd="formatBlock" data-val="h2">큰 제목</button><button class="btn btn-secondary" data-cmd="formatBlock" data-val="h3">작은 제목</button><button class="btn btn-secondary" id="link">링크</button></div><div class="admin-editor" contenteditable="true" id="body"><h2>핵심 내용</h2><p>여기에 내용을 작성하세요.</p></div>
+<div class="form-actions"><button class="btn btn-primary" id="publish">GitHub에 바로 발행</button><button class="btn btn-secondary" id="draft">브라우저 임시저장</button><button class="btn btn-secondary" hidden="" id="delete" style="border-color:#b91c1c;color:#b91c1c">게시글 삭제</button></div><div class="form-status" id="status"></div></div>
 </div></section></main><footer class="site-footer"><div class="container copyright">© 2026 한이네생활정보.</div></footer>
 <script>
 const $=x=>document.getElementById(x); let mode='new', current=''; $('date').value=new Date().toISOString().slice(0,10);

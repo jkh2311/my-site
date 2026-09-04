@@ -3,24 +3,10 @@
 (function(){
   'use strict';
   const CATEGORY_MAP = [
-    ['admin','생활·행정'],
-    ['support','지원·복지'],
-    ['finance','금융·보험'],
-    ['financialinfo','금융정보'],
-    ['tips','생활팁'],
-    ['transport','교통정보'],
-    ['shopping','쇼핑·할인'],
-    ['utility','생활요금'],
-    ['work','노동·고용'],
-    ['military','병역·예비군'],
-    ['safety','안전·보안'],
-    ['apptech','앱테크']
+    ['life','생활정보'],['support','지원금/정책'],['finance','금융정보'],['health','건강정보'],['property','부동산정보'],['auto','자동차정보'],['travel','여행/맛집'],['it','IT/생활꿀팁']
   ];
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function categoryMatches(value,label){
-    value=String(value||'');
-    if(label==='생활·행정') return value.indexOf('생활·행정')===0;
-    return value===label;
+  function categoryMatches(value,label){ return String(value||'')===label;
   }
   function sortRecent(a,b){
     const da=String(a.publishedAt||'');
