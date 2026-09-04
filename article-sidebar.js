@@ -9,7 +9,10 @@
     ['financialinfo','금융정보'],
     ['tips','생활팁'],
     ['transport','교통정보'],
+    ['shopping','쇼핑·할인'],
+    ['utility','생활요금'],
     ['work','노동·고용'],
+    ['military','병역·예비군'],
     ['safety','안전·보안']
   ];
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
