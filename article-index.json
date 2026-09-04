@@ -53,7 +53,7 @@
     "category": "부동산정보",
     "url": "/articles/rent-special-guarantee-guide.html",
     "publishedAt": "2026-09-04",
-    "subcategory": "전세·보증"
+    "subcategory": "대출"
   },
   {
     "title": "전기차 주행가능거리, 기본 1000km 예상",
@@ -61,7 +61,7 @@
     "category": "자동차정보",
     "url": "/articles/electric-car-range-solid-state-battery-guide.html",
     "publishedAt": "2026-09-04",
-    "subcategory": "전기차"
+    "subcategory": "관련 뉴스"
   },
   {
     "title": "전기차 보조금 언제 나올까? 조회·신청방법 한눈에",
@@ -229,7 +229,7 @@
     "category": "여행/맛집",
     "url": "/articles/2026-chuseok-ktx-train-reservation.html",
     "publishedAt": "2026-09-03",
-    "subcategory": "예약"
+    "subcategory": "예매"
   },
   {
     "title": "자동차 보험료 계산·조회·가입 방법 총정리",
@@ -237,7 +237,7 @@
     "category": "자동차정보",
     "url": "/articles/car-insurance-guide.html",
     "publishedAt": "2026-09-02",
-    "subcategory": "자동차보험"
+    "subcategory": "보험"
   },
   {
     "title": "운전면허증 신규 발급·갱신·재발급 방법 총정리",
@@ -261,7 +261,7 @@
     "category": "건강정보",
     "url": "/articles/health-insurance-arrears.html",
     "publishedAt": "2026-09-02",
-    "subcategory": "건강보험"
+    "subcategory": "보험"
   },
   {
     "title": "주민등록증 신규·재발급 신청 방법 총정리",
