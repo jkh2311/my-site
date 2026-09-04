@@ -2518,3 +2518,76 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     color:#d5deea!important;
   }
 }
+
+/* MOBILE-RECENT-HORIZONTAL-TEXT-V84
+   Recent-post items stack vertically, while each row and its title text stay horizontal. */
+@media (max-width:700px){
+  .article-sidebar .recent-post-list{
+    display:flex!important;
+    flex-direction:column!important;
+    flex-wrap:nowrap!important;
+    gap:0!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow:visible!important;
+  }
+  .article-sidebar .recent-post-item{
+    display:flex!important;
+    flex-direction:row!important;
+    flex-wrap:nowrap!important;
+    align-items:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    gap:11px!important;
+    padding:10px 0!important;
+    margin:0!important;
+    overflow:visible!important;
+  }
+  .article-sidebar .recent-post-item img{
+    display:block!important;
+    flex:0 0 72px!important;
+    width:72px!important;
+    min-width:72px!important;
+    max-width:72px!important;
+    height:54px!important;
+    object-fit:cover!important;
+  }
+  .article-sidebar .recent-post-item > span{
+    display:flex!important;
+    flex:1 1 auto!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    width:auto!important;
+    min-width:0!important;
+    max-width:calc(100% - 83px)!important;
+    writing-mode:horizontal-tb!important;
+    text-orientation:mixed!important;
+    white-space:normal!important;
+    overflow:visible!important;
+  }
+  .article-sidebar .recent-post-item strong,
+  .article-sidebar .recent-post-item small{
+    writing-mode:horizontal-tb!important;
+    text-orientation:mixed!important;
+    direction:ltr!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .article-sidebar .recent-post-item strong{
+    display:block!important;
+    white-space:normal!important;
+    word-break:keep-all!important;
+    overflow-wrap:break-word!important;
+    line-break:auto!important;
+    font-size:13.5px!important;
+    line-height:1.5!important;
+    letter-spacing:-.15px!important;
+  }
+  .article-sidebar .recent-post-item small{
+    display:block!important;
+    white-space:nowrap!important;
+    margin-top:3px!important;
+  }
+}
