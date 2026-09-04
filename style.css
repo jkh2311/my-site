@@ -942,3 +942,26 @@ img{max-width:100%}
   #article-list .tag,#article-list .card-kicker{font-size:9.5px!important;line-height:1.2!important;margin:0 0 3px!important;}
   #article-list .article-published{display:block!important;font-size:9.5px!important;line-height:1.35!important;margin:2px 0 0!important;color:#8a94a3!important;}
 }
+
+
+/* EYE-COMFORT-MODE-V1 — PC + mobile, saved per browser */
+.eye-comfort-toggle{
+  appearance:none;-webkit-appearance:none;border:1px solid #d8dee8;background:#fff;color:#344054;
+  min-height:36px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
+  gap:6px;font:inherit;font-size:12.5px;font-weight:800;line-height:1;white-space:nowrap;cursor:pointer;
+  box-shadow:0 1px 2px rgba(16,24,40,.04);transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
+}
+.eye-comfort-toggle:hover{background:#fff8e8;border-color:#e8c77f;color:#725317}
+.eye-comfort-toggle:focus-visible{outline:3px solid rgba(245,183,66,.28);outline-offset:2px}
+.eye-comfort-toggle .eye-comfort-icon{font-size:15px;line-height:1}
+html.eye-comfort-mode body{background:#fffaf2}
+html.eye-comfort-mode body::after{
+  content:"";position:fixed;inset:0;z-index:2147483646;pointer-events:none;
+  background:rgba(255,190,92,.13);mix-blend-mode:multiply;
+}
+html.eye-comfort-mode .eye-comfort-toggle{background:#fff3d6;border-color:#e2bc63;color:#624b17}
+@media(max-width:699px){
+  .main-nav .eye-comfort-toggle{flex:0 0 auto;min-width:34px;min-height:30px;padding:0 9px;border-radius:999px}
+  .main-nav .eye-comfort-toggle .eye-comfort-label{display:none}
+  .main-nav .eye-comfort-toggle .eye-comfort-icon{font-size:14px}
+}
