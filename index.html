@@ -17,7 +17,10 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/style.css?v=69">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=70">
 <link rel="canonical" href="https://haninelife.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="한이네생활정보">
@@ -69,45 +72,67 @@
 }
 </style>
 
-<style id="desktop-hero-editorial-v1">
-@media (min-width:700px){
+<style id="desktop-hero-editorial-v2">
+@media (min-width:701px){
+  /* PC hero: softer, premium typography */
   .hero-copy{display:flex;flex-direction:column;align-items:flex-start;}
   .hero-title-group{margin:0 auto;text-align:center;}
   .hero-title-group h1{text-align:center;}
-  .hero-subline{margin-top:8px;line-height:1.08;letter-spacing:-1.8px;}
+  .hero-subline{margin-top:10px;line-height:1.1;letter-spacing:-1.35px;}
   .hero-subline .hero-tip,
   .hero-subline .hero-summary{
-    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
-    font-style:normal;font-weight:800;
+    font-family:"Gowun Batang","Noto Serif KR","Nanum Myeongjo",serif;
+    font-style:normal;font-weight:700;
+    text-shadow:0 1px 0 rgba(255,255,255,.75);
   }
-  .hero-subline .hero-tip{color:#11857f;}
-  .hero-subline .hero-summary{color:#3757a5;}
-  .hero-subline .hero-dot{color:#a2acbb;font-size:.72em;vertical-align:.12em;margin:0 .08em;}
+  .hero-subline .hero-tip{color:#167d77;}
+  .hero-subline .hero-summary{color:#5265a9;}
+  .hero-subline .hero-dot{color:#a5adba;font-size:.62em;vertical-align:.15em;margin:0 .16em;}
 
   .hero-description.hero-description-refined{
-    width:min(100%,720px);max-width:720px;margin:28px auto 0!important;
+    width:min(100%,720px);max-width:720px;margin:30px auto 0!important;
     padding:0!important;text-align:center!important;color:#526174;
-    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+    font-family:"Gowun Dodum","Noto Sans KR",sans-serif;
   }
   .hero-description-refined .hero-desc-main,
   .hero-description-refined .hero-desc-sub,
   .hero-description-refined .hero-desc-point{display:block;text-align:center;width:100%;}
-  .hero-description-refined .hero-desc-main{font-size:18px;line-height:1.55;letter-spacing:-.45px;font-weight:600;color:#4b586c;}
-  .hero-description-refined .hero-desc-sub{margin-top:7px;font-size:19px;line-height:1.5;letter-spacing:-.55px;font-weight:700;color:#29364a;}
-  .hero-description-refined .hero-desc-point{margin-top:9px;}
-  .hero-description-refined .hero-desc-prefix{display:inline!important;width:auto!important;font-size:15px;line-height:1.55;font-weight:500;color:#6e7888;}
-  .hero-description-refined .hero-desc-brand{display:inline!important;width:auto!important;margin-left:5px;font-size:18px;line-height:1.45;font-weight:800;letter-spacing:-.5px;color:#315f72;}
+  .hero-description-refined .hero-desc-main{font-size:17px;line-height:1.65;letter-spacing:-.42px;font-weight:400;color:#536073;}
+  .hero-description-refined .hero-desc-sub{margin-top:6px;font-size:18px;line-height:1.6;letter-spacing:-.48px;font-weight:400;color:#334155;}
+  .hero-description-refined .hero-desc-point{margin-top:7px;}
+  .hero-description-refined .hero-desc-prefix{display:inline!important;width:auto!important;font-size:14px;line-height:1.6;font-weight:400;color:#7a8494;}
+  .hero-description-refined .hero-desc-brand{display:inline!important;width:auto!important;margin-left:5px;font-family:"Gowun Batang",serif;font-size:18px;line-height:1.45;font-weight:700;letter-spacing:-.4px;color:#315f72;}
   .hero-description-refined em{font-style:normal;}
   .hero-word-info{
-    display:inline-block;padding:0 .10em;
-    font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;
-    font-weight:900;font-size:1.12em;color:#d05d47;letter-spacing:-.08em;
-    transform:translateY(-.02em);
+    display:inline-block;padding:0 .08em;
+    font-family:"Gowun Batang",serif;
+    font-weight:700;font-size:1.13em;color:#d96752;letter-spacing:-.05em;
+    transform:translateY(-.01em);
   }
   .hero-word-organize{
-    display:inline-block;font-weight:900;color:#11857f;
-    font-size:1.08em;letter-spacing:-.07em;
-    border-bottom:2px solid rgba(17,133,127,.22);padding-bottom:1px;
+    display:inline-block;font-family:"Gowun Batang",serif;font-weight:700;color:#147f78;
+    font-size:1.1em;letter-spacing:-.05em;
+    border-bottom:1px solid rgba(20,127,120,.28);padding-bottom:1px;
+  }
+
+  /* Center the three hero buttons on PC */
+  .hero-buttons{align-self:center;justify-content:center;width:100%;}
+
+  /* PC latest content: compact title + date only */
+  #home-latest-grid{gap:12px;}
+  #home-latest-grid .article-card{
+    min-height:118px;padding:18px 19px;border-radius:13px;
+    display:flex;flex-direction:column;justify-content:center;gap:7px;
+  }
+  #home-latest-grid .article-card .tag,
+  #home-latest-grid .article-card p,
+  #home-latest-grid .article-card .more{display:none!important;}
+  #home-latest-grid .article-card .article-date{
+    display:block!important;order:2;margin:0;font-size:12px;line-height:1.4;color:#98a2b3;
+  }
+  #home-latest-grid .article-card h3{
+    order:1;margin:0;font-size:17px;line-height:1.48;letter-spacing:-.45px;
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
   }
 }
 </style>
