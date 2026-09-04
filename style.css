@@ -2282,3 +2282,111 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     color:#e8eef7!important;
   }
 }
+
+/* MOBILE-CALCULATOR-LAYOUT + DARK-ARTICLE-BORDER-FIX-V81 */
+@media (max-width:700px){
+  /* Keep every calculator article inside the viewport. */
+  .article-layout,.article-main,.article,.article-content,
+  .compound-tool,.compound-layout,.compound-inputs,.compound-summary,
+  .compound-summary-grid,.compound-chart-wrap,.compound-year-table-card,
+  .compound-guide-section,.compound-explain-section,.compound-rule-section,.compound-why-section,
+  .compound-step-grid,.interest-compare-grid,.rule72-grid,.why-grid,.related-calc-grid,
+  .loan-tool,.loan-ui-grid,.loan-grid,.loan-panel,.loan-summary-grid,.loan-info-card,
+  .loan-schedule-card,.loan-table-scroll,.loan-actions,
+  .retirement-calculator-cta,.retirement-calculator-cta-wrap{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  .article-main>*,.article>*{max-width:100%!important;box-sizing:border-box!important;}
+  .compound-layout,.compound-step-grid,.interest-compare-grid,.why-grid,
+  .loan-ui-grid,.loan-grid,.loan-summary-grid,.related-calc-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .compound-summary-grid{grid-template-columns:minmax(0,1fr)!important;}
+  .rule72-grid{grid-template-columns:minmax(0,1fr)!important;}
+  .compound-inputs label,.loan-field,.loan-field label{min-width:0!important;max-width:100%!important;}
+  .compound-inputs input,.loan-field input,.loan-field select,
+  .loan-actions button,.loan-methods button{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  .compound-frequency,.loan-actions,.loan-methods{flex-wrap:wrap!important;max-width:100%!important;}
+  .compound-frequency button,.loan-methods button{flex:1 1 calc(50% - 6px)!important;}
+  .compound-chart-wrap{overflow:hidden!important;padding-left:8px!important;padding-right:8px!important;}
+  .compound-chart-wrap canvas,.hundred-svg-chart,svg,canvas{max-width:100%!important;}
+  .table-scroll,.loan-table-scroll,.compound-year-table-card{
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  .compound-year-table,.loan-table,.result-table,.train-table{
+    width:100%!important;
+    max-width:none!important;
+  }
+  .compound-year-table{min-width:560px!important;}
+  .loan-table{min-width:600px!important;}
+  .result-table{min-width:520px!important;}
+  .related-calc-grid a{min-width:0!important;overflow-wrap:anywhere!important;}
+
+  /* Strong dark-mode normalization for posts that still contain pale inline cards/borders. */
+  html.dark-mode .article :is(
+    .scb-date,.scb-card,.scb-green,.scb-warn,.bank-list span,
+    .eligibility-split>div,.number-strip>div,.compare-note,.quick-check>div,.yesno,
+    .money-route>div,.timeline-loan>div,.reality-box,.change-table,.support-table,
+    .money-focus>div,.status-box,.special-route>div,.rate-stairs>div,.warning-card,.decision,
+    .train-card,.tip-box,.mobile-note,.rent-check>div,.money-box,.flow-line>div,
+    .compound-tool,.compound-inputs,.compound-summary,.compound-big,.compound-summary-grid>div,
+    .compound-chart-wrap,.compound-year-table-card,.compound-guide-section,.compound-explain-section,
+    .compound-rule-section,.compound-why-section,.compound-step-card,.compound-tip-box,.interest-card,
+    .loan-tool,.loan-panel,.loan-info-card,.loan-note,.loan-schedule-card,.loan-stat,.loan-summary-main,
+    .related-calc-grid a
+  ){
+    background:#111c2e!important;
+    background-color:#111c2e!important;
+    border-color:#334155!important;
+    color:#e8eef7!important;
+    box-shadow:none!important;
+  }
+  html.dark-mode .article :is(
+    .scb-card strong,.number-strip strong,.quick-check b,.timeline-loan strong,.money-focus b,
+    .special-route strong,.rate-stairs strong,.train-card h3,.rent-check strong,.flow-line b,
+    .compound-big strong,.compound-section-head h2,.compound-step-card h3,.interest-card h3,
+    .loan-panel h3,.loan-stat strong,.loan-summary-main strong,.related-calc-grid b
+  ){color:#fff!important;}
+  html.dark-mode .article :is(
+    .scb-table th,.scb-table td,.change-table th,.change-table td,.support-table th,.support-table td,
+    .train-table th,.train-table td,.compound-year-table th,.compound-year-table td,
+    .loan-table th,.loan-table td,.result-table th,.result-table td
+  ){
+    border-color:#334155!important;
+  }
+  html.dark-mode .article :is(
+    .scb-table th,.change-table th,.support-table th,.train-table th,
+    .compound-year-table th,.loan-table th,.result-table th
+  ){background:#202b3d!important;color:#fff!important;}
+  html.dark-mode .article :is(
+    .scb-table td,.change-table td,.support-table td,.train-table td,
+    .compound-year-table td,.loan-table td,.result-table td
+  ){background:#111c2e!important;color:#dbe4f0!important;}
+  html.dark-mode .article .scb-green,
+  html.dark-mode .article .compare-note,
+  html.dark-mode .article .yesno,
+  html.dark-mode .article .status-box{background:#10231f!important;border-color:#2f6658!important;}
+  html.dark-mode .article .scb-warn,
+  html.dark-mode .article .warning-card,
+  html.dark-mode .article .tip-box,
+  html.dark-mode .article .date-alert{background:#211c12!important;border-color:#6b592e!important;}
+  html.dark-mode .article .mobile-note{background:#1b1930!important;border-color:#51467a!important;}
+  html.dark-mode .article .decision{background:#111c2e!important;border-color:#43566f!important;}
+  html.dark-mode .article .rate-stairs>div,
+  html.dark-mode .article .special-route>div{background:#111c2e!important;border-color:#334155!important;}
+  html.dark-mode .article [style*="border:1px solid #"],
+  html.dark-mode .article [style*="border: 1px solid #"],
+  html.dark-mode .article [style*="border:2px solid #"],
+  html.dark-mode .article [style*="border: 2px solid #"]{border-color:#334155!important;}
+}
