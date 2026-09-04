@@ -1905,3 +1905,19 @@ html.dark-mode body.finance-page .finance-guide-box{background:#111c2e;border:1p
 @media(max-width:760px){
  .finance-hero{padding:42px 0 28px}.finance-intro{font-size:15px}.finance-clock-card{grid-template-columns:1fr}.finance-widget-grid{grid-template-columns:1fr}.finance-market-card:last-child{grid-column:auto}.market-card-head{display:block}.market-card-head p{text-align:left;max-width:none;margin-top:6px}.finance-section-head h2{font-size:26px}
 }
+
+
+/* finance market quotes - Naver Pay Securities primary source */
+.finance-page .market-quote{margin-top:18px;padding:18px 0 8px;border-top:1px solid #edf1f6;display:flex;flex-direction:column;gap:7px}
+.finance-page .market-value{font-size:32px;line-height:1.1;color:#0D1B3D;letter-spacing:-.02em}
+.finance-page .market-change{font-size:15px;font-weight:700;color:#64748b}
+.finance-page .market-change.up{color:#e11d48}.finance-page .market-change.down{color:#2563eb}.finance-page .market-change.neutral{color:#64748b}
+.finance-page .market-time{font-size:12px;color:#8190a5;line-height:1.5;min-height:18px}
+.finance-page .market-source-link{display:inline-flex;margin-top:10px;font-size:13px;font-weight:700;color:#2459a9;text-decoration:none}
+.finance-page .market-source-link:hover{text-decoration:underline}
+html.dark-mode body.finance-page .market-quote{border-top-color:#2b3a50}
+html.dark-mode body.finance-page .market-value{color:#f8fafc}
+html.dark-mode body.finance-page .market-change.neutral{color:#aebbd0}
+html.dark-mode body.finance-page .market-time{color:#8fa0b8}
+html.dark-mode body.finance-page .market-source-link{color:#8fc2ff}
+@media(max-width:700px){.finance-page .market-value{font-size:28px}}

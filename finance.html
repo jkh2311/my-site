@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=74">
+  <link rel="stylesheet" href="/style.css?v=75">
   <link rel="canonical" href="https://haninelife.com/finance.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="한이네생활정보">
@@ -46,53 +46,33 @@
     <div><span class="finance-eyebrow">주요 시세</span><h2>환율·증시 지수</h2></div>
     <button type="button" class="finance-refresh" onclick="location.reload()">새로고침</button>
   </div>
-  <p class="finance-data-note">아래 시세는 TradingView 제공 데이터입니다. 거래소·상품에 따라 실시간 또는 지연 시세가 표시될 수 있으며, 장 마감·휴장 중에는 최근 거래값이 표시됩니다.</p>
+  <p class="finance-data-note">아래 시세는 <strong>네이버페이 증권</strong> 데이터를 우선 불러옵니다. 거래소·상품에 따라 실시간 또는 지연 시세가 표시될 수 있으며, 장 마감·휴장 중에는 최근 거래값이 표시됩니다. NYSE 종합지수는 네이버에서 제공되지 않을 경우 Yahoo Finance 데이터를 보조로 사용합니다.</p>
 
-  <div class="finance-widget-grid">
-    <article class="finance-market-card">
+  <div class="finance-widget-grid" id="finance-market-grid">
+    <article class="finance-market-card" data-market="usdkrw">
       <div class="market-card-head"><div><span>USD / KRW</span><h3>원·달러 환율</h3></div><p>1달러당 원화 가격</p></div>
-      <div class="tv-theme tv-theme-light">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FX_IDC:USDKRW","width":"100%","isTransparent":true,"colorTheme":"light","locale":"kr"}</script></div>
-      </div>
-      <div class="tv-theme tv-theme-dark">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FX_IDC:USDKRW","width":"100%","isTransparent":true,"colorTheme":"dark","locale":"kr"}</script></div>
-      </div>
+      <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
+      <a class="market-source-link" href="https://finance.naver.com/marketindex/exchangeDetail.naver?marketindexCd=FX_USDKRW" target="_blank" rel="noopener">네이버페이 증권에서 확인 →</a>
     </article>
-    <article class="finance-market-card">
+    <article class="finance-market-card" data-market="kospi">
       <div class="market-card-head"><div><span>KOSPI</span><h3>코스피</h3></div><p>한국 유가증권시장 종합지수</p></div>
-      <div class="tv-theme tv-theme-light">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"KRX:KOSPI","width":"100%","isTransparent":true,"colorTheme":"light","locale":"kr"}</script></div>
-      </div>
-      <div class="tv-theme tv-theme-dark">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"KRX:KOSPI","width":"100%","isTransparent":true,"colorTheme":"dark","locale":"kr"}</script></div>
-      </div>
+      <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
+      <a class="market-source-link" href="https://finance.naver.com/sise/sise_index.naver?code=KOSPI" target="_blank" rel="noopener">네이버페이 증권에서 확인 →</a>
     </article>
-    <article class="finance-market-card">
+    <article class="finance-market-card" data-market="kosdaq">
       <div class="market-card-head"><div><span>KOSDAQ</span><h3>코스닥</h3></div><p>한국 코스닥시장 종합지수</p></div>
-      <div class="tv-theme tv-theme-light">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"KRX:KOSDAQ","width":"100%","isTransparent":true,"colorTheme":"light","locale":"kr"}</script></div>
-      </div>
-      <div class="tv-theme tv-theme-dark">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"KRX:KOSDAQ","width":"100%","isTransparent":true,"colorTheme":"dark","locale":"kr"}</script></div>
-      </div>
+      <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
+      <a class="market-source-link" href="https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ" target="_blank" rel="noopener">네이버페이 증권에서 확인 →</a>
     </article>
-    <article class="finance-market-card">
+    <article class="finance-market-card" data-market="nasdaq">
       <div class="market-card-head"><div><span>NASDAQ Composite</span><h3>나스닥</h3></div><p>미국 나스닥 종합지수</p></div>
-      <div class="tv-theme tv-theme-light">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"NASDAQ:IXIC","width":"100%","isTransparent":true,"colorTheme":"light","locale":"kr"}</script></div>
-      </div>
-      <div class="tv-theme tv-theme-dark">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"NASDAQ:IXIC","width":"100%","isTransparent":true,"colorTheme":"dark","locale":"kr"}</script></div>
-      </div>
+      <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
+      <a class="market-source-link" href="https://finance.naver.com/world/sise.naver?symbol=NAS@IXIC&fdtc=0" target="_blank" rel="noopener">네이버페이 증권에서 확인 →</a>
     </article>
-    <article class="finance-market-card">
+    <article class="finance-market-card" data-market="nyse">
       <div class="market-card-head"><div><span>NYSE Composite</span><h3>NYSE</h3></div><p>뉴욕증권거래소 종합지수</p></div>
-      <div class="tv-theme tv-theme-light">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"ICE:NYA","width":"100%","isTransparent":true,"colorTheme":"light","locale":"kr"}</script></div>
-      </div>
-      <div class="tv-theme tv-theme-dark">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"ICE:NYA","width":"100%","isTransparent":true,"colorTheme":"dark","locale":"kr"}</script></div>
-      </div>
+      <div class="market-quote"><strong class="market-value">불러오는 중</strong><span class="market-change">잠시만 기다려주세요</span><small class="market-time"></small></div>
+      <a class="market-source-link" href="https://finance.yahoo.com/quote/%5ENYA/" target="_blank" rel="noopener">지수 원문에서 확인 →</a>
     </article>
   </div>
 
@@ -117,6 +97,85 @@
   }
   function tick(){seoul.textContent=fmt('Asia/Seoul');ny.textContent=fmt('America/New_York');}
   tick(); setInterval(tick,1000);
+
+  const PROXY='https://api.allorigins.win/raw?url=';
+  async function getJson(url){
+    try{
+      const r=await fetch(url,{cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return await r.json();
+    }catch(e){
+      const r=await fetch(PROXY+encodeURIComponent(url),{cache:'no-store'});
+      if(!r.ok) throw e;
+      return await r.json();
+    }
+  }
+  function walk(obj, pred){
+    if(!obj) return null;
+    if(Array.isArray(obj)){ for(const v of obj){ const f=walk(v,pred); if(f) return f; } return null; }
+    if(typeof obj==='object'){
+      if(pred(obj)) return obj;
+      for(const k of Object.keys(obj)){ const f=walk(obj[k],pred); if(f) return f; }
+    }
+    return null;
+  }
+  function num(v){ return Number(String(v??'').replace(/,/g,'')); }
+  function signed(v, direction){
+    const n=num(v); if(!Number.isFinite(n)) return null;
+    if(direction==='FALLING'||direction==='5') return -Math.abs(n);
+    if(direction==='RISING'||direction==='2') return Math.abs(n);
+    return n;
+  }
+  function show(key, q){
+    const card=document.querySelector('[data-market="'+key+'"]'); if(!card) return;
+    const val=card.querySelector('.market-value'), ch=card.querySelector('.market-change'), tm=card.querySelector('.market-time');
+    if(!q || !Number.isFinite(q.price)){ val.textContent='불러오지 못했습니다'; ch.textContent='출처 페이지에서 직접 확인해주세요'; ch.className='market-change neutral'; return; }
+    val.textContent=q.price.toLocaleString('ko-KR',{maximumFractionDigits:q.decimals??2,minimumFractionDigits:q.decimals??0});
+    const diff=Number.isFinite(q.diff)?q.diff:null, ratio=Number.isFinite(q.ratio)?q.ratio:null;
+    if(diff===null && ratio===null){ ch.textContent='최근 거래값'; ch.className='market-change neutral'; }
+    else{
+      const up=(ratio??diff)>0, down=(ratio??diff)<0;
+      const sign=up?'+':'';
+      ch.textContent=(diff!==null?sign+diff.toLocaleString('ko-KR',{maximumFractionDigits:2})+' ':'')+(ratio!==null?'('+sign+ratio.toFixed(2)+'%)':'');
+      ch.className='market-change '+(up?'up':down?'down':'neutral');
+    }
+    tm.textContent=(q.time?'기준 '+q.time+' · ':'')+(q.source||'네이버페이 증권');
+  }
+  async function loadNaverBasic(code,key,decimals){
+    const d=await getJson('https://m.stock.naver.com/api/index/'+code+'/basic');
+    const dir=d.compareToPreviousPrice && (d.compareToPreviousPrice.name||d.compareToPreviousPrice.code);
+    show(key,{price:num(d.closePrice),diff:signed(d.compareToPreviousClosePrice,dir),ratio:signed(d.fluctuationsRatio,dir),time:d.localTradedAt||'',source:'네이버페이 증권',decimals});
+  }
+  async function loadFx(){
+    const d=await getJson('https://m.stock.naver.com/front-api/marketIndex/exchange/main');
+    const x=walk(d,o=>o.reutersCode==='FX_USDKRW');
+    if(!x) throw new Error('USD/KRW not found');
+    const dir=x.fluctuationsType&&x.fluctuationsType.name;
+    show('usdkrw',{price:num(x.closePrice),diff:signed(x.fluctuations,dir),ratio:signed(x.fluctuationsRatio,dir),time:x.localTradedAt||'',source:'네이버페이 증권',decimals:2});
+  }
+  async function loadUs(){
+    const d=await getJson('https://api.stock.naver.com/index/nation/USA');
+    const nas=walk(d,o=>o.reutersCode==='.IXIC'||/NASDAQ Composite/i.test(o.indexNameEng||''));
+    if(nas){ const dir=nas.compareToPreviousPrice && (nas.compareToPreviousPrice.name||nas.compareToPreviousPrice.code); show('nasdaq',{price:num(nas.closePrice),diff:signed(nas.compareToPreviousClosePrice,dir),ratio:signed(nas.fluctuationsRatio,dir),time:nas.localTradedAt||'',source:'네이버페이 증권',decimals:2}); }
+    else throw new Error('NASDAQ not found');
+    const nya=walk(d,o=>o.reutersCode==='.NYA'||/NYSE Composite/i.test((o.indexNameEng||'')+' '+(o.indexName||'')));
+    if(nya){ const dir=nya.compareToPreviousPrice && (nya.compareToPreviousPrice.name||nya.compareToPreviousPrice.code); show('nyse',{price:num(nya.closePrice),diff:signed(nya.compareToPreviousClosePrice,dir),ratio:signed(nya.fluctuationsRatio,dir),time:nya.localTradedAt||'',source:'네이버페이 증권',decimals:2}); return true; }
+    return false;
+  }
+  async function loadNyseFallback(){
+    const d=await getJson('https://query1.finance.yahoo.com/v8/finance/chart/%5ENYA?range=1d&interval=1m');
+    const m=d&&d.chart&&d.chart.result&&d.chart.result[0]&&d.chart.result[0].meta;
+    if(!m) throw new Error('NYSE fallback failed');
+    const price=Number(m.regularMarketPrice), prev=Number(m.chartPreviousClose||m.previousClose), diff=price-prev, ratio=prev?diff/prev*100:0;
+    const t=m.regularMarketTime?new Date(m.regularMarketTime*1000).toLocaleString('ko-KR',{timeZone:'America/New_York'}):'';
+    show('nyse',{price,diff,ratio,time:t,source:'Yahoo Finance',decimals:2});
+  }
+  async function start(){
+    const jobs=[loadFx().catch(()=>show('usdkrw')),loadNaverBasic('KOSPI','kospi',2).catch(()=>show('kospi')),loadNaverBasic('KOSDAQ','kosdaq',2).catch(()=>show('kosdaq'))];
+    jobs.push(loadUs().then(ok=>ok||loadNyseFallback()).catch(async()=>{ show('nasdaq'); try{await loadNyseFallback();}catch(e){show('nyse');} }));
+    await Promise.allSettled(jobs);
+  }
+  start();
 })();
 </script>
 </body></html>
