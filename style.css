@@ -1749,3 +1749,103 @@ html.dark-mode body.calculators-page header nav a:hover{
     height:auto!important;
   }
 }
+
+/* === DARK MODE ARTICLE CUSTOM CARD CONTRAST FIX v73 ===
+   Custom article callouts/cards must not keep light backgrounds in dark mode.
+   Also remove the visible boxed strip around .article-updated in dark mode only.
+*/
+html.dark-mode .article .date-alert,
+html.dark-mode .article .status-box,
+html.dark-mode .article .compare-note,
+html.dark-mode .article .yesno,
+html.dark-mode .article .reality-box,
+html.dark-mode .article .tip-box,
+html.dark-mode .article .mobile-note,
+html.dark-mode .article .money-box,
+html.dark-mode .article .eligibility-split>div,
+html.dark-mode .article .number-strip>div,
+html.dark-mode .article .quick-check>div,
+html.dark-mode .article .money-route>div,
+html.dark-mode .article .timeline-loan>div,
+html.dark-mode .article .train-card,
+html.dark-mode .article .rent-check>div,
+html.dark-mode .article .flow-line>div,
+html.dark-mode .article .money-focus>div{
+  background:#111c2e!important;
+  border-color:#334155!important;
+  color:#dbe4f0!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article .date-alert strong,
+html.dark-mode .article .status-box strong,
+html.dark-mode .article .compare-note strong,
+html.dark-mode .article .yesno strong,
+html.dark-mode .article .reality-box strong,
+html.dark-mode .article .tip-box strong,
+html.dark-mode .article .mobile-note strong,
+html.dark-mode .article .money-box strong,
+html.dark-mode .article .eligibility-split strong,
+html.dark-mode .article .number-strip strong,
+html.dark-mode .article .quick-check b,
+html.dark-mode .article .money-route strong,
+html.dark-mode .article .timeline-loan strong,
+html.dark-mode .article .train-card h3,
+html.dark-mode .article .rent-check strong,
+html.dark-mode .article .flow-line b,
+html.dark-mode .article .money-focus b{
+  color:#f4f7fb!important;
+}
+html.dark-mode .article .date-alert p,
+html.dark-mode .article .status-box p,
+html.dark-mode .article .compare-note p,
+html.dark-mode .article .yesno p,
+html.dark-mode .article .reality-box p,
+html.dark-mode .article .tip-box p,
+html.dark-mode .article .mobile-note p,
+html.dark-mode .article .money-box p,
+html.dark-mode .article .eligibility-split p,
+html.dark-mode .article .number-strip p,
+html.dark-mode .article .quick-check p,
+html.dark-mode .article .money-route p,
+html.dark-mode .article .timeline-loan p,
+html.dark-mode .article .train-card p,
+html.dark-mode .article .rent-check p,
+html.dark-mode .article .flow-line p,
+html.dark-mode .article .money-focus p{
+  color:#c7d2e2!important;
+}
+/* Accent borders remain visible without using bright light-mode panel colors. */
+html.dark-mode .article .date-alert{border-color:#7a6228!important;background:#171b24!important}
+html.dark-mode .article .status-box{border-left-color:#2d8b70!important;background:#10231f!important}
+html.dark-mode .article .compare-note{border-left-color:#2d8b70!important;background:#10231f!important}
+html.dark-mode .article .yesno{border-color:#2f5d50!important;background:#10231f!important}
+html.dark-mode .article .reality-box{border-color:#334d73!important;background:#111c2e!important}
+html.dark-mode .article .money-box{border-color:#315943!important;background:#102019!important}
+html.dark-mode .article .mobile-note{border-left-color:#66569b!important;background:#19182a!important}
+html.dark-mode .article .tip-box{border-color:#7a6228!important;background:#171b24!important}
+html.dark-mode .article .money-focus>div,
+html.dark-mode .article .eligibility-split>div,
+html.dark-mode .article .number-strip>div,
+html.dark-mode .article .quick-check>div,
+html.dark-mode .article .money-route>div,
+html.dark-mode .article .timeline-loan>div,
+html.dark-mode .article .train-card,
+html.dark-mode .article .rent-check>div,
+html.dark-mode .article .flow-line>div{border-color:#334155!important;background:#111c2e!important}
+/* Article update strip: blend into page in dark mode so it does not look like a separate outlined box. */
+html.dark-mode .article .article-updated{
+  background:#0f172a!important;
+  border-color:#0f172a!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article .article-updated strong{color:#e8eef7!important}
+html.dark-mode .article .article-updated span{color:#c1ccdc!important}
+/* Keep official buttons crisp in dark mode. */
+html.dark-mode .article .official-grid a,
+html.dark-mode .article .direct-btn,
+html.dark-mode .article .official-btn{
+  border:1px solid #243b5c!important;
+  box-shadow:none!important;
+}
+html.dark-mode .article .official-grid a:last-child,
+html.dark-mode .article .direct-btn.secondary{border-color:#285e49!important}
