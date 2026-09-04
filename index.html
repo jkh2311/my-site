@@ -19,7 +19,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=70">
 <link rel="canonical" href="https://haninelife.com/">
 <meta property="og:type" content="website">
@@ -134,6 +134,52 @@
     order:1;margin:0;font-size:17px;line-height:1.48;letter-spacing:-.45px;
     display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
   }
+}
+</style>
+
+<style id="hero-reference-style-final">
+/* Reference-style hero typography — desktop + mobile */
+.hero-title-group{position:relative;z-index:1;text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
+.hero-title-group h1{font-family:system-ui,-apple-system,"Pretendard","Noto Sans KR",sans-serif!important;font-weight:900!important;letter-spacing:-2.4px!important;color:#111a2b!important;text-align:center!important;}
+.hero-subline{display:block!important;margin-top:10px!important;line-height:1.02!important;white-space:nowrap!important;}
+.hero-subline .hero-tip,.hero-subline .hero-summary{font-family:"Nanum Brush Script","Gowun Batang",cursive!important;font-style:normal!important;font-weight:400!important;letter-spacing:-1.1px!important;text-shadow:none!important;position:relative!important;display:inline-block!important;}
+.hero-subline .hero-tip{color:#11877f!important;}
+.hero-subline .hero-summary{color:#315aab!important;}
+.hero-subline .hero-dot{color:#9da9bb!important;font-size:.52em!important;vertical-align:.18em!important;margin:0 .18em!important;}
+.hero-subline .hero-tip::after,.hero-subline .hero-summary::after{content:"";position:absolute;left:8%;right:8%;bottom:-3px;height:7px;border-radius:50%;filter:blur(1px);opacity:.34;z-index:-1;}
+.hero-subline .hero-tip::after{background:#6dd8cb;}
+.hero-subline .hero-summary::after{background:#9ebaf2;}
+
+.hero-description.hero-description-refined{background:none!important;border:0!important;box-shadow:none!important;text-align:center!important;font-family:"Gowun Dodum","Noto Sans KR",sans-serif!important;}
+.hero-description-refined .hero-desc-main,.hero-description-refined .hero-desc-sub,.hero-description-refined .hero-desc-point{display:block!important;text-align:center!important;width:100%!important;}
+.hero-description-refined .hero-word-info{font-family:"Nanum Brush Script","Gowun Batang",cursive!important;font-weight:400!important;color:#e5654c!important;font-size:1.28em!important;letter-spacing:-.04em!important;border:0!important;padding:0 .05em!important;}
+.hero-description-refined .hero-word-organize{font-family:"Nanum Brush Script","Gowun Batang",cursive!important;font-weight:400!important;color:#11877f!important;font-size:1.34em!important;letter-spacing:-.05em!important;border:0!important;padding:0 .05em!important;}
+.hero-description-refined .hero-desc-brand{font-family:"Gowun Dodum","Noto Sans KR",sans-serif!important;font-weight:800!important;color:#245694!important;background:none!important;-webkit-text-fill-color:initial!important;text-shadow:0 5px 14px rgba(49,90,171,.12)!important;}
+
+@media (min-width:701px){
+  .hero-title-group h1{font-size:58px!important;line-height:1.08!important;}
+  .hero-subline .hero-tip,.hero-subline .hero-summary{font-size:64px!important;}
+  .hero-description.hero-description-refined{width:min(100%,680px)!important;max-width:680px!important;margin:28px auto 0!important;padding:0!important;}
+  .hero-description-refined .hero-desc-main{font-size:16px!important;line-height:1.7!important;color:#4c5b70!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-sub{margin-top:4px!important;font-size:16px!important;line-height:1.7!important;color:#4c5b70!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-sub::after{display:none!important;content:none!important;}
+  .hero-description-refined .hero-desc-point{margin-top:4px!important;}
+  .hero-description-refined .hero-desc-prefix{display:inline!important;font-size:15px!important;line-height:1.7!important;color:#7b8797!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-brand{display:inline!important;margin-left:5px!important;font-size:16px!important;line-height:1.7!important;letter-spacing:-.4px!important;}
+}
+
+@media (max-width:700px){
+  .hero-title-group .hero-subline{display:block!important;}
+  .hero-title-group h1{font-size:34px!important;line-height:1.12!important;letter-spacing:-1.8px!important;}
+  .hero-subline{margin-top:7px!important;}
+  .hero-subline .hero-tip,.hero-subline .hero-summary{font-size:44px!important;}
+  .hero-description.hero-description-refined{width:100%!important;max-width:360px!important;margin:18px auto 0!important;padding:0 8px!important;}
+  .hero-description-refined .hero-desc-main{font-size:14px!important;line-height:1.65!important;color:#4e5b6d!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-sub{margin-top:2px!important;font-size:14px!important;line-height:1.65!important;color:#4e5b6d!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-sub::after{display:none!important;content:none!important;}
+  .hero-description-refined .hero-desc-point{margin-top:2px!important;}
+  .hero-description-refined .hero-desc-prefix{display:inline!important;font-size:13.5px!important;line-height:1.65!important;color:#7b8797!important;font-weight:400!important;}
+  .hero-description-refined .hero-desc-brand{display:inline!important;margin-left:4px!important;font-size:14.5px!important;line-height:1.65!important;letter-spacing:-.35px!important;}
 }
 </style>
 </head>
