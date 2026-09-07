@@ -154,5 +154,59 @@
     "title": "대전장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
     "url": "/funeral/daejeon/daejeon-funeral.html",
     "address": "대전광역시 서구 갑천도시고속도로 1895 (월평동)"
+  },
+  {
+    "name": "건양대학교병원장례식장",
+    "title": "건양대학교병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/konyang-hospital.html",
+    "address": "대전광역시 서구 관저동로 158 (관저동)"
+  },
+  {
+    "name": "대전을지대학교병원장례식장",
+    "title": "대전을지대학교병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/eulji-hospital.html",
+    "address": "대전광역시 서구 둔산서로 95 (둔산동, 을지대학병원)"
+  },
+  {
+    "name": "대청병원장례식장",
+    "title": "대청병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/daecheong-hospital.html",
+    "address": "대전광역시 서구 계백로 1322 (정림동, 대청병원)"
+  },
+  {
+    "name": "나진장례식장",
+    "title": "나진장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/najin.html",
+    "address": "대전광역시 서구 갈마로 122 (괴정동)"
+  },
+  {
+    "name": "대전성심장례식장",
+    "title": "대전성심장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/daejeon-sungsim.html",
+    "address": "대전광역시 서구 갑천도시고속도로 1893 (월평동)"
+  },
+  {
+    "name": "충남대학교병원장례식장",
+    "title": "충남대학교병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/chungnam-national-hospital.html",
+    "address": "대전광역시 중구 문화로 282 (대사동, 충남대학교병원)"
+  },
+  {
+    "name": "가톨릭대학교대전성모병원장례식장",
+    "title": "가톨릭대학교대전성모병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/daejeon-st-marys.html",
+    "address": "대전광역시 중구 대흥로 64 (대흥동, 가톨릭대학교대전성모병원)"
+  },
+  {
+    "name": "대전보훈병원장례식장",
+    "title": "대전보훈병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/daejeon-bohun.html",
+    "address": "대전광역시 대덕구 대청로82번길 147 (신탄진동)"
+  },
+  {
+    "name": "근로복지공단대전병원장례식장",
+    "title": "근로복지공단대전병원장례식장 이용안내 위치·주차·편의시설·대중교통 정리",
+    "url": "/funeral/daejeon/comwel-daejeon.html",
+    "address": "대전광역시 대덕구 계족로 637 (법동, 근로복지공단대전병원)"
   }
 ]
