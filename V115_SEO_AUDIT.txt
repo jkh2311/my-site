@@ -1,0 +1,32 @@
+V115 사이트 전체 SEO 전수검사 및 수정
+
+검사 범위
+- 전체 HTML 74개
+- 일반 게시물 38개
+- 서울 장례식장 상세 25개 + 장례식장 허브
+- 홈/게시물목록/계산기/금융/소개/문의/개인정보 등 주요 페이지
+
+전수검사 항목
+- title / meta description
+- og:title / og:description / og:url / og:type
+- canonical
+- robots noindex 여부
+- H1 누락/중복
+- sitemap.xml 포함 여부와 실제 파일 존재 여부
+- 내부 링크 404 여부
+- 일반 게시물 article-index.json 등록 여부
+- Article 구조화 데이터 누락 여부
+
+발견 및 수정
+1. calculators.html: Open Graph 메타가 없어서 고유 OG title/description/url/type/site_name 추가
+2. articles/2026-chuseok-highway-toll-free.html: canonical, Open Graph, Twitter 카드, Article/Breadcrumb 구조화 데이터 누락 수정
+3. 장례식장 25개: V114의 고유 OG/canonical 유지 확인
+4. sitemap.xml: 등록 URL이 실제 파일과 모두 연결됨 확인
+5. 내부 링크: 깨진 내부 링크 0건 확인
+6. 일반 게시물: 38개 HTML과 article-index.json 38개 일치 확인
+7. H1: 검색 대상 페이지에서 누락/복수 H1 0건 확인
+8. admin.html의 noindex,nofollow는 의도된 관리자 페이지 설정이므로 유지
+9. 네이버 소유확인 파일과 ads.txt는 변경하지 않음
+
+참고
+- /funeral/ 및 /funeral/seoul/ 허브는 index.html 대신 디렉터리 URL을 canonical로 사용하는 현재 구조가 정상이라 유지.
