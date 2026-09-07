@@ -1,0 +1,8 @@
+V97 변경사항
+- 서울 장례식장 상세 25개 위치지도를 NAVER Web Dynamic Map(JavaScript API)으로 교체
+- 신규 Maps 인증 방식 ncpKeyId 사용
+- 각 페이지에 위도/경도 고정 저장: 방문 시 Geocoding API 호출 없음
+- 페이지당 장례식장 위치 Dynamic Map 1개 + 마커 표시
+- 장례식장 글 내부 주변 공영주차장 지도는 계속 미표시(공영주차장 페이지에서만 표시)
+- 거리뷰/로드뷰는 인터랙티브 뷰로 넣지 않음. 상단 장례식장 사진은 별도 정적 이미지 확보 후 적용 예정
+- Naver verification / ads.txt / GA4 / AdSense 유지
