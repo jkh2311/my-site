@@ -2703,3 +2703,14 @@ html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
 .route-detail-v110{line-height:1.75}.route-detail-v110 h3{margin:24px 0 12px;font-size:19px}.route-block-v110{margin:8px 0 18px}.route-block-v110>strong{display:block;margin-bottom:8px}.route-block-v110 ul{margin:0;padding-left:22px}.route-block-v110 li{margin:6px 0}.route-car-v110{display:grid;gap:8px}.route-car-v110>div{padding-left:0}.route-parking-v110{margin-top:16px;padding:13px 15px;border-left:3px solid #2d7fe5;background:#f4f8fd;border-radius:8px}.route-map-links-v110{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.route-map-links-v110 a{display:inline-block;padding:9px 12px;border:1px solid #19ce60;border-radius:9px;color:#087c37!important;text-decoration:none;font-weight:800;background:#fff}html.dark-mode .route-parking-v110,body.dark-mode .route-parking-v110{background:#152238!important;color:#e5eefb!important}html.dark-mode .route-map-links-v110 a,body.dark-mode .route-map-links-v110 a{background:#152238!important;color:#7fe6a8!important;border-color:#2f8e58!important}
 
 .parking-map-links .parking-naver-primary-v110{border-color:#19ce60!important;background:#19ce60!important;color:#fff!important;padding:11px 15px!important}
+
+
+/* V118 search-intent answer summaries */
+.search-intent-summary-v118{margin:28px 0;padding:22px 24px;border:1px solid var(--border,#dbe3ef);border-radius:14px;background:var(--card-bg,#fff)}
+.search-intent-summary-v118 h2{margin:0 0 10px;font-size:1.35rem}
+.search-intent-lead-v118{margin:0 0 16px;line-height:1.75}
+.search-intent-list-v118,.search-intent-keypoints-v118{margin:0;padding-left:20px}
+.search-intent-list-v118 li,.search-intent-keypoints-v118 li{margin:10px 0}
+.search-intent-list-v118 a{text-decoration:none}
+.search-intent-list-v118 p{margin:5px 0 0;line-height:1.65}
+@media (prefers-color-scheme:dark){.search-intent-summary-v118{background:#111827;border-color:#374151;color:#f3f4f6}.search-intent-summary-v118 a{color:#93c5fd}}
