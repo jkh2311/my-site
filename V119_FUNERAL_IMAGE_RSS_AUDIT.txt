@@ -1,0 +1,9 @@
+V119 작업 내역
+- 서울 장례식장 상세페이지: 25개
+- 상단 대표이미지: /images/funeral-hall-sign.png (사용자 제공 원본 606x323)
+- 표시 방식: width 100% + height auto + object-fit contain (크롭 없음)
+- 각 장례식장 상세페이지 og:image: 25개
+- RSS 장례식장 상세 URL: 25개
+- RSS 전체 item 수: 63개
+- sitemap.xml 장례식장 상세 URL: 25개 유지
+- 네이버 인증파일/ads.txt 변경 없음
