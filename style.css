@@ -2720,3 +2720,10 @@ html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
 .funeral-repeat-title-v121 h2{margin:0;font-size:clamp(1.35rem,2.2vw,1.8rem);line-height:1.45;letter-spacing:-.025em;color:var(--text,#172033);font-weight:800}
 @media (max-width:640px){.funeral-repeat-title-v121{margin:18px 0 14px}.funeral-repeat-title-v121 h2{font-size:1.25rem;line-height:1.45}}
 @media (prefers-color-scheme:dark){.funeral-repeat-title-v121 h2{color:var(--text,#f3f6fb)}}
+
+/* V125: funeral route action links - larger, more visible */
+.route-map-links-v110{gap:12px!important;margin-top:22px!important}
+.route-map-links-v110 a{display:inline-flex!important;align-items:center;justify-content:center;min-height:52px;padding:14px 22px!important;border:2px solid #19ce60!important;border-radius:12px!important;font-size:16px!important;line-height:1.25;font-weight:900!important;box-shadow:0 4px 12px rgba(0,0,0,.10);transition:transform .15s ease,box-shadow .15s ease;text-align:center}
+.route-map-links-v110 a:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.14)}
+@media(max-width:640px){.route-map-links-v110{display:grid!important;grid-template-columns:1fr!important}.route-map-links-v110 a{width:100%;box-sizing:border-box;font-size:16px!important;min-height:54px}}
+html.dark-mode .route-map-links-v110 a,body.dark-mode .route-map-links-v110 a{box-shadow:0 4px 12px rgba(0,0,0,.28)}
