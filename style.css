@@ -943,752 +943,9 @@ img{max-width:100%}
   #article-list .article-published{display:block!important;font-size:9.5px!important;line-height:1.35!important;margin:2px 0 0!important;color:#8a94a3!important;}
 }
 
-/* DARK-MODE-V1 — true dark theme, PC + mobile */
-.dark-mode-toggle{
-  appearance:none;-webkit-appearance:none;border:1px solid #d8dee8;background:#fff;color:#344054;
-  min-height:36px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
-  gap:6px;font:inherit;font-size:12.5px;font-weight:800;line-height:1;white-space:nowrap;cursor:pointer;
-  box-shadow:0 1px 2px rgba(16,24,40,.04);transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
-  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
-}
-.dark-mode-toggle:hover{background:#f4f6f8;border-color:#b9c2cf;color:#172033}
-.dark-mode-toggle:focus-visible{outline:3px solid rgba(54,95,145,.24);outline-offset:2px}
-.dark-mode-toggle .dark-mode-icon{font-size:15px;line-height:1}
-
-html.dark-mode{color-scheme:dark;background:#0b1020}
-html.dark-mode body{background:#0f172a!important;color:#dbe4f0!important}
-html.dark-mode .site-header,
-html.dark-mode .article-search-wrap,
-html.dark-mode footer,
-html.dark-mode .site-footer{background:#111827!important;border-color:#2b3548!important;color:#dbe4f0!important}
-html.dark-mode .site-header a,
-html.dark-mode .main-nav a,
-html.dark-mode header nav a,
-html.dark-mode footer a{color:#dbe4f0!important}
-html.dark-mode .brand-wordmark{filter:brightness(0) invert(1) opacity(.94)}
-html.dark-mode .brand-symbol{filter:brightness(1.15)}
-
-html.dark-mode main,
-html.dark-mode .hero,
-html.dark-mode .section,
-html.dark-mode .article-main,
-html.dark-mode .content-section,
-html.dark-mode .latest-section,
-html.dark-mode .category-section{background-color:#0f172a!important;color:#dbe4f0!important}
-
-html.dark-mode h1,html.dark-mode h2,html.dark-mode h3,html.dark-mode h4,
-html.dark-mode strong,html.dark-mode b{color:#f4f7fb!important}
-html.dark-mode p,html.dark-mode li,html.dark-mode dd,html.dark-mode dt,
-html.dark-mode .lead,html.dark-mode .article-published,html.dark-mode .article-published-detail,
-html.dark-mode .eyebrow,html.dark-mode .muted,html.dark-mode small{color:#b9c5d6!important}
-
-html.dark-mode .card,
-html.dark-mode .article-card,
-html.dark-mode .category-card,
-html.dark-mode .calculator-card,
-html.dark-mode .calc-card,
-html.dark-mode .info-card,
-html.dark-mode .summary-card,
-html.dark-mode .side-card,
-html.dark-mode .sidebar-card,
-html.dark-mode .toc,
-html.dark-mode .article-opening-qa,
-html.dark-mode .qa-mini-item,
-html.dark-mode .article-updated,
-html.dark-mode .lead-line,
-html.dark-mode .spec-precision-box,
-html.dark-mode .spec-table,
-html.dark-mode .loan-calculator,
-html.dark-mode .calculator-box,
-html.dark-mode .result-box,
-html.dark-mode .article-search-box,
-html.dark-mode .article-search-results,
-html.dark-mode table,
-html.dark-mode thead,
-html.dark-mode tbody,
-html.dark-mode tr,
-html.dark-mode td,
-html.dark-mode th{
-  background-color:#172033!important;
-  border-color:#334155!important;
-  color:#dbe4f0!important;
-  box-shadow:none!important;
-}
-html.dark-mode .lead-line{border-top-color:#334155!important;border-bottom-color:#334155!important}
-html.dark-mode .article-search-result{background:#172033!important;border-color:#334155!important;color:#e5edf7!important}
-html.dark-mode .article-search-result:hover{background:#202b3d!important}
-
-html.dark-mode input,html.dark-mode select,html.dark-mode textarea{
-  background:#0b1220!important;color:#f3f6fb!important;border-color:#3b475a!important;
-}
-html.dark-mode input::placeholder,html.dark-mode textarea::placeholder{color:#7f8da3!important}
-html.dark-mode button:not(.dark-mode-toggle),
-html.dark-mode .btn:not(.btn-primary){border-color:#3b475a!important}
-
-html.dark-mode a{color:#8ec5ff}
-html.dark-mode .tag,html.dark-mode .badge,html.dark-mode .chip{filter:brightness(.88) saturate(.9)}
-html.dark-mode img:not(.brand-wordmark):not(.brand-symbol){filter:brightness(.88) contrast(1.03)}
-html.dark-mode .article-cover img,html.dark-mode .article-cover-banner img{filter:brightness(.82) contrast(1.04)}
-
-html.dark-mode .hero-description-refined .hero-desc-main,
-html.dark-mode .hero-description-refined .hero-desc-sub,
-html.dark-mode .hero-description-refined .hero-desc-prefix{color:#bdc9d8!important}
-html.dark-mode .hero-description-refined .hero-desc-brand{color:#79b8ff!important;text-shadow:none!important}
-html.dark-mode .hero-title-group h1{color:#f3f6fb!important}
-html.dark-mode .hero-title-group .eyebrow{color:#8c9ab0!important}
-
-html.dark-mode .dark-mode-toggle{background:#eef2f7!important;border-color:#eef2f7!important;color:#111827!important}
-html.dark-mode .dark-mode-toggle:hover{background:#fff!important;color:#0b1020!important}
-
-@media(max-width:699px){
-  .main-nav .dark-mode-toggle,header nav .dark-mode-toggle{
-    flex:0 0 auto!important;display:inline-flex!important;visibility:visible!important;opacity:1!important;
-    min-width:36px;min-height:32px;padding:0 9px;border-radius:999px;position:relative;z-index:3;
-  }
-  .main-nav .dark-mode-toggle .dark-mode-label,header nav .dark-mode-toggle .dark-mode-label{display:none!important}
-  .main-nav .dark-mode-toggle .dark-mode-icon,header nav .dark-mode-toggle .dark-mode-icon{font-size:15px}
-}
-
-/* DARK-MODE-V2-CONTRAST-FIX — readable UI everywhere, PC + mobile */
-html.dark-mode .page-hero,
-html.dark-mode .prose,
-html.dark-mode .hani-about,
-html.dark-mode .form-card,
-html.dark-mode .admin-card,
-html.dark-mode .contact-box,
-html.dark-mode .notice,
-html.dark-mode .summary-box,
-html.dark-mode .guide-step,
-html.dark-mode .method-box,
-html.dark-mode .photo-rule,
-html.dark-mode .photo-diagram,
-html.dark-mode .quick-fact,
-html.dark-mode .application-card,
-html.dark-mode .secondary-cta,
-html.dark-mode .compare-card,
-html.dark-mode .notice-blue,
-html.dark-mode .photo-detail-box,
-html.dark-mode .photo-spec-grid>div,
-html.dark-mode .rule-photo,
-html.dark-mode .photo-guide-pro,
-html.dark-mode .passport-strict,
-html.dark-mode .quick-photo-cards>div,
-html.dark-mode .empty-category,
-html.dark-mode .article-hashtags,
-html.dark-mode .popular-post-item,
-html.dark-mode .article-toc,
-html.dark-mode .article-section-with-icon,
-html.dark-mode .compound-tool,
-html.dark-mode .compound-inputs,
-html.dark-mode .compound-summary,
-html.dark-mode .compound-big,
-html.dark-mode .compound-summary-grid>div,
-html.dark-mode .compound-chart-wrap,
-html.dark-mode .compound-year-table-card,
-html.dark-mode .compound-guide-section,
-html.dark-mode .compound-explain-section,
-html.dark-mode .compound-rule-section,
-html.dark-mode .compound-why-section,
-html.dark-mode .compound-step-card,
-html.dark-mode .interest-card,
-html.dark-mode .rule72-grid div,
-html.dark-mode .why-grid>div,
-html.dark-mode .calculator-search-card,
-html.dark-mode .calculator-category-panel,
-html.dark-mode .calculator-tool,
-html.dark-mode .calc-intro,
-html.dark-mode .calc-details,
-html.dark-mode .calc-result,
-html.dark-mode .calc-result-box,
-html.dark-mode .calc-note,
-html.dark-mode .calc-warning,
-html.dark-mode .wage-box{
-  background:#172033!important;
-  border-color:#334155!important;
-  color:#e6edf7!important;
-  box-shadow:none!important;
-}
-
-/* Light hero/section blocks that previously washed text out */
-html.dark-mode .page-hero,
-html.dark-mode .page-hero .container,
-html.dark-mode .page-hero .prose{
-  background:#111827!important;
-  color:#e6edf7!important;
-}
-html.dark-mode .page-hero h1,
-html.dark-mode .page-hero h2,
-html.dark-mode .page-hero h3,
-html.dark-mode .page-hero p,
-html.dark-mode .page-hero .section-label,
-html.dark-mode .page-hero .eyebrow{
-  color:#e6edf7!important;
-}
-html.dark-mode .page-hero p{color:#bac6d8!important}
-html.dark-mode .section-label{color:#91a4bf!important}
-
-/* General text contrast inside dark cards/panels */
-html.dark-mode .hani-about h1,
-html.dark-mode .hani-about h2,
-html.dark-mode .hani-about h3,
-html.dark-mode .form-card h1,
-html.dark-mode .form-card h2,
-html.dark-mode .form-card h3,
-html.dark-mode .calculator-search-card h1,
-html.dark-mode .calculator-search-card h2,
-html.dark-mode .calculator-search-card h3,
-html.dark-mode .calculator-category-panel h2,
-html.dark-mode .calculator-category-panel h3,
-html.dark-mode .calculator-tool h2,
-html.dark-mode .calculator-tool h3,
-html.dark-mode .article-hashtags h2,
-html.dark-mode .popular-posts h2,
-html.dark-mode .article-toc strong,
-html.dark-mode .info-card strong,
-html.dark-mode .compound-section-head h2,
-html.dark-mode .compound-step-card h3,
-html.dark-mode .interest-card h3,
-html.dark-mode .why-grid h3,
-html.dark-mode .rule72-grid b{
-  color:#f5f8fc!important;
-}
-html.dark-mode .hani-about p,
-html.dark-mode .hani-about span,
-html.dark-mode .form-card p,
-html.dark-mode .form-card .form-help,
-html.dark-mode .calculator-search-card p,
-html.dark-mode .calculator-category-panel p,
-html.dark-mode .calculator-tool p,
-html.dark-mode .calc-intro,
-html.dark-mode .calc-details,
-html.dark-mode .compound-section-head p,
-html.dark-mode .compound-step-card p,
-html.dark-mode .interest-card p,
-html.dark-mode .why-grid p,
-html.dark-mode .popular-copy em,
-html.dark-mode .lead-line p{
-  color:#bac6d8!important;
-}
-
-/* Forms */
-html.dark-mode .form-field label,
-html.dark-mode .calc-field label,
-html.dark-mode .inline-check,
-html.dark-mode .calculator-search-card label{
-  color:#e6edf7!important;
-}
-html.dark-mode input,
-html.dark-mode select,
-html.dark-mode textarea,
-html.dark-mode .form-field input,
-html.dark-mode .form-field select,
-html.dark-mode .form-field textarea,
-html.dark-mode .calculator-search-row input{
-  background:#0b1220!important;
-  color:#f5f8fc!important;
-  border-color:#475569!important;
-  caret-color:#f5f8fc!important;
-}
-html.dark-mode input::placeholder,
-html.dark-mode textarea::placeholder{color:#8291a8!important;opacity:1!important}
-html.dark-mode select option{background:#0b1220!important;color:#f5f8fc!important}
-html.dark-mode .form-status{background:#202b3d!important;color:#e6edf7!important}
-
-/* Calculator hub/category panels */
-html.dark-mode .calculator-category-btn,
-html.dark-mode .calculator-category-close,
-html.dark-mode .calculator-close,
-html.dark-mode .calc-reset,
-html.dark-mode .calc-secondary{
-  background:#202b3d!important;
-  border-color:#475569!important;
-  color:#f5f8fc!important;
-}
-html.dark-mode .calculator-category-btn:hover,
-html.dark-mode .calculator-category-close:hover,
-html.dark-mode .calculator-close:hover,
-html.dark-mode .calc-reset:hover,
-html.dark-mode .calc-secondary:hover{background:#29364b!important}
-html.dark-mode .calculator-tool{background:#172033!important}
-html.dark-mode .calculator-tool-head,
-html.dark-mode .calculator-category-head,
-html.dark-mode .calculator-category-panel-head{border-color:#334155!important}
-html.dark-mode .mini-badge{background:#26354a!important;color:#a9d0ff!important}
-html.dark-mode .calc-note.warning,
-html.dark-mode .warning-box,
-html.dark-mode .admin-note{background:#2a2416!important;border-color:#6b5730!important;color:#f5d991!important}
-
-/* Tables */
-html.dark-mode table,
-html.dark-mode .table,
-html.dark-mode .result-table,
-html.dark-mode .compound-year-table{background:#172033!important;color:#e6edf7!important}
-html.dark-mode th,
-html.dark-mode .table th,
-html.dark-mode .result-table th,
-html.dark-mode .compound-year-table thead th{background:#202b3d!important;color:#f5f8fc!important;border-color:#3b4a60!important}
-html.dark-mode td,
-html.dark-mode .table td,
-html.dark-mode .result-table td,
-html.dark-mode .compound-year-table tbody td{background:#172033!important;color:#dce6f3!important;border-color:#334155!important}
-html.dark-mode tr:hover td,
-html.dark-mode .compound-year-table tbody tr:hover td{background:#1d293a!important}
-
-/* Pills/tabs/cards which stayed white */
-html.dark-mode .category-tabs a,
-html.dark-mode .article-pagination button,
-html.dark-mode .home-pagination button,
-html.dark-mode .article-hashtag-list span,
-html.dark-mode .interest-flow b{
-  background:#202b3d!important;
-  color:#dce6f3!important;
-  border-color:#3b4a60!important;
-}
-html.dark-mode .category-tabs a.active,
-html.dark-mode .home-pagination button.active{background:#2563eb!important;color:#fff!important;border-color:#2563eb!important}
-html.dark-mode .popular-post-item:hover{background:#202b3d!important}
-
-/* Keep primary/accent buttons readable */
-html.dark-mode .btn-primary,
-html.dark-mode .calc-primary,
-html.dark-mode .calculator-search-row button,
-html.dark-mode .article-search-input-row button{
-  background:#2563eb!important;
-  color:#fff!important;
-  border-color:#2563eb!important;
-}
-html.dark-mode .btn-secondary{background:#202b3d!important;color:#f5f8fc!important;border-color:#475569!important}
-
-/* Search bar text and sticky shell */
-html.dark-mode .article-search-box>label{color:#aebbd0!important}
-html.dark-mode .article-search-wrap{background:#111827!important;border-color:#2c3a50!important}
-html.dark-mode .article-search-box{background:#111827!important}
-html.dark-mode .article-search-results{background:#111827!important;border-color:#334155!important}
-html.dark-mode .article-search-result-cat,
-html.dark-mode .article-search-message{color:#9fb0c8!important}
-
-/* Header/logo/mascot details */
-html.dark-mode .hani-card{background:#172033!important;border-color:#334155!important}
-html.dark-mode .hani-card figcaption{background:#172033!important;color:#e6edf7!important}
-html.dark-mode .hani-card figcaption span{color:#bac6d8!important}
-
-/* Links retain clear accessible blue/teal accents */
-html.dark-mode a{color:#8cc5ff!important}
-html.dark-mode a:hover{color:#b8dcff!important}
-html.dark-mode .article-hashtag-list span{color:#9ccaff!important}
-html.dark-mode .compound-section-badge,
-html.dark-mode .interest-card.compound .interest-label{background:#153b38!important;color:#86e1d7!important}
-html.dark-mode .compound-tip-box{background:#15342f!important;border-color:#285b54!important}
-html.dark-mode .compound-tip-box p{color:#c0ddd8!important}
-html.dark-mode .compound-explain-note{background:#18283a!important}
-html.dark-mode .rule72-hero .rule72-note{background:#202b3d!important;color:#dce6f3!important;border-color:#3b4a60!important}
-
-/* Ensure dark-mode button is always visible in both desktop and mobile */
-html.dark-mode .dark-mode-toggle,
-.dark-mode-toggle{visibility:visible!important;opacity:1!important}
-
-@media(max-width:699px){
-  html.dark-mode .page-hero{background:#111827!important}
-  html.dark-mode .form-card,
-  html.dark-mode .hani-about,
-  html.dark-mode .calculator-search-card,
-  html.dark-mode .calculator-category-panel{background:#172033!important;color:#e6edf7!important}
-}
 
 
-/* DARK-MODE-V3-FULL-VISIBILITY — dark-mode only, exhaustive contrast repair */
-html.dark-mode #home-latest-grid .article-card .tag,
-html.dark-mode .admin-card,
-html.dark-mode .admin-editor,
-html.dark-mode .admin-list button,
-html.dark-mode .admin-list button:hover,
-html.dark-mode .admin-note,
-html.dark-mode .application-card,
-html.dark-mode .article-cover,
-html.dark-mode .article-hashtag-list span,
-html.dark-mode .article-hashtags,
-html.dark-mode .article-pagination button,
-html.dark-mode .article-search-input-row input,
-html.dark-mode .article-search-result:hover,
-html.dark-mode .article-search-results,
-html.dark-mode .article-section-with-icon,
-html.dark-mode .article-toc,
-html.dark-mode .article-visual,
-html.dark-mode .bad,
-html.dark-mode .btn-secondary,
-html.dark-mode .calc-field input,
-html.dark-mode .calc-field select,
-html.dark-mode .calc-note,
-html.dark-mode .calc-note.success,
-html.dark-mode .calc-note.warning,
-html.dark-mode .calc-reset,
-html.dark-mode .calc-result,
-html.dark-mode .calc-source-links a,
-html.dark-mode .calculator-card,
-html.dark-mode .calculator-category-btn,
-html.dark-mode .calculator-category-btn span,
-html.dark-mode .calculator-category-close,
-html.dark-mode .calculator-category-panel,
-html.dark-mode .calculator-category-panel-head,
-html.dark-mode .calculator-category-scroll .calculator-card,
-html.dark-mode .calculator-category-scroll::-webkit-scrollbar-thumb,
-html.dark-mode .calculator-close,
-html.dark-mode .calculator-close:hover,
-html.dark-mode .calculator-search-card,
-html.dark-mode .calculator-search-results a,
-html.dark-mode .calculator-tool,
-html.dark-mode .card,
-html.dark-mode .category-tabs a,
-html.dark-mode .compare-card,
-html.dark-mode .compound-chart-wrap,
-html.dark-mode .compound-explain-note,
-html.dark-mode .compound-explain-section,
-html.dark-mode .compound-frequency button,
-html.dark-mode .compound-guide-section,
-html.dark-mode .compound-inputs,
-html.dark-mode .compound-profit-pill,
-html.dark-mode .compound-rule-section,
-html.dark-mode .compound-section-badge,
-html.dark-mode .compound-step-card,
-html.dark-mode .compound-summary,
-html.dark-mode .compound-tip-box,
-html.dark-mode .compound-tool,
-html.dark-mode .compound-why-section,
-html.dark-mode .compound-year-table tbody td,
-html.dark-mode .compound-year-table tbody tr:hover td,
-html.dark-mode .compound-year-table thead th,
-html.dark-mode .compound-year-table-card,
-html.dark-mode .contact-box,
-html.dark-mode .dark-mode-toggle,
-html.dark-mode .dark-mode-toggle:hover,
-html.dark-mode .empty-category,
-html.dark-mode .form-card,
-html.dark-mode .form-field input,
-html.dark-mode .form-field select,
-html.dark-mode .form-field textarea,
-html.dark-mode .form-status{background-color:#172033!important;border-color:#334155!important;box-shadow:none!important;}
-html.dark-mode .formula-box,
-html.dark-mode .guide-step,
-html.dark-mode .hani-about,
-html.dark-mode .hani-card,
-html.dark-mode .hani-card figcaption.hani-footer,
-html.dark-mode .home-pagination button,
-html.dark-mode .info-card,
-html.dark-mode .interest-card,
-html.dark-mode .interest-card.compound,
-html.dark-mode .interest-card.compound .interest-label,
-html.dark-mode .interest-flow b,
-html.dark-mode .interest-label,
-html.dark-mode .issue-cta-button,
-html.dark-mode .loan-excel,
-html.dark-mode .loan-field input,
-html.dark-mode .loan-field select,
-html.dark-mode .loan-info-card,
-html.dark-mode .loan-info-card .loan-steps li,
-html.dark-mode .loan-methods button,
-html.dark-mode .loan-note,
-html.dark-mode .loan-panel,
-html.dark-mode .loan-pill,
-html.dark-mode .loan-reset,
-html.dark-mode .loan-schedule-card,
-html.dark-mode .loan-stat,
-html.dark-mode .loan-summary-main,
-html.dark-mode .loan-table tbody tr.is-selected,
-html.dark-mode .loan-table th,
-html.dark-mode .loan-table thead th,
-html.dark-mode .main-nav a,
-html.dark-mode .method-box,
-html.dark-mode .mini-badge,
-html.dark-mode .mobile-note,
-html.dark-mode .notice,
-html.dark-mode .notice-blue,
-html.dark-mode .number,
-html.dark-mode .ok,
-html.dark-mode .passport-strict,
-html.dark-mode .passport-strict .spec-caution,
-html.dark-mode .photo-detail-box,
-html.dark-mode .photo-diagram,
-html.dark-mode .photo-frame,
-html.dark-mode .photo-guide-pro,
-html.dark-mode .photo-rule,
-html.dark-mode .photo-spec-grid>div,
-html.dark-mode .popular-post-item,
-html.dark-mode .pre-step-photo-cta,
-html.dark-mode .quick-fact,
-html.dark-mode .quick-photo-cards>div,
-html.dark-mode .recent-post-item img,
-html.dark-mode .rule-photo,
-html.dark-mode .rule72-grid div,
-html.dark-mode .rule72-hero .rule72-note,
-html.dark-mode .secondary-cta,
-html.dark-mode .sidebar-card,
-html.dark-mode .spec-caution,
-html.dark-mode .spec-precision-box,
-html.dark-mode .summary-box,
-html.dark-mode .table th,
-html.dark-mode .tip-box,
-html.dark-mode .train-card,
-html.dark-mode .train-table th,
-html.dark-mode .wage-box,
-html.dark-mode .warning-box,
-html.dark-mode .why-grid span,
-html.dark-mode .why-grid>div,
-html.dark-mode body{background-color:#172033!important;border-color:#334155!important;box-shadow:none!important;}
-html.dark-mode .article-opening-qa,html.dark-mode .qa-mini-item,
-html.dark-mode .train-card,html.dark-mode .tip-box,html.dark-mode .mobile-note,
-html.dark-mode .calculator-category-panel-head,html.dark-mode .calculator-category-head,
-html.dark-mode .calculator-category-panel>div,html.dark-mode .calculator-category-panel>section,
-html.dark-mode .form-card,html.dark-mode .hani-about,html.dark-mode .page-hero,
-html.dark-mode .page-hero .container,html.dark-mode .sidebar-card,
-html.dark-mode .faq-item,html.dark-mode .faq-list,html.dark-mode .faq-box,
-html.dark-mode .summary-grid>div,html.dark-mode .info-grid>div,
-html.dark-mode .article-content-box,html.dark-mode .content-card{background:#172033!important;border-color:#334155!important;box-shadow:none!important;}
-html.dark-mode #article-list .article-published,
-html.dark-mode #home-latest-grid .article-card .article-date,
-html.dark-mode #home-latest-grid .article-card .more,
-html.dark-mode #home-latest-grid .article-card .tag,
-html.dark-mode .admin-editor:focus,
-html.dark-mode .ai-photo-examples figcaption,
-html.dark-mode .article .retirement-calculator-cta:hover,
-html.dark-mode .article-body p,
-html.dark-mode .article-hashtag-list span,
-html.dark-mode .article-hashtags h2,
-html.dark-mode .article-main-title,
-html.dark-mode .article-meta,
-html.dark-mode .article-pagination button,
-html.dark-mode .article-pagination button.active,
-html.dark-mode .article-published,
-html.dark-mode .article-published-detail,
-html.dark-mode .article-search-box>label,
-html.dark-mode .article-search-input-row input:focus,
-html.dark-mode .article-search-message,
-html.dark-mode .article-search-result,
-html.dark-mode .article-search-result small,
-html.dark-mode .article-search-result-cat,
-html.dark-mode .article-toc a,
-html.dark-mode .article-toc strong,
-html.dark-mode .article-updated span,
-html.dark-mode .article-updated strong,
-html.dark-mode .article-visual-title,
-html.dark-mode .calc-details,
-html.dark-mode .calc-disclaimer,
-html.dark-mode .calc-field label,
-html.dark-mode .calc-field small,
-html.dark-mode .calc-note,
-html.dark-mode .calc-note.success,
-html.dark-mode .calc-note.warning,
-html.dark-mode .calc-reset,
-html.dark-mode .calc-result-line strong,
-html.dark-mode .calc-source-links a,
-html.dark-mode .calc-warning,
-html.dark-mode .calculator-card p,
-html.dark-mode .calculator-category-btn,
-html.dark-mode .calculator-category-btn span,
-html.dark-mode .calculator-category-btn.active,
-html.dark-mode .calculator-category-close,
-html.dark-mode .calculator-category-head h2,
-html.dark-mode .calculator-category-head p,
-html.dark-mode .calculator-category-panel-head span,
-html.dark-mode .calculator-category-panel-head strong,
-html.dark-mode .calculator-close,
-html.dark-mode .calculator-close:hover,
-html.dark-mode .calculator-search-message,
-html.dark-mode .calculator-search-results a,
-html.dark-mode .card p,
-html.dark-mode .category-card .more,
-html.dark-mode .category-tabs a,
-html.dark-mode .category-tabs a.active,
-html.dark-mode .category-tabs a:hover,
-html.dark-mode .chart-legend,
-html.dark-mode .compound-big em,
-html.dark-mode .compound-big span,
-html.dark-mode .compound-big strong,
-html.dark-mode .compound-explain-note p,
-html.dark-mode .compound-explain-note strong,
-html.dark-mode .compound-frequency button,
-html.dark-mode .compound-inputs input[type=range],
-html.dark-mode .compound-profit-pill,
-html.dark-mode .compound-section-badge,
-html.dark-mode .compound-section-head h2,
-html.dark-mode .compound-section-head p,
-html.dark-mode .compound-step-card h3,
-html.dark-mode .compound-step-card p{color:#e8eef7!important;}
-html.dark-mode .compound-summary-grid span,
-html.dark-mode .compound-tip-box p,
-html.dark-mode .compound-tip-box span,
-html.dark-mode .compound-year-table tbody td,
-html.dark-mode .compound-year-table thead th,
-html.dark-mode .copyright,
-html.dark-mode .dark-mode-toggle,
-html.dark-mode .dark-mode-toggle:hover,
-html.dark-mode .empty-category p,
-html.dark-mode .eyebrow,
-html.dark-mode .footer-inner p,
-html.dark-mode .footer-links,
-html.dark-mode .form-help,
-html.dark-mode .form-status,
-html.dark-mode .formula-box,
-html.dark-mode .hani-card .hani-mascot-text b,
-html.dark-mode .hani-card figcaption span,
-html.dark-mode .hero h1,
-html.dark-mode .hero-description,
-html.dark-mode .hero-description-refined .hero-desc-brand,
-html.dark-mode .hero-description-refined .hero-desc-main,
-html.dark-mode .hero-description-refined .hero-desc-point,
-html.dark-mode .hero-description-refined .hero-desc-prefix,
-html.dark-mode .hero-description-refined .hero-desc-sub,
-html.dark-mode .hero-description-refined .hero-word-info,
-html.dark-mode .hero-description-refined .hero-word-organize,
-html.dark-mode .hero-description.hero-description-refined,
-html.dark-mode .hero-subline .hero-dot,
-html.dark-mode .hero-subline .hero-summary,
-html.dark-mode .hero-subline .hero-tip,
-html.dark-mode .hero-title-group .eyebrow,
-html.dark-mode .hero-title-group h1,
-html.dark-mode .hero-word-info,
-html.dark-mode .hero-word-organize,
-html.dark-mode .home-pagination button,
-html.dark-mode .home-pagination button.active,
-html.dark-mode .info-card strong,
-html.dark-mode .interest-card h3,
-html.dark-mode .interest-card p,
-html.dark-mode .interest-card.compound .interest-label,
-html.dark-mode .interest-flow span,
-html.dark-mode .interest-label,
-html.dark-mode .issue-cta-button,
-html.dark-mode .lead-line p,
-html.dark-mode .lead-line strong,
-html.dark-mode .loan-field label,
-html.dark-mode .loan-info-card li,
-html.dark-mode .loan-info-card p,
-html.dark-mode .loan-methods button.active,
-html.dark-mode .loan-note,
-html.dark-mode .loan-panel h3,
-html.dark-mode .loan-pill,
-html.dark-mode .loan-range,
-html.dark-mode .loan-reset,
-html.dark-mode .loan-stat span,
-html.dark-mode .loan-stat strong,
-html.dark-mode .loan-summary-main em,
-html.dark-mode .loan-summary-main span,
-html.dark-mode .loan-summary-main strong,
-html.dark-mode .loan-table tbody tr.is-selected td,
-html.dark-mode .main-nav a,
-html.dark-mode .main-nav a:hover,
-html.dark-mode .mini-badge,
-html.dark-mode .notice,
-html.dark-mode .notice-blue,
-html.dark-mode .passport-strict .spec-table b,
-html.dark-mode .photo-spec-grid span,
-html.dark-mode .photo-spec-grid strong,
-html.dark-mode .popular-copy em,
-html.dark-mode .popular-copy strong{color:#e8eef7!important;}
-html.dark-mode .popular-loading,
-html.dark-mode .popular-posts h2,
-html.dark-mode .pre-step-photo-cta p,
-html.dark-mode .pre-step-photo-cta strong,
-html.dark-mode .prose li,
-html.dark-mode .prose p,
-html.dark-mode .qa-a,
-html.dark-mode .qa-q,
-html.dark-mode .quick-fact span,
-html.dark-mode .quick-photo-cards span,
-html.dark-mode .quick-photo-cards strong,
-html.dark-mode .rate-note,
-html.dark-mode .recent-post-item,
-html.dark-mode .recent-post-item small,
-html.dark-mode .recent-post-item:hover strong,
-html.dark-mode .related-calc-grid a,
-html.dark-mode .related-calc-grid span,
-html.dark-mode .rule-photo figcaption,
-html.dark-mode .rule72-grid b,
-html.dark-mode .rule72-grid span,
-html.dark-mode .rule72-hero .rule72-note,
-html.dark-mode .secondary-cta a,
-html.dark-mode .section-label,
-html.dark-mode .sidebar-card h2,
-html.dark-mode .sidebar-categories a,
-html.dark-mode .sidebar-categories a:hover span,
-html.dark-mode .sidebar-categories b,
-html.dark-mode .source-box,
-html.dark-mode .spec-table b,
-html.dark-mode .spec-table span,
-html.dark-mode .tag,
-html.dark-mode .train-card h3,
-html.dark-mode .train-table th,
-html.dark-mode .wage-total strong,
-html.dark-mode .why-grid h3,
-html.dark-mode .why-grid p,
-html.dark-mode .why-grid span{color:#e8eef7!important;}
-html.dark-mode .qa-q,html.dark-mode .qa-a,
-html.dark-mode .article-opening-qa h2,html.dark-mode .article-opening-qa h3,
-html.dark-mode .article-opening-qa div,html.dark-mode .article-opening-qa span,
-html.dark-mode .article h1,html.dark-mode .article h2,html.dark-mode .article h3,html.dark-mode .article h4,
-html.dark-mode .article p,html.dark-mode .article li,html.dark-mode .article dt,html.dark-mode .article dd,
-html.dark-mode .article label,html.dark-mode .article figcaption,
-html.dark-mode .calculator-category-panel,html.dark-mode .calculator-category-panel *:not(a):not(button),
-html.dark-mode .calculator-tool,html.dark-mode .calculator-tool *:not(a):not(button):not(input):not(select):not(textarea),
-html.dark-mode .form-card,html.dark-mode .form-card *:not(a):not(button):not(input):not(select):not(textarea),
-html.dark-mode .hani-about,html.dark-mode .hani-about *:not(a):not(button),
-html.dark-mode .page-hero,html.dark-mode .page-hero *:not(a):not(button),
-html.dark-mode .sidebar-card,html.dark-mode .sidebar-card *:not(a):not(button){color:#e8eef7!important;}
 
-html.dark-mode .qa-a,html.dark-mode .article p,html.dark-mode .article li,html.dark-mode .article dd,
-html.dark-mode .article figcaption,html.dark-mode .form-help,html.dark-mode .muted,html.dark-mode small,
-html.dark-mode .page-hero p,html.dark-mode .hani-about p{color:#c1ccda!important;}
-html.dark-mode .qa-q,html.dark-mode .article h1,html.dark-mode .article h2,html.dark-mode .article h3,
-html.dark-mode .article h4,html.dark-mode .calculator-category-panel h2,html.dark-mode .calculator-category-panel h3,
-html.dark-mode .form-card h2,html.dark-mode .hani-about h2{color:#f7f9fc!important;}
-html.dark-mode .brand-wordmark{filter:none!important;opacity:1!important;background:#fff!important;border-radius:2px;}
-html.dark-mode .brand-symbol{filter:none!important;}
-html.dark-mode .article-opening-qa .qa-mini-item{background:#172033!important;border-color:#334155!important;}
-html.dark-mode .article-opening-qa .qa-q{color:#f7f9fc!important;}
-html.dark-mode .article-opening-qa .qa-a{color:#c1ccda!important;}
-html.dark-mode .train-card h3,html.dark-mode .train-card p,
-html.dark-mode .tip-box,html.dark-mode .tip-box p,
-html.dark-mode .mobile-note,html.dark-mode .mobile-note p{color:#e8eef7!important;}
-html.dark-mode input,html.dark-mode select,html.dark-mode textarea{background:#0b1220!important;color:#f7f9fc!important;border-color:#475569!important;}
-html.dark-mode input::placeholder,html.dark-mode textarea::placeholder{color:#94a3b8!important;opacity:1!important;}
-html.dark-mode table th{background:#202b3d!important;color:#f7f9fc!important;}
-html.dark-mode table td{background:#172033!important;color:#dce6f3!important;}
-html.dark-mode .calculator-category-panel-head,html.dark-mode .calculator-category-head{background:#172033!important;color:#f7f9fc!important;}
-html.dark-mode .calculator-category-panel-head *,html.dark-mode .calculator-category-head *{color:#f7f9fc!important;}
-html.dark-mode .calculator-category-close,html.dark-mode .calculator-close{background:#202b3d!important;color:#f7f9fc!important;border-color:#475569!important;}
-/* Keep intended accent/CTA colors after the broad readability pass */
-html.dark-mode .btn-primary,html.dark-mode .calc-primary,html.dark-mode .calculator-search-row button,
-html.dark-mode .article-search-input-row button{background:#2563eb!important;color:#fff!important;border-color:#2563eb!important;}
-html.dark-mode .direct-btn{color:#fff!important;}
-html.dark-mode .direct-btn.secondary{color:#fff!important;}
-html.dark-mode .hero-word-info{color:#ff765f!important;}
-html.dark-mode .hero-word-organize{color:#39c5b8!important;}
-html.dark-mode .hero-desc-brand{color:#79b8ff!important;}
-html.dark-mode .hero-tip{color:#37b7ad!important;}
-html.dark-mode .hero-summary{color:#6ea4ff!important;}
-
-
-/* DARK-MODE-V4-TARGETED — header wordmark background + about page lower area only */
-html.dark-mode .brand-wordmark{
-  content:url('/images/hanine-header-logo-dark.png')!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  filter:none!important;
-  opacity:1!important;
-}
-/* Keep the lower text area on About visually continuous with the dark page background. */
-html.dark-mode body.about-page .section,
-html.dark-mode body.about-page .section > .container,
-html.dark-mode body.about-page .section .prose{
-  background:#0f172a!important;
-  border-color:transparent!important;
-  box-shadow:none!important;
-}
-/* The Hani introduction card remains a distinct card, as requested. */
-html.dark-mode body.about-page .hani-about{
-  background:#172033!important;
-  border-color:#334155!important;
-}
 
 /* BRAND-ICON-STORY-V1 — directly below Hani introduction */
 .brand-icon-story{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;margin:22px 0 34px;padding:22px;border:1px solid #dbe3ee;border-radius:18px;background:#fff}
@@ -1697,37 +954,7 @@ html.dark-mode body.about-page .hani-about{
 .brand-icon-story-copy .section-label{margin:0 0 6px}
 .brand-icon-story-copy h2{margin:0 0 10px}
 .brand-icon-story-copy p:last-child{margin:0;line-height:1.8}
-html.dark-mode .brand-icon-story{background:#172033!important;border-color:#334155!important}
-html.dark-mode .brand-icon-story-visual{background:#101827!important}
-html.dark-mode .brand-icon-story-visual img{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
-html.dark-mode .brand-icon-story-copy h2,html.dark-mode .brand-icon-story-copy strong{color:#f7f9fc!important}
-html.dark-mode .brand-icon-story-copy p{color:#c1ccda!important}
-/* Dark-mode logo symbol: white '한' strokes, mint checks preserved */
-html.dark-mode .site-header .brand-symbol{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
-html.dark-mode .hani-mark img{content:url('/images/hanine-symbol-dark.png')!important;filter:none!important;opacity:1!important}
 @media(max-width:700px){.brand-icon-story{grid-template-columns:86px minmax(0,1fr);gap:14px;padding:16px}.brand-icon-story-visual{min-height:86px}.brand-icon-story-visual img{width:68px;height:68px}.brand-icon-story-copy h2{font-size:19px}}
-
-
-/* DARK-MODE-CALCULATORS-SEAMLESS-V1 — calculators page only */
-html.dark-mode body.calculators-page .calc-intro,
-html.dark-mode body.calculators-page .calculator-category-head{
-  background:transparent!important;
-  background-color:transparent!important;
-  border-color:transparent!important;
-  box-shadow:none!important;
-}
-html.dark-mode body.calculators-page .main-nav a,
-html.dark-mode body.calculators-page header nav a{
-  background:transparent!important;
-  background-color:transparent!important;
-  border-color:transparent!important;
-  box-shadow:none!important;
-}
-html.dark-mode body.calculators-page .main-nav a:hover,
-html.dark-mode body.calculators-page header nav a:hover{
-  background:transparent!important;
-  background-color:transparent!important;
-}
 
 /* ARTICLE-HERO-FULL-VISIBILITY-V1 — 대표 AI 이미지는 잘리지 않고 전체가 보이도록 */
 .article-cover-banner{
@@ -1749,106 +976,6 @@ html.dark-mode body.calculators-page header nav a:hover{
     height:auto!important;
   }
 }
-
-/* === DARK MODE ARTICLE CUSTOM CARD CONTRAST FIX v73 ===
-   Custom article callouts/cards must not keep light backgrounds in dark mode.
-   Also remove the visible boxed strip around .article-updated in dark mode only.
-*/
-html.dark-mode .article .date-alert,
-html.dark-mode .article .status-box,
-html.dark-mode .article .compare-note,
-html.dark-mode .article .yesno,
-html.dark-mode .article .reality-box,
-html.dark-mode .article .tip-box,
-html.dark-mode .article .mobile-note,
-html.dark-mode .article .money-box,
-html.dark-mode .article .eligibility-split>div,
-html.dark-mode .article .number-strip>div,
-html.dark-mode .article .quick-check>div,
-html.dark-mode .article .money-route>div,
-html.dark-mode .article .timeline-loan>div,
-html.dark-mode .article .train-card,
-html.dark-mode .article .rent-check>div,
-html.dark-mode .article .flow-line>div,
-html.dark-mode .article .money-focus>div{
-  background:#111c2e!important;
-  border-color:#334155!important;
-  color:#dbe4f0!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article .date-alert strong,
-html.dark-mode .article .status-box strong,
-html.dark-mode .article .compare-note strong,
-html.dark-mode .article .yesno strong,
-html.dark-mode .article .reality-box strong,
-html.dark-mode .article .tip-box strong,
-html.dark-mode .article .mobile-note strong,
-html.dark-mode .article .money-box strong,
-html.dark-mode .article .eligibility-split strong,
-html.dark-mode .article .number-strip strong,
-html.dark-mode .article .quick-check b,
-html.dark-mode .article .money-route strong,
-html.dark-mode .article .timeline-loan strong,
-html.dark-mode .article .train-card h3,
-html.dark-mode .article .rent-check strong,
-html.dark-mode .article .flow-line b,
-html.dark-mode .article .money-focus b{
-  color:#f4f7fb!important;
-}
-html.dark-mode .article .date-alert p,
-html.dark-mode .article .status-box p,
-html.dark-mode .article .compare-note p,
-html.dark-mode .article .yesno p,
-html.dark-mode .article .reality-box p,
-html.dark-mode .article .tip-box p,
-html.dark-mode .article .mobile-note p,
-html.dark-mode .article .money-box p,
-html.dark-mode .article .eligibility-split p,
-html.dark-mode .article .number-strip p,
-html.dark-mode .article .quick-check p,
-html.dark-mode .article .money-route p,
-html.dark-mode .article .timeline-loan p,
-html.dark-mode .article .train-card p,
-html.dark-mode .article .rent-check p,
-html.dark-mode .article .flow-line p,
-html.dark-mode .article .money-focus p{
-  color:#c7d2e2!important;
-}
-/* Accent borders remain visible without using bright light-mode panel colors. */
-html.dark-mode .article .date-alert{border-color:#7a6228!important;background:#171b24!important}
-html.dark-mode .article .status-box{border-left-color:#2d8b70!important;background:#10231f!important}
-html.dark-mode .article .compare-note{border-left-color:#2d8b70!important;background:#10231f!important}
-html.dark-mode .article .yesno{border-color:#2f5d50!important;background:#10231f!important}
-html.dark-mode .article .reality-box{border-color:#334d73!important;background:#111c2e!important}
-html.dark-mode .article .money-box{border-color:#315943!important;background:#102019!important}
-html.dark-mode .article .mobile-note{border-left-color:#66569b!important;background:#19182a!important}
-html.dark-mode .article .tip-box{border-color:#7a6228!important;background:#171b24!important}
-html.dark-mode .article .money-focus>div,
-html.dark-mode .article .eligibility-split>div,
-html.dark-mode .article .number-strip>div,
-html.dark-mode .article .quick-check>div,
-html.dark-mode .article .money-route>div,
-html.dark-mode .article .timeline-loan>div,
-html.dark-mode .article .train-card,
-html.dark-mode .article .rent-check>div,
-html.dark-mode .article .flow-line>div{border-color:#334155!important;background:#111c2e!important}
-/* Article update strip: blend into page in dark mode so it does not look like a separate outlined box. */
-html.dark-mode .article .article-updated{
-  background:#0f172a!important;
-  border-color:#0f172a!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article .article-updated strong{color:#e8eef7!important}
-html.dark-mode .article .article-updated span{color:#c1ccdc!important}
-/* Keep official buttons crisp in dark mode. */
-html.dark-mode .article .official-grid a,
-html.dark-mode .article .direct-btn,
-html.dark-mode .article .official-btn{
-  border:1px solid #243b5c!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article .official-grid a:last-child,
-html.dark-mode .article .direct-btn.secondary{border-color:#285e49!important}
 
 
 /* V7.4 finance market page */
@@ -1881,27 +1008,6 @@ html.dark-mode .article .direct-btn.secondary{border-color:#285e49!important}
 .finance-guide-box{margin-top:22px;padding:20px 22px;border-radius:16px;background:#0d1b3d;color:#fff}
 .finance-guide-box strong{display:block;margin-bottom:7px;font-size:17px;color:#fff}
 .finance-guide-box p{margin:0;color:#d3deec;line-height:1.75;font-size:14px}
-html.dark-mode body.finance-page{background:#0f172a}
-html.dark-mode body.finance-page .finance-hero{background:#0f172a;border-bottom-color:#1e293b}
-html.dark-mode body.finance-page .finance-kicker{color:#57d4c6}
-html.dark-mode body.finance-page .finance-hero h1,html.dark-mode body.finance-page .finance-section-head h2{color:#f2f6fb}
-html.dark-mode body.finance-page .finance-intro{color:#b9c5d5}
-html.dark-mode body.finance-page .finance-clock-card{background:#111c2e;border-color:#334155;box-shadow:none}
-html.dark-mode body.finance-page .finance-clock-card>div{background:#0f172a}
-html.dark-mode body.finance-page .clock-label{color:#9fb0c5}
-html.dark-mode body.finance-page .finance-clock-card strong{color:#f0f5fb}
-html.dark-mode body.finance-page .finance-page .main-nav a[aria-current="page"],html.dark-mode body.finance-page .main-nav a[aria-current="page"]{color:#7ab8ff!important}
-html.dark-mode body.finance-page .finance-refresh{background:#111c2e;border-color:#334155;color:#e7eef8}
-html.dark-mode body.finance-page .finance-refresh:hover{background:#17243a}
-html.dark-mode body.finance-page .finance-data-note{background:#111c2e;color:#c5d0df;border:1px solid #2b3a50}
-html.dark-mode body.finance-page .finance-market-card{background:#111c2e;border-color:#334155;box-shadow:none}
-html.dark-mode body.finance-page .market-card-head span,html.dark-mode body.finance-page .finance-eyebrow{color:#5ed5c8}
-html.dark-mode body.finance-page .market-card-head h3{color:#f2f6fb}
-html.dark-mode body.finance-page .market-card-head p{color:#aebbd0}
-html.dark-mode body.finance-page .tv-theme{border-top-color:#26364d}
-html.dark-mode body.finance-page .tv-theme-light{display:none}
-html.dark-mode body.finance-page .tv-theme-dark{display:block}
-html.dark-mode body.finance-page .finance-guide-box{background:#111c2e;border:1px solid #334155}
 @media(max-width:760px){
  .finance-hero{padding:42px 0 28px}.finance-intro{font-size:15px}.finance-clock-card{grid-template-columns:1fr}.finance-widget-grid{grid-template-columns:1fr}.finance-market-card:last-child{grid-column:auto}.market-card-head{display:block}.market-card-head p{text-align:left;max-width:none;margin-top:6px}.finance-section-head h2{font-size:26px}
 }
@@ -1915,11 +1021,6 @@ html.dark-mode body.finance-page .finance-guide-box{background:#111c2e;border:1p
 .finance-page .market-time{font-size:12px;color:#8190a5;line-height:1.5;min-height:18px}
 .finance-page .market-source-link{display:inline-flex;margin-top:10px;font-size:13px;font-weight:700;color:#2459a9;text-decoration:none}
 .finance-page .market-source-link:hover{text-decoration:underline}
-html.dark-mode body.finance-page .market-quote{border-top-color:#2b3a50}
-html.dark-mode body.finance-page .market-value{color:#f8fafc}
-html.dark-mode body.finance-page .market-change.neutral{color:#aebbd0}
-html.dark-mode body.finance-page .market-time{color:#8fa0b8}
-html.dark-mode body.finance-page .market-source-link{color:#8fc2ff}
 @media(max-width:700px){.finance-page .market-value{font-size:28px}}
 
 /* V7.6 finance market compact Yahoo layout */
@@ -1949,11 +1050,6 @@ html.dark-mode body.finance-page .market-source-link{color:#8fc2ff}
 .finance-page .finance-guide-box{margin-top:26px;padding:15px 17px;border-radius:14px}
 .finance-page .finance-guide-box strong{font-size:14px;margin-bottom:3px}
 .finance-page .finance-guide-box p{font-size:12px;line-height:1.65}
-html.dark-mode body.finance-page .finance-group-head h3{color:#eef4fb}
-html.dark-mode body.finance-page .finance-group-head>span{color:#8292a8}
-html.dark-mode body.finance-page .finance-market-card:hover{border-color:#48617e;box-shadow:0 9px 24px rgba(0,0,0,.14)}
-html.dark-mode body.finance-page .market-card-head h4{color:#f2f6fb}
-html.dark-mode body.finance-page .market-source-link{color:#8fb9e8}
 @media(max-width:850px){.finance-page .finance-grid-kr{grid-template-columns:repeat(2,minmax(0,1fr))}.finance-page .finance-grid-us{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}}
 @media(max-width:560px){.finance-page .finance-grid-kr,.finance-page .finance-grid-us{grid-template-columns:1fr 1fr}.finance-page .finance-market-card{padding:13px 12px}.finance-page .market-value{font-size:21px}.finance-page .market-card-head h4{font-size:14px}.finance-group-head>span{display:none}.finance-page .finance-section-head{align-items:center}.finance-page .finance-section-head h2{font-size:24px}}
 @media(max-width:390px){.finance-page .finance-grid-kr,.finance-page .finance-grid-us{grid-template-columns:1fr}}
@@ -1964,10 +1060,6 @@ html.dark-mode body.finance-page .market-source-link{color:#8fb9e8}
 .finance-live-badge[data-state="loading"]{color:#4a6480;background:#f1f5f9;border-color:#dbe4ec}
 .finance-live-badge[data-state="warn"]{color:#9a6700;background:#fff8df;border-color:#f4dfa0}
 .finance-live-badge[data-state="error"]{color:#a33a3a;background:#fff0f0;border-color:#f0cccc}
-body.dark-mode .finance-live-badge{color:#7ee2bd;background:#102d25;border-color:#245847}
-body.dark-mode .finance-live-badge[data-state="loading"]{color:#bfd0e4;background:#172234;border-color:#2b3a50}
-body.dark-mode .finance-live-badge[data-state="warn"]{color:#ffd76a;background:#302813;border-color:#5c4a1e}
-body.dark-mode .finance-live-badge[data-state="error"]{color:#ffaaaa;background:#351b20;border-color:#65303b}
 @media(max-width:640px){.finance-section-head{align-items:flex-start}.finance-refresh-wrap{justify-content:flex-start}.finance-live-badge{font-size:11px;padding:5px 8px}}
 
 /* HEADER CATEGORY NAV V1 */
@@ -1985,9 +1077,6 @@ body.dark-mode .finance-live-badge[data-state="error"]{color:#ffaaaa;background:
 .content-category-menu a{display:inline-flex;align-items:center;justify-content:center;padding:7px 9px;border-radius:9px;color:#35445b!important;text-decoration:none!important;font-size:12px;font-weight:750;letter-spacing:-.25px;transition:.15s ease}
 .content-category-menu a:hover{background:#eef5ff!important;color:#135fcb!important}
 .content-category-menu a.active{background:#e7f1ff!important;color:#0d5cc7!important;box-shadow:inset 0 0 0 1px #bfd8ff}
-html.dark-mode .content-category-menu a{color:#d5deeb!important}
-html.dark-mode .content-category-menu a:hover{background:#223047!important;color:#9dcbff!important}
-html.dark-mode .content-category-menu a.active{background:#17355e!important;color:#a9d2ff!important;box-shadow:inset 0 0 0 1px #315d91}
 @media(max-width:1080px) and (min-width:701px){
   .article-search-wrap{gap:8px!important}
   .article-search-wrap>.article-search-box{flex-basis:330px;min-width:300px}
@@ -2003,8 +1092,6 @@ html.dark-mode .content-category-menu a.active{background:#17355e!important;colo
   .content-category-menu{display:none;position:absolute;z-index:10030;left:0;right:0;top:44px;padding:8px;border:1px solid #d8e1ed;border-radius:12px;background:#fff;box-shadow:0 12px 30px rgba(15,23,42,.16);grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;white-space:normal}
   .content-category-area.is-open .content-category-menu{display:grid}
   .content-category-menu a{justify-content:flex-start;padding:10px 11px;font-size:13px;border-radius:8px}
-  html.dark-mode .content-category-toggle{background:#172033;color:#f5f8fc;border-color:#3b4a60}
-  html.dark-mode .content-category-menu{background:#172033;border-color:#3b4a60;box-shadow:0 12px 30px rgba(0,0,0,.34)}
   .article-search-box>label{display:none!important}
   .article-search-input-row{width:100%!important}
   .article-search-results{top:52px!important;left:0!important;right:0!important}
@@ -2027,7 +1114,6 @@ html.dark-mode .content-category-menu a.active{background:#17355e!important;colo
 .home-article-link{color:inherit!important;text-decoration:none!important;cursor:pointer;}
 .home-article-link:hover{border-color:#b7c7dc!important;box-shadow:0 9px 24px rgba(15,23,42,.08)!important;transform:translateY(-1px);}
 .home-article-link:focus-visible{outline:3px solid rgba(31,98,221,.28);outline-offset:2px;}
-html.dark-mode .home-article-link:hover{border-color:#4d6380!important;box-shadow:0 9px 24px rgba(0,0,0,.28)!important;}
 .calculators-page .calc-page{display:block!important;width:100%!important;}
 .calculators-page .calc-page>.container{width:min(100% - 36px,var(--max))!important;margin-inline:auto!important;}
 @media(max-width:900px){
@@ -2047,8 +1133,6 @@ html.dark-mode .home-article-link:hover{border-color:#4d6380!important;box-shado
 .subcategory-filter[hidden]{display:none!important;}
 .subcategory-filter button{appearance:none;border:1px solid #d6e1ef;background:#fff;color:#32445f;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:800;cursor:pointer;transition:.15s ease;}
 .subcategory-filter button:hover,.subcategory-filter button.active{border-color:#2f79e8;background:#eaf3ff;color:#105fc9;}
-html.dark-mode .subcategory-filter button{background:#172033;color:#d9e5f5;border-color:#3a4c64;}
-html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filter button.active{background:#173963;color:#b9d9ff;border-color:#4d7caf;}
 @media(max-width:700px){
   .article-search-wrap{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;align-items:center!important;gap:8px!important;padding:7px 12px!important;overflow:visible!important;}
   .article-search-wrap>.content-category-area{width:auto!important;max-width:none!important;position:relative!important;z-index:10031;}
@@ -2090,81 +1174,8 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   .subcategory-filter button{font-size:13.5px!important;font-weight:850!important;}
 }
 
-/* MOBILE-DARK-ARTICLE-AUDIT-V79
-   Mobile article dark-mode cleanup across all existing posts.
-   Keep panels aligned with the site dark palette, remove light/white borders,
-   and keep article text readable. Also prevent recent-post titles from clipping.
-*/
+
 @media (max-width: 700px){
-  html.dark-mode .article-main,
-  html.dark-mode .article-layout,
-  html.dark-mode .article,
-  html.dark-mode .article-body,
-  html.dark-mode .article-content,
-  html.dark-mode .article-sidebar,
-  html.dark-mode .article-sidebar > *,
-  html.dark-mode .popular-posts,
-  html.dark-mode .article-hashtags{
-    background-color:#0f172a!important;
-    color:#e8eef7!important;
-    border-color:#334155!important;
-  }
-
-  /* Common content panels used throughout the current article library */
-  html.dark-mode .article :is(
-    .guide-step,.guide-steps,.info-card,.info-grid>div,.method-box,.tip-box,.warning-box,
-    .notice,.notice-blue,.summary-box,.summary-card,.quick-fact,.quick-facts>div,.compare-card,
-    .source-box,.secondary-cta,.mobile-note,.train-card,.scb-card,.quiz-item,.faq-item,.faq-box,
-    .article-opening-qa,.qa-mini-item,.article-toc,.article-hashtags,.popular-post-item,
-    .article-content-box,.content-card,.photo-rule,.photo-detail-box,.photo-diagram,.photo-guide-pro,
-    .passport-strict,.spec-precision-box,.spec-table,.spec-caution,.rule-photo,
-    .compound-tool,.compound-inputs,.compound-summary,.compound-big,.compound-summary-grid>div,
-    .compound-chart-wrap,.compound-year-table-card,.compound-guide-section,.compound-explain-section,
-    .compound-rule-section,.compound-why-section,.compound-step-card,.compound-tip-box,.interest-card,
-    .why-grid>div,.rule72-grid>div,.loan-panel,.loan-info-card,.loan-note,.loan-schedule-card,
-    .calculator-box,.result-box,.calc-note,.calc-warning,.wage-box,.date-alert,.status-box,.compare-note,
-    .yesno,.reality-box,.money-box,.eligibility-split>div,.number-strip>div,.quick-check>div,
-    .money-route>div,.timeline-loan>div,.rent-check>div,.flow-line>div,.money-focus>div
-  ){
-    background:#111c2e!important;
-    background-color:#111c2e!important;
-    border-color:#334155!important;
-    color:#e8eef7!important;
-    box-shadow:none!important;
-  }
-
-  /* Catch legacy article panels that used inline light backgrounds. */
-  html.dark-mode .article div[style*="background"],
-  html.dark-mode .article section[style*="background"],
-  html.dark-mode .article aside[style*="background"]{
-    background:#111c2e!important;
-    background-color:#111c2e!important;
-    border-color:#334155!important;
-  }
-
-  /* Text inside article cards should remain bright/readable on phones. */
-  html.dark-mode .article :is(h1,h2,h3,h4,h5,h6,strong,b,label,dt,th){color:#f7f9fc!important;}
-  html.dark-mode .article :is(p,li,dd,td,figcaption,small,span){color:#d5deea!important;}
-  html.dark-mode .article a:not(.direct-btn):not(.btn):not(.official-btn):not(.issue-cta-button){color:#8ec5ff!important;}
-
-  /* No bright white outlines in mobile dark mode. */
-  html.dark-mode .article :is(table,thead,tbody,tr,td,th),
-  html.dark-mode .sidebar-card,
-  html.dark-mode .recent-post-item,
-  html.dark-mode .popular-post-item{
-    border-color:#334155!important;
-  }
-  html.dark-mode .sidebar-card{
-    background:#111827!important;
-    color:#e8eef7!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .recent-post-item{
-    background:transparent!important;
-    color:#e8eef7!important;
-  }
-  html.dark-mode .recent-post-item strong{color:#f7f9fc!important;}
-  html.dark-mode .recent-post-item small{color:#aebbd0!important;}
 
   /* Recent posts: use full width and show the complete post title instead of clipping it. */
   .article-sidebar,
@@ -2207,17 +1218,6 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     display:block!important;
     margin-top:4px!important;
     white-space:normal!important;
-  }
-
-  /* The update/reference strip should merge with the page, not look like a white box. */
-  html.dark-mode .article .article-updated,
-  html.dark-mode .article .article-update-note,
-  html.dark-mode .article .article-source-note{
-    background:#0f172a!important;
-    background-color:#0f172a!important;
-    border-color:#0f172a!important;
-    color:#d5deea!important;
-    box-shadow:none!important;
   }
 }
 
@@ -2276,11 +1276,6 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     overflow-wrap:anywhere!important;
   }
   .article-sidebar .recent-post-item small{font-size:11.5px!important;}
-  html.dark-mode .article-sidebar .recent-post-item{
-    background:#111827!important;
-    border-color:#334155!important;
-    color:#e8eef7!important;
-  }
 }
 
 /* MOBILE-CALCULATOR-LAYOUT + DARK-ARTICLE-BORDER-FIX-V81 */
@@ -2332,63 +1327,6 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   .loan-table{min-width:600px!important;}
   .result-table{min-width:520px!important;}
   .related-calc-grid a{min-width:0!important;overflow-wrap:anywhere!important;}
-
-  /* Strong dark-mode normalization for posts that still contain pale inline cards/borders. */
-  html.dark-mode .article :is(
-    .scb-date,.scb-card,.scb-green,.scb-warn,.bank-list span,
-    .eligibility-split>div,.number-strip>div,.compare-note,.quick-check>div,.yesno,
-    .money-route>div,.timeline-loan>div,.reality-box,.change-table,.support-table,
-    .money-focus>div,.status-box,.special-route>div,.rate-stairs>div,.warning-card,.decision,
-    .train-card,.tip-box,.mobile-note,.rent-check>div,.money-box,.flow-line>div,
-    .compound-tool,.compound-inputs,.compound-summary,.compound-big,.compound-summary-grid>div,
-    .compound-chart-wrap,.compound-year-table-card,.compound-guide-section,.compound-explain-section,
-    .compound-rule-section,.compound-why-section,.compound-step-card,.compound-tip-box,.interest-card,
-    .loan-tool,.loan-panel,.loan-info-card,.loan-note,.loan-schedule-card,.loan-stat,.loan-summary-main,
-    .related-calc-grid a
-  ){
-    background:#111c2e!important;
-    background-color:#111c2e!important;
-    border-color:#334155!important;
-    color:#e8eef7!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article :is(
-    .scb-card strong,.number-strip strong,.quick-check b,.timeline-loan strong,.money-focus b,
-    .special-route strong,.rate-stairs strong,.train-card h3,.rent-check strong,.flow-line b,
-    .compound-big strong,.compound-section-head h2,.compound-step-card h3,.interest-card h3,
-    .loan-panel h3,.loan-stat strong,.loan-summary-main strong,.related-calc-grid b
-  ){color:#fff!important;}
-  html.dark-mode .article :is(
-    .scb-table th,.scb-table td,.change-table th,.change-table td,.support-table th,.support-table td,
-    .train-table th,.train-table td,.compound-year-table th,.compound-year-table td,
-    .loan-table th,.loan-table td,.result-table th,.result-table td
-  ){
-    border-color:#334155!important;
-  }
-  html.dark-mode .article :is(
-    .scb-table th,.change-table th,.support-table th,.train-table th,
-    .compound-year-table th,.loan-table th,.result-table th
-  ){background:#202b3d!important;color:#fff!important;}
-  html.dark-mode .article :is(
-    .scb-table td,.change-table td,.support-table td,.train-table td,
-    .compound-year-table td,.loan-table td,.result-table td
-  ){background:#111c2e!important;color:#dbe4f0!important;}
-  html.dark-mode .article .scb-green,
-  html.dark-mode .article .compare-note,
-  html.dark-mode .article .yesno,
-  html.dark-mode .article .status-box{background:#10231f!important;border-color:#2f6658!important;}
-  html.dark-mode .article .scb-warn,
-  html.dark-mode .article .warning-card,
-  html.dark-mode .article .tip-box,
-  html.dark-mode .article .date-alert{background:#211c12!important;border-color:#6b592e!important;}
-  html.dark-mode .article .mobile-note{background:#1b1930!important;border-color:#51467a!important;}
-  html.dark-mode .article .decision{background:#111c2e!important;border-color:#43566f!important;}
-  html.dark-mode .article .rate-stairs>div,
-  html.dark-mode .article .special-route>div{background:#111c2e!important;border-color:#334155!important;}
-  html.dark-mode .article [style*="border:1px solid #"],
-  html.dark-mode .article [style*="border: 1px solid #"],
-  html.dark-mode .article [style*="border:2px solid #"],
-  html.dark-mode .article [style*="border: 2px solid #"]{border-color:#334155!important;}
 }
 
 /* MOBILE-RECENT-VERTICAL-LIST-V82
@@ -2454,68 +1392,6 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
     display:block!important;
     margin-top:3px!important;
     font-size:11.5px!important;
-  }
-  html.dark-mode .article-sidebar .recent-post-item{
-    background:transparent!important;
-    border-color:#27364b!important;
-    color:#e8eef7!important;
-  }
-  html.dark-mode .article-sidebar .recent-post-item strong{color:#f7f9fc!important;}
-  html.dark-mode .article-sidebar .recent-post-item small{color:#aebbd0!important;}
-}
-
-/* V83: Cashwalk article mobile dark-mode contrast fix */
-@media (max-width: 768px){
-  html.dark-mode .article .answer-now{
-    background:#111c2e!important;
-    border-color:#334155!important;
-    color:#e7eef8!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article .quiz-grid{
-    background:transparent!important;
-  }
-  html.dark-mode .article .quiz-item{
-    background:#111c2e!important;
-    border-color:#334155!important;
-    color:#e7eef8!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article .quiz-item b{
-    color:#f8fafc!important;
-  }
-  html.dark-mode .article .answer-chip{
-    background:#2a2612!important;
-    border:1px solid #665a21!important;
-    color:#ffe58a!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article .live-note{
-    background:#1e1b12!important;
-    border-color:#665a21!important;
-    color:#e7eef8!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article .live-note strong,
-  html.dark-mode .article .live-note b{
-    color:#ffe58a!important;
-  }
-  html.dark-mode .article .how-card{
-    background:transparent!important;
-  }
-  html.dark-mode .article .how-card>div{
-    background:#111c2e!important;
-    border:1px solid #334155!important;
-    color:#e7eef8!important;
-    box-shadow:none!important;
-  }
-  html.dark-mode .article .how-card>div b{
-    color:#f8fafc!important;
-  }
-  html.dark-mode .article .answer-now :is(h2,h3,p,span),
-  html.dark-mode .article .live-note :is(p,span),
-  html.dark-mode .article .how-card :is(p,span){
-    color:#d5deea!important;
   }
 }
 
@@ -2634,73 +1510,17 @@ html.dark-mode .subcategory-filter button:hover,html.dark-mode .subcategory-filt
   }
 }
 
-/* The three newer articles used their own pale card colors. Override them on ALL dark-mode sizes. */
-html.dark-mode .article :is(
-  .scb-date,.scb-card,.bank-list span,.eligibility-split>div,.number-strip>div,
-  .money-focus>div,.special-route>div,.rate-stairs>div,
-  .answer-now,.quiz-item,.how-card>div
-){
-  background:#111c2e!important;
-  background-color:#111c2e!important;
-  border-color:#334155!important;
-  color:#e8eef7!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article :is(.scb-green,.compare-note,.status-box){
-  background:#10231f!important;
-  border-color:#2f6658!important;
-  color:#e8eef7!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article :is(.scb-warn,.date-alert,.warning-card,.live-note){
-  background:#211c12!important;
-  border-color:#6b592e!important;
-  color:#e8eef7!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article .decision{
-  background:#111c2e!important;
-  border-color:#43566f!important;
-  color:#e8eef7!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article .answer-chip{
-  background:#2a2612!important;
-  border:1px solid #665a21!important;
-  color:#ffe58a!important;
-  box-shadow:none!important;
-}
-html.dark-mode .article :is(
-  .scb-card strong,.number-strip strong,.money-focus b,.special-route strong,.rate-stairs strong,
-  .quiz-item b,.answer-now h2,.warning-card strong,.decision strong
-){color:#f8fafc!important;}
-html.dark-mode .article :is(.scb-table,.change-table,.support-table){
-  background:#111c2e!important;
-  border-color:#334155!important;
-  color:#e8eef7!important;
-}
-html.dark-mode .article :is(.scb-table th,.change-table th,.support-table th){
-  background:#202b3d!important;
-  border-color:#334155!important;
-  color:#f8fafc!important;
-}
-html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
-  background:#111c2e!important;
-  border-color:#334155!important;
-  color:#dbe4f0!important;
-}
-
 /* Home latest pagination visibility: JS hidden must override mobile card display rules */
 #home-latest-grid .article-card[hidden]{display:none!important;}
 
 /* V105 funeral blog-style route & facilities */
-.facility-list-v105{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.facility-item-v105{padding:13px 14px;border:1px solid #d9e2ef;border-radius:10px;font-weight:700;background:#fff}.source-mini-v105{font-size:.88rem;color:#667085;margin-top:12px}.route-blog-v105{display:grid;gap:18px;margin-top:14px}.route-block-v105 h3{margin:0 0 8px;font-size:1.06rem}.route-block-v105 p{margin:6px 0;line-height:1.8}.route-address-v105{margin-top:16px;padding-top:12px;border-top:1px solid #e5e7eb}@media(max-width:640px){.facility-list-v105{grid-template-columns:1fr}}html[data-theme="dark"] .facility-item-v105,body.dark-mode .facility-item-v105{background:#111827;border-color:#374151;color:#f3f4f6}html[data-theme="dark"] .source-mini-v105,body.dark-mode .source-mini-v105{color:#cbd5e1}
+.facility-list-v105{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.facility-item-v105{padding:13px 14px;border:1px solid #d9e2ef;border-radius:10px;font-weight:700;background:#fff}.source-mini-v105{font-size:.88rem;color:#667085;margin-top:12px}.route-blog-v105{display:grid;gap:18px;margin-top:14px}.route-block-v105 h3{margin:0 0 8px;font-size:1.06rem}.route-block-v105 p{margin:6px 0;line-height:1.8}.route-address-v105{margin-top:16px;padding-top:12px;border-top:1px solid #e5e7eb}@media(max-width:640px){.facility-list-v105{grid-template-columns:1fr}}
 
 /* V107 funeral-centered public parking map */
-.funeral-parking-context{margin:18px 0 14px;padding:18px 20px;border:1px solid #cfdcec;border-radius:16px;background:#f8fbff}.funeral-parking-context .context-kicker{font-size:13px;font-weight:800;color:#3567a8;margin-bottom:5px}.funeral-parking-context h2{margin:0 0 8px;font-size:21px}.funeral-parking-context p{margin:0;line-height:1.75}.context-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.context-actions a{display:inline-block;padding:9px 12px;border:1px solid #2876df;border-radius:9px;text-decoration:none;font-weight:800}.parking-context-map{position:relative;border-radius:14px;overflow:hidden}.parking-context-map iframe{display:block;width:100%;min-height:460px;border:0}.funeral-center-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);z-index:5;display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.96);border:2px solid #e33;box-shadow:0 3px 12px rgba(0,0,0,.22);font-size:12px;line-height:1.25;font-weight:700;pointer-events:none;white-space:nowrap}.funeral-center-pin .pin-dot{font-size:24px;color:#e22;line-height:1}.funeral-center-pin b{color:#d11}.dark-mode .funeral-parking-context,.theme-dark .funeral-parking-context{background:#111827;border-color:#334155;color:#e5e7eb}.dark-mode .funeral-center-pin,.theme-dark .funeral-center-pin{background:rgba(17,24,39,.96);color:#f3f4f6;border-color:#ef4444}@media(max-width:640px){.parking-context-map iframe{min-height:380px}.funeral-center-pin{max-width:80%;white-space:normal;font-size:11px}.funeral-parking-context{padding:15px}}
+.funeral-parking-context{margin:18px 0 14px;padding:18px 20px;border:1px solid #cfdcec;border-radius:16px;background:#f8fbff}.funeral-parking-context .context-kicker{font-size:13px;font-weight:800;color:#3567a8;margin-bottom:5px}.funeral-parking-context h2{margin:0 0 8px;font-size:21px}.funeral-parking-context p{margin:0;line-height:1.75}.context-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.context-actions a{display:inline-block;padding:9px 12px;border:1px solid #2876df;border-radius:9px;text-decoration:none;font-weight:800}.parking-context-map{position:relative;border-radius:14px;overflow:hidden}.parking-context-map iframe{display:block;width:100%;min-height:460px;border:0}.funeral-center-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);z-index:5;display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.96);border:2px solid #e33;box-shadow:0 3px 12px rgba(0,0,0,.22);font-size:12px;line-height:1.25;font-weight:700;pointer-events:none;white-space:nowrap}.funeral-center-pin .pin-dot{font-size:24px;color:#e22;line-height:1}.funeral-center-pin b{color:#d11}@media(max-width:640px){.parking-context-map iframe{min-height:380px}.funeral-center-pin{max-width:80%;white-space:normal;font-size:11px}.funeral-parking-context{padding:15px}}
 
 /* v110 funeral detailed directions */
-.route-detail-v110{line-height:1.75}.route-detail-v110 h3{margin:24px 0 12px;font-size:19px}.route-block-v110{margin:8px 0 18px}.route-block-v110>strong{display:block;margin-bottom:8px}.route-block-v110 ul{margin:0;padding-left:22px}.route-block-v110 li{margin:6px 0}.route-car-v110{display:grid;gap:8px}.route-car-v110>div{padding-left:0}.route-parking-v110{margin-top:16px;padding:13px 15px;border-left:3px solid #2d7fe5;background:#f4f8fd;border-radius:8px}.route-map-links-v110{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.route-map-links-v110 a{display:inline-block;padding:9px 12px;border:1px solid #19ce60;border-radius:9px;color:#087c37!important;text-decoration:none;font-weight:800;background:#fff}html.dark-mode .route-parking-v110,body.dark-mode .route-parking-v110{background:#152238!important;color:#e5eefb!important}html.dark-mode .route-map-links-v110 a,body.dark-mode .route-map-links-v110 a{background:#152238!important;color:#7fe6a8!important;border-color:#2f8e58!important}
+.route-detail-v110{line-height:1.75}.route-detail-v110 h3{margin:24px 0 12px;font-size:19px}.route-block-v110{margin:8px 0 18px}.route-block-v110>strong{display:block;margin-bottom:8px}.route-block-v110 ul{margin:0;padding-left:22px}.route-block-v110 li{margin:6px 0}.route-car-v110{display:grid;gap:8px}.route-car-v110>div{padding-left:0}.route-parking-v110{margin-top:16px;padding:13px 15px;border-left:3px solid #2d7fe5;background:#f4f8fd;border-radius:8px}.route-map-links-v110{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.route-map-links-v110 a{display:inline-block;padding:9px 12px;border:1px solid #19ce60;border-radius:9px;color:#087c37!important;text-decoration:none;font-weight:800;background:#fff}
 
 .parking-map-links .parking-naver-primary-v110{border-color:#19ce60!important;background:#19ce60!important;color:#fff!important;padding:11px 15px!important}
 
@@ -2713,17 +1533,16 @@ html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
 .search-intent-list-v118 li,.search-intent-keypoints-v118 li{margin:10px 0}
 .search-intent-list-v118 a{text-decoration:none}
 .search-intent-list-v118 p{margin:5px 0 0;line-height:1.65}
-@media (prefers-color-scheme:dark){.search-intent-summary-v118{background:#111827;border-color:#374151;color:#f3f4f6}.search-intent-summary-v118 a{color:#93c5fd}}
+
 
 /* V121: funeral detail title repeated directly below the top image */
 .funeral-repeat-title-v121{margin:22px 0 18px;padding:0 2px}
 .funeral-repeat-title-v121 h2{margin:0;font-size:clamp(1.35rem,2.2vw,1.8rem);line-height:1.45;letter-spacing:-.025em;color:var(--text,#172033);font-weight:800}
 @media (max-width:640px){.funeral-repeat-title-v121{margin:18px 0 14px}.funeral-repeat-title-v121 h2{font-size:1.25rem;line-height:1.45}}
-@media (prefers-color-scheme:dark){.funeral-repeat-title-v121 h2{color:var(--text,#f3f6fb)}}
+
 
 /* V125: funeral route action links - larger, more visible */
 .route-map-links-v110{gap:12px!important;margin-top:22px!important}
 .route-map-links-v110 a{display:inline-flex!important;align-items:center;justify-content:center;min-height:52px;padding:14px 22px!important;border:2px solid #19ce60!important;border-radius:12px!important;font-size:16px!important;line-height:1.25;font-weight:900!important;box-shadow:0 4px 12px rgba(0,0,0,.10);transition:transform .15s ease,box-shadow .15s ease;text-align:center}
 .route-map-links-v110 a:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.14)}
 @media(max-width:640px){.route-map-links-v110{display:grid!important;grid-template-columns:1fr!important}.route-map-links-v110 a{width:100%;box-sizing:border-box;font-size:16px!important;min-height:54px}}
-html.dark-mode .route-map-links-v110 a,body.dark-mode .route-map-links-v110 a{box-shadow:0 4px 12px rgba(0,0,0,.28)}
