@@ -486,12 +486,16 @@
  if(!grid||!pager)return;
  const cards=[...grid.querySelectorAll('.article-card')];
  let currentPage=1;
- const getPerPage=()=>window.matchMedia('(max-width:699px)').matches?5:6;
+ const getPerPage=()=>window.matchMedia('(max-width:699px)').matches?10:6;
  function show(page){
    const perPage=getPerPage();
    const pages=Math.max(1,Math.ceil(cards.length/perPage));
    currentPage=Math.min(Math.max(1,page),pages);
-   cards.forEach((c,i)=>c.style.display=(i>=(currentPage-1)*perPage&&i<currentPage*perPage)?'':'none');
+   cards.forEach((c,i)=>{
+     const visible=i>=(currentPage-1)*perPage&&i<currentPage*perPage;
+     c.hidden=!visible;
+     c.style.display='';
+   });
    pager.innerHTML='';
    if(pages<=1)return;
    for(let n=1;n<=pages;n++){

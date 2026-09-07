@@ -2689,3 +2689,6 @@ html.dark-mode .article :is(.scb-table td,.change-table td,.support-table td){
   border-color:#334155!important;
   color:#dbe4f0!important;
 }
+
+/* Home latest pagination visibility: JS hidden must override mobile card display rules */
+#home-latest-grid .article-card[hidden]{display:none!important;}
