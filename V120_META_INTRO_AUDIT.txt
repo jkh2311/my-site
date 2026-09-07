@@ -1,0 +1,7 @@
+V120 META + INTRO CLEANUP
+- regular articles: 38
+- removed V118 search-intent summary blocks: 38
+- added one natural visible intro paragraph per regular article: 38
+- dedicated meta description + og:description + twitter:description: 38 regular articles
+- dedicated unique meta description + og:description + twitter:description: 25 funeral detail pages
+- RSS descriptions synchronized where applicable
