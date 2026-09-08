@@ -1,0 +1,8 @@
+V169 funeral hub SEO strengthening
+- /funeral/ title/meta/OG/Twitter aligned to 전국 장례식장 찾기
+- canonical fixed to https://haninelife.com/funeral/
+- robots index,follow explicit
+- CollectionPage + BreadcrumbList + regional ItemList JSON-LD added
+- visible intro aligned with hub intent
+- funeral root lastmod updated in sitemap.xml and sitemap-funeral.xml
+- funeral detail pages/UI untouched
