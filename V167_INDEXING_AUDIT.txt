@@ -1,0 +1,12 @@
+V167 Google/Naver crawl & index technical improvements
+Date: 2026-09-08
+
+- Existing page UI/content preserved. Funeral detail UI untouched.
+- Normalized internal home links /index.html -> / to reduce duplicate crawling.
+- Added explicit index,follow robots meta to all 247 sitemap-listed HTML pages.
+- Added RSS autodiscovery link to indexable HTML pages.
+- Added /site-index.html as a crawl hub with static links to all indexable site pages.
+- Rebuilt sitemap.xml and added /site-index.html.
+- Removed deployment-only index.html.tmp.
+- robots.txt continues to allow all crawlers and points to sitemap.xml.
+- Protected Naver verification and ads.txt files unchanged.
