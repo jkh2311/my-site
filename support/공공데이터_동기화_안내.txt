@@ -1,0 +1,17 @@
+한이네생활정보 정부지원금 공공데이터 동기화
+
+1) Windows: support/sync_windows.bat 더블클릭
+   Mac: support/sync_mac_linux.command 실행
+2) 공공데이터포털에서 발급받은 '일반 인증키'를 입력합니다.
+   입력 중 키는 화면에 표시되지 않습니다.
+3) 프로그램이 아래 3개 공식 API 전체를 페이지 단위로 수집합니다.
+   - serviceList (공공서비스 목록)
+   - serviceDetail (상세 내용 / 온라인 신청 URL / 구비서류)
+   - supportConditions (연령·소득·가구·직업 등 지원조건)
+4) 검증이 끝나면 support/data/services.json이 실제 공공데이터로 교체됩니다.
+5) 생성된 services.json이 포함된 사이트 폴더를 업로드하면 됩니다.
+
+주의
+- 인증키는 HTML/JS/services.json에 저장되지 않습니다.
+- 원천 건수가 비정상적으로 적으면 기존 services.json을 교체하지 않도록 안전장치를 넣었습니다.
+- 신청 가능 여부는 서비스가 확정하지 않습니다. 최종 자격은 정부24/소관기관 공식 안내가 기준입니다.
