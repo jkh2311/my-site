@@ -213,9 +213,16 @@ function render(){
  const found=SUPPORT.filter(x=>{if(!deadlineIsCurrentlyOpen(x.deadline))return false;const hay=[x.name,x.summary,x.target,x.criteria,x.benefit,x.method,x.deadline,x.agency,x.userType,x.field,(x.conditions||[]).join(' ')].join(' ').toLowerCase();const hayNorm=normalizeSearch(hay);const cond=x.conditions||[];const ageOk=age===null||(!Number.isNaN(age)&&age>=Number(x.ageMin??0)&&age<=Number(x.ageMax??120));return regionMatch(x,f.region,f.subregion)&&ageOk&&(!f.income||cond.includes(f.income))&&(!f.who||cond.includes(f.who)||hay.includes(f.who.toLowerCase())||(WHO_TEXT[f.who]||[]).some(k=>hay.includes(k.toLowerCase())))&&(!f.userType||String(x.userType||'').includes(f.userType))&&(!f.q||hayNorm.includes(f.qNorm))&&(!f.category||categoryMatches(x,f.category.terms))})
  .map(x=>({x,match:scoreService(x,f)}));
  const geoSort=(a,b)=>locationPriority(a.x,f.region,f.subregion)-locationPriority(b.x,f.region,f.subregion);
- if(hasFilters&&!CATEGORY_MODE){found.sort((a,b)=>geoSort(a,b)||b.match.pct-a.match.pct||String(b.x.updatedAt||'').localeCompare(String(a.x.updatedAt||'')))}else if(CATEGORY_MODE){found.sort((a,b)=>geoSort(a,b)||String(b.x.updatedAt||'').localeCompare(String(a.x.updatedAt||'')))}
- const localityNote=f.subregion?` · ${f.subregion} 지원금 우선`:(f.region?` · ${f.region} 지역 우선`:'');
- $('resultCount').textContent=found.length.toLocaleString('ko-KR')+'개'+localityNote+(CATEGORY_MODE?' · '+(ACTIVE_CATEGORY?.label||'카테고리'):(hasFilters?' · 지원 가능성 높은 순':''));
+ // 지역/상세지역만 선택한 경우에는 상세지역 → 광역 → 중앙정부 순으로 보여줍니다.
+ // 나이·소득·대상·신청대상·키워드까지 입력한 맞춤검색은 조건 일치도를 최우선으로 정렬하고,
+ // 같은 일치도 안에서만 상세지역 사업을 앞세웁니다.
+ const hasPersonalFilters=!!(f.ageRaw||f.income||f.who||f.userType||f.q);
+ if(hasFilters&&!CATEGORY_MODE){
+   if(hasPersonalFilters){found.sort((a,b)=>b.match.pct-a.match.pct||geoSort(a,b)||String(b.x.updatedAt||'').localeCompare(String(a.x.updatedAt||'')))}
+   else{found.sort((a,b)=>geoSort(a,b)||b.match.pct-a.match.pct||String(b.x.updatedAt||'').localeCompare(String(a.x.updatedAt||'')))}
+ }else if(CATEGORY_MODE){found.sort((a,b)=>geoSort(a,b)||String(b.x.updatedAt||'').localeCompare(String(a.x.updatedAt||'')))}
+ const localityNote=!CATEGORY_MODE&&!hasPersonalFilters?(f.subregion?` · ${f.subregion} 지원금 우선`:(f.region?` · ${f.region} 지역 우선`:'')):'';
+ $('resultCount').textContent=found.length.toLocaleString('ko-KR')+'개'+localityNote+(CATEGORY_MODE?' · '+(ACTIVE_CATEGORY?.label||'카테고리'):(hasPersonalFilters?' · 입력 조건 일치도 높은 순':(hasFilters?' · 지역 우선':'')));
  const exactLocalCount=f.region&&f.subregion?found.reduce((n,item)=>n+(locationPriority(item.x,f.region,f.subregion)===0?1:0),0):0;
  const displayLimit=Math.max(100,exactLocalCount);
  const show=found.slice(0,displayLimit);
