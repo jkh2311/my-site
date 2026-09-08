@@ -32,6 +32,65 @@
 
 /* V156 region-aware support discovery sidebar + category mode */
 .support-layout{max-width:1240px;margin:0 auto 42px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}.support-layout .finder{max-width:none;width:auto;margin:0}.support-side{display:grid;gap:16px;position:sticky;top:18px}.side-card{border:1px solid #dce6f2;border-radius:18px;background:#fff;padding:18px;box-shadow:0 8px 24px rgba(23,74,130,.06)}.side-card h2{font-size:17px;margin:0 0 14px}.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.category-btn{border:1px solid #e3ebf4;background:#f8fbff;border-radius:12px;padding:11px 7px;font-weight:800;color:#24415f;cursor:pointer}.category-btn:hover{border-color:#87b8f5;background:#eef6ff;color:#0968d8}.hot-list{display:grid;gap:0}.hot-item{display:block;padding:11px 0;border-top:1px solid #edf1f5;text-decoration:none;color:#172b45}.hot-item:first-child{border-top:0;padding-top:2px}.hot-item strong{display:block;font-size:14px;line-height:1.4}.hot-item span{display:block;margin-top:4px;font-size:11px;color:#758397}.deadline-badge{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;font-size:12px;font-weight:900}.deadline-soon{background:#fff0f0;color:#d92d20}.deadline-open{background:#edf8f0;color:#20733d}.match-status{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:900;margin-bottom:8px}.match-high{background:#eaf8ef;color:#16743a}.match-check{background:#fff6df;color:#9a6700}.match-low{background:#eef2f6;color:#526174}.probability-main{display:block}.probability-main span{display:block;font-size:20px}.probability-main strong{display:block;margin-top:4px;font-size:14px;color:#35624a;font-weight:800}.probability-box.match-check-box{border-color:#f2dfaa;background:#fffbef}.probability-box.match-low-box{border-color:#dce3ea;background:#f7f9fb}.side-note{font-size:11px;line-height:1.55;color:#7b8797;margin:10px 0 0}.side-region-note{margin:-7px 0 12px;font-size:11px;font-weight:800;color:#2875d8}.category-region-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px}.category-region-field label{display:block;font-size:11px;font-weight:800;color:#5d6b82;margin:0 0 5px}.category-region-field select{width:100%;height:40px;border:1px solid #d7e2ef;border-radius:10px;background:#fff;padding:0 9px;font:inherit;font-size:12px;color:#26364d;box-sizing:border-box}.category-btn[hidden]{display:none}.category-btn.active{border-color:#2875d8;background:#eaf4ff;color:#075fca;box-shadow:0 0 0 2px rgba(40,117,216,.08)}@media(max-width:1050px){.support-layout{grid-template-columns:1fr}.support-side{position:static;grid-template-columns:1fr 1fr}.finder{max-width:none}}@media(max-width:720px){.support-side{grid-template-columns:1fr}.category-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+/* V175 mobile-only support finder cleanup — desktop layout intentionally unchanged */
+@media(max-width:720px){
+  .support-hero{padding:30px 0 18px}
+  .support-hero .container{padding-left:18px;padding-right:18px}
+  .support-hero .section-label{font-size:11px;letter-spacing:.08em}
+  .support-hero h1{font-size:28px;line-height:1.24;margin:6px 0 10px;letter-spacing:-.045em;word-break:keep-all}
+  .support-hero p{font-size:14px;line-height:1.65;margin:0;word-break:keep-all}
+  .section>.container{padding-left:12px;padding-right:12px}
+  .support-layout{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+  .support-layout .finder{width:100%;box-sizing:border-box;margin:0;padding:18px 14px;border-radius:16px;box-shadow:0 6px 20px rgba(23,74,130,.06)}
+  .finder>h2{font-size:21px;line-height:1.3;margin-bottom:7px}
+  .finder>.finder-note{font-size:12px;line-height:1.65;margin:0 0 18px;padding:11px 12px;border-radius:10px;background:#f7f9fc;color:#667085;word-break:keep-all}
+  .filter-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 10px;align-items:start}
+  .filter-field,.filter-field.wide{grid-column:span 1;min-width:0}
+  .filter-field.wide{grid-column:1/-1}
+  .filter-field label{font-size:12px;line-height:1.3;margin-bottom:6px;white-space:normal}
+  .filter-field select,.filter-field input{height:46px;padding:0 10px;border-radius:10px;font-size:14px;min-width:0}
+  #monthlyIncome{font-size:14px}
+  .income-calc{grid-column:1/-1;min-height:auto;padding:11px 12px;font-size:12px;line-height:1.55;border:1px solid #e8eef5;align-items:flex-start;display:block;word-break:keep-all}
+  .income-calc strong{display:inline}
+  .finder-actions{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:8px;margin-top:18px}
+  .finder-actions button{height:48px;padding:0 10px;border-radius:11px;font-size:14px}
+  #findSupport{font-size:15px}
+  .result-head{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;margin:28px 0 12px;padding-top:18px;border-top:1px solid #edf1f5}
+  .result-head h2{font-size:20px;white-space:nowrap}
+  .result-count{font-size:12px;line-height:1.45;text-align:right;max-width:58%}
+  .support-results{display:grid;grid-template-columns:1fr;gap:12px}
+  .support-card{padding:16px 14px;border-radius:14px;min-width:0}
+  .support-card .chips{gap:5px;margin-bottom:9px}
+  .support-card .chip,.deadline-badge{font-size:11px;padding:4px 7px}
+  .support-card h3{font-size:17px;line-height:1.42;margin-bottom:8px;word-break:keep-all}
+  .support-card p{font-size:13px;line-height:1.6;margin:5px 0;word-break:keep-all}
+  .support-card .match-reasons{padding:9px 10px;border-radius:9px;background:#f7f9fc;font-size:12px;line-height:1.55}
+  .card-footer{margin-top:13px;padding-top:12px}
+  .support-card a.official-link{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box;margin:0 0 10px;padding:11px 12px;border-radius:10px;background:#eef6ff;font-size:14px;text-align:center}
+  .probability-box{padding:12px;border-radius:11px}
+  .match-status{margin-bottom:6px;font-size:11px;padding:4px 7px}
+  .probability-main span{font-size:16px;line-height:1.35}
+  .probability-main strong{font-size:12px;line-height:1.45;margin-top:3px}
+  .probability-note{font-size:11px;line-height:1.5;margin-top:6px}
+  #dataStatus{font-size:11px!important;line-height:1.55!important;margin:12px 2px 0!important}
+  .support-side{width:100%;grid-template-columns:1fr;position:static}
+  .side-card{padding:16px 14px;border-radius:15px;box-shadow:none}
+  .side-card h2{font-size:16px;margin-bottom:12px}
+  .category-region-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .category-region-field select{font-size:12px;height:42px}
+  .category-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .category-btn{min-height:44px;padding:9px 6px;font-size:12px;line-height:1.3}
+}
+@media(max-width:390px){
+  .filter-grid{grid-template-columns:1fr}
+  .filter-field,.filter-field.wide,.income-calc{grid-column:1/-1}
+  .finder-actions{grid-template-columns:1fr}
+  .result-head{align-items:flex-start;flex-direction:column}
+  .result-count{max-width:none;text-align:left}
+}
+
 </style><link rel="alternate" type="application/rss+xml" title="한이네생활정보 RSS" href="/rss.xml"></head><body class="about-page">
 <header class="site-header"><div class="container header-inner"><a aria-label="한이네생활정보 홈" class="logo logo-image" href="/"><img alt="" aria-hidden="true" class="brand-symbol" src="/images/hanine-symbol.png"><img alt="한이네생활정보 | 오늘도 하나 알아갑니다" class="brand-wordmark" src="/images/hanine-header-logo.png"></a><nav aria-label="주요 메뉴" class="main-nav"><a href="/">홈</a><a href="/about.html">소개</a><a href="/calculators.html">계산기 모음</a><a href="/contact.html">문의</a></nav></div></header>
 <main><section class="support-hero"><div class="container"><p class="section-label">GOVERNMENT SUPPORT FINDER</p><h1>정부지원금 찾기 ㅣ 내가 받을 수 있는 지원금 정리</h1><p>지역, 나이, 가구원 수, 월 가구소득을 입력하면 내 조건에 맞는 정부지원금과 정부혜택을 빠르게 찾아볼 수 있습니다.</p></div></section>
