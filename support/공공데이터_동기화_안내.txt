@@ -1,17 +1,18 @@
-한이네생활정보 정부지원금 공공데이터 동기화
+한이네생활정보 정부지원금 공공데이터 동기화 V145
 
-1) Windows: support/sync_windows.bat 더블클릭
-   Mac: support/sync_mac_linux.command 실행
-2) 공공데이터포털에서 발급받은 '일반 인증키'를 입력합니다.
-   입력 중 키는 화면에 표시되지 않습니다.
-3) 프로그램이 아래 3개 공식 API 전체를 페이지 단위로 수집합니다.
-   - serviceList (공공서비스 목록)
-   - serviceDetail (상세 내용 / 온라인 신청 URL / 구비서류)
-   - supportConditions (연령·소득·가구·직업 등 지원조건)
-4) 검증이 끝나면 support/data/services.json이 실제 공공데이터로 교체됩니다.
-5) 생성된 services.json이 포함된 사이트 폴더를 업로드하면 됩니다.
+1. Windows: sync_windows.bat 실행
+2. 공공데이터포털의 '일반 인증키'를 붙여넣고 Enter
+   - 입력 내용은 화면에 표시되지 않습니다.
+3. 먼저 /gov24/v3/serviceList?page=1&perPage=10&serviceKey=... 형식으로 인증을 확인합니다.
+4. HTTP 200이 확인되면 serviceList, serviceDetail, supportConditions 전체 데이터를 순서대로 수집합니다.
+5. 완료되면 support/data/services.json이 생성됩니다.
+
+V145 변경점
+- Swagger에서 사용자가 직접 성공한 것과 동일한 serviceKey(query) 인증 방식으로 고정
+- Authorization 헤더 자동시도 제거
+- 첫 10건 인증 테스트 후 전체 수집 시작
+- 1,000건 미만 수집 시 기존 JSON을 덮어쓰지 않는 안전장치 유지
 
 주의
-- 인증키는 HTML/JS/services.json에 저장되지 않습니다.
-- 원천 건수가 비정상적으로 적으면 기존 services.json을 교체하지 않도록 안전장치를 넣었습니다.
-- 신청 가능 여부는 서비스가 확정하지 않습니다. 최종 자격은 정부24/소관기관 공식 안내가 기준입니다.
+- 인증키를 HTML/JavaScript/services.json에 저장하지 않습니다.
+- 인증키를 채팅이나 공개 저장소에 올리지 마세요.

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-import json, os, sys, urllib.parse, urllib.request, getpass, time
+import json, os, sys, urllib.parse, urllib.request, urllib.error, time, subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 
 BASE='https://api.odcloud.kr/api/gov24/v3'
+AUTH_MODE=None
 OUT=Path(__file__).resolve().parent/'data'/'services.json'
 PAGE_SIZE=1000
 TIMEOUT=90
@@ -22,20 +23,55 @@ COND_LABELS={
 def truthy(v):
     return str(v).strip() not in ('','0','N','n','false','False','None','null')
 
-def request_json(ep,key,page,per_page=PAGE_SIZE,retries=4):
-    params={'page':page,'perPage':per_page,'returnType':'JSON','serviceKey':key}
-    url=f"{BASE}/{ep}?{urllib.parse.urlencode(params)}"
+def _read_http_error(e):
+    try:
+        body=e.read().decode('utf-8','replace').strip()
+    except Exception:
+        body=''
+    return body[:1200]
+
+def _build_url(ep,key,page,per_page):
+    # Swagger에서 실제 성공한 요청과 동일하게 serviceKey를 query에 직접 붙인다.
+    # 인증키는 이미 포털이 발급한 문자열이므로 별도 Authorization 헤더를 사용하지 않는다.
+    safe_key=key.strip().strip('\"').strip("'")
+    if not safe_key:
+        raise RuntimeError('인증키가 비어 있습니다.')
+    params=f"page={int(page)}&perPage={int(per_page)}&serviceKey={safe_key}"
+    return f"{BASE}/{ep}?{params}"
+
+def request_json(ep,key,page,per_page=PAGE_SIZE,retries=3):
+    url=_build_url(ep,key,page,per_page)
+    headers={'User-Agent':'HanineSupportDataUpdater/1.3','Accept':'application/json'}
     last=None
     for attempt in range(retries):
         try:
-            req=urllib.request.Request(url,headers={'User-Agent':'HanineSupportDataUpdater/1.1'})
+            req=urllib.request.Request(url,headers=headers)
             with urllib.request.urlopen(req,timeout=TIMEOUT) as r:
                 return json.load(r)
+        except urllib.error.HTTPError as e:
+            last=e
+            body=_read_http_error(e)
+            if e.code in (401,403):
+                raise RuntimeError(
+                    f'{ep} page {page} 인증 실패: HTTP {e.code} {body}\n'
+                    'Swagger에서 성공한 것과 동일하게 serviceKey query 방식으로 요청했습니다. '
+                    '인증키를 다시 복사해 입력해 주세요.'
+                )
+            if attempt+1<retries:
+                time.sleep(2*(attempt+1))
         except Exception as e:
             last=e
             if attempt+1<retries:
                 time.sleep(2*(attempt+1))
     raise RuntimeError(f'{ep} page {page} 요청 실패: {last}')
+
+def verify_key(key):
+    print('인증키를 Swagger와 동일한 serviceKey query 방식으로 확인합니다...')
+    data=request_json('serviceList',key,1,10,retries=1)
+    rows=data.get('data',[])
+    total=int(data.get('matchCount') or data.get('totalCount') or len(rows))
+    print(f'  인증 성공: HTTP 200 / 공공서비스 총 {total:,}건')
+    return total
 
 def fetch_all(ep,key):
     first=request_json(ep,key,1)
@@ -60,10 +96,53 @@ def clean(v):
     if isinstance(v,(int,float)): return v
     return str(v).replace('\r\n','\n').replace('\r','\n').strip()
 
+def sanitize_key(value):
+    # Windows의 숨김 입력(getpass)에서 Ctrl+V가 실제 붙여넣기 대신
+    # 제어문자(\x16)로 들어오는 문제를 피하고, 복사 과정의 줄바꿈/공백도 제거한다.
+    value = '' if value is None else str(value)
+    value = ''.join(ch for ch in value if ch.isprintable())
+    return value.strip().strip('\"').strip("'")
+
+def read_clipboard_windows():
+    if os.name != 'nt':
+        return ''
+    try:
+        r=subprocess.run(
+            ['powershell','-NoProfile','-Command','Get-Clipboard -Raw'],
+            capture_output=True,text=True,timeout=10
+        )
+        if r.returncode==0:
+            return sanitize_key(r.stdout)
+    except Exception:
+        pass
+    return ''
+
+def get_api_key():
+    env_key=sanitize_key(os.getenv('GOV24_API_KEY',''))
+    if env_key:
+        print('환경변수 GOV24_API_KEY에서 인증키를 읽었습니다.')
+        return env_key
+
+    if os.name=='nt':
+        print('공공데이터포털 일반 인증키를 먼저 복사(Ctrl+C)해 두세요.')
+        print('※ 이 창에서는 Ctrl+V를 누르지 마세요. 이전 오류의 \x16은 Ctrl+V 제어문자였습니다.')
+        input('인증키를 복사한 상태라면 Enter를 누르세요: ')
+        clip=read_clipboard_windows()
+        if clip:
+            print('Windows 클립보드에서 인증키를 읽었습니다(화면에는 표시하지 않음).')
+            return clip
+        print('클립보드를 읽지 못했습니다. 아래 입력은 화면에 보일 수 있습니다.')
+
+    return sanitize_key(input('공공데이터포털 일반 인증키 입력: '))
+
 def main():
-    key=os.getenv('GOV24_API_KEY') or getpass.getpass('공공데이터포털 일반 인증키 입력(화면에 표시되지 않음): ').strip()
-    if not key: sys.exit('인증키가 없습니다.')
+    key=get_api_key()
+    if not key:
+        sys.exit('인증키가 없습니다. 공공데이터포털의 일반 인증키를 복사한 뒤 다시 실행해 주세요.')
+    if any(ord(ch)<32 or ord(ch)==127 for ch in key):
+        sys.exit('인증키에 제어문자가 포함되어 있습니다. 인증키를 다시 복사해 주세요.')
     print('정부24 공공서비스 데이터 동기화를 시작합니다.')
+    verify_key(key)
     listing, list_total=fetch_all('serviceList',key)
     details, detail_total=fetch_all('serviceDetail',key)
     conds, cond_total=fetch_all('supportConditions',key)
