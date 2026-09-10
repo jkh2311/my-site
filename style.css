@@ -1556,3 +1556,29 @@ img{max-width:100%}
   .hero-category-filter::-webkit-scrollbar{display:none;}
   .hero-category-filter a{flex:0 0 auto;font-size:13px;padding:7px 12px;}
 }
+
+/* V195 article section heading accent */
+.article > h2,
+.article > section:not(.article-hashtags):not(.popular-posts) > h2{
+  margin:36px 0 20px;
+  padding:14px 18px;
+  border-left:4px solid #0aa37f;
+  border-radius:0 9px 9px 0;
+  background:#eaf6f3;
+  color:#111827;
+  font-size:clamp(22px,2.4vw,30px);
+  line-height:1.38;
+  letter-spacing:-.025em;
+  font-weight:800;
+}
+@media(max-width:640px){
+  .article > h2,
+  .article > section:not(.article-hashtags):not(.popular-posts) > h2{
+    margin:30px 0 16px;
+    padding:12px 14px;
+    border-left-width:4px;
+    border-radius:0 8px 8px 0;
+    font-size:22px;
+    line-height:1.4;
+  }
+}
