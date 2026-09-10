@@ -156,12 +156,20 @@
   document.querySelectorAll('.hero-category-filter a').forEach(a=>a.classList.toggle('active',a.dataset.cat===current));
   const subNav=document.getElementById('subcategory-filter');
   const available=new Set(cards.filter(c=>current==='all'||c.dataset.category===current).map(c=>c.dataset.subcategory).filter(Boolean));
+  // 세부 카테고리는 선택한 대분류 안에서만 표시한다.
+  // 예: 생활정보 선택 시 신분증·발급 / 서류발급 / 규격·준비 / 조회·확인 / 생활절차
   const subs=(order[current]||[]);
   let sub=(requestedSub==='all'||subs.includes(requestedSub))?requestedSub:'all';
   if(subNav && current!=='all' && subs.length){
     subNav.hidden=false;
+    subNav.dataset.parentCategory=current;
     subNav.innerHTML='<button type="button" data-sub="all">전체</button>'+subs.map(s=>'<button type="button" data-sub="'+s+'">'+s+'</button>').join('');
-  } else if(subNav){ subNav.hidden=true; subNav.innerHTML=''; sub='all'; }
+  } else if(subNav){
+    subNav.hidden=true;
+    subNav.innerHTML='';
+    subNav.removeAttribute('data-parent-category');
+    sub='all';
+  }
   const perPage=10; let page=1;
   let pager=document.getElementById('article-pagination');
   if(!pager){pager=document.createElement('nav');pager.id='article-pagination';pager.className='article-pagination';pager.setAttribute('aria-label','게시글 페이지 이동');list.insertAdjacentElement('afterend',pager);}
