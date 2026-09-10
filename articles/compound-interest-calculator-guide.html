@@ -160,4 +160,56 @@ function draw(rows){
 }
 window.addEventListener('resize',calc);calc();})();
 </script><script src="/article-sidebar.js?v=1"></script>
-</body></html>
+<script id="mobile-category-menu-fix-v190">
+(function(){
+  function closeMenu(area, btn){
+    area.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.content-category-area').forEach(function(area){
+      var btn=area.querySelector('.content-category-toggle');
+      var menu=area.querySelector('.content-category-menu');
+      if(!btn || !menu || btn.dataset.mobileMenuBound==='1') return;
+      btn.dataset.mobileMenuBound='1';
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var willOpen=!area.classList.contains('is-open');
+        document.querySelectorAll('.content-category-area.is-open').forEach(function(other){
+          if(other!==area){
+            other.classList.remove('is-open');
+            var otherBtn=other.querySelector('.content-category-toggle');
+            if(otherBtn) otherBtn.setAttribute('aria-expanded','false');
+          }
+        });
+        area.classList.toggle('is-open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function(e){
+        if(e.target.closest('a')) closeMenu(area, btn);
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        if(!area.contains(e.target)){
+          var btn=area.querySelector('.content-category-toggle');
+          if(btn) closeMenu(area, btn);
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape') document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        var btn=area.querySelector('.content-category-toggle');
+        if(btn) closeMenu(area, btn);
+      });
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth>700) document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        var btn=area.querySelector('.content-category-toggle');
+        if(btn) closeMenu(area, btn);
+      });
+    });
+  });
+})();
+</script></body></html>

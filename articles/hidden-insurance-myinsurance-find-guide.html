@@ -196,4 +196,56 @@
 </script>
 <script>/* AUTO-CATEGORY-COUNTS-V1 */(async()=>{try{const r=await fetch('/article-index.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();const m={'생활·행정':'admin','지원·복지':'support','금융·보험':'finance','금융정보':'financialinfo','생활팁':'tips','교통정보':'transport','쇼핑·할인':'shopping','생활요금':'utility','노동·고용':'work','병역·예비군':'military','안전·보안':'safety'};const box=document.querySelector('.sidebar-categories');if(!box)return;const all=box.querySelector('a[href="/articles.html"] b');if(all)all.textContent=d.length;Object.entries(m).forEach(([label,key])=>{const el=box.querySelector(`a[href="/articles.html?category=${key}"] b`);if(el)el.textContent=d.filter(x=>x.category===label).length;});}catch(e){}})();</script>
 <script src="/article-sidebar.js?v=1"></script>
-</body></html>
+<script id="mobile-category-menu-fix-v190">
+(function(){
+  function closeMenu(area, btn){
+    area.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.content-category-area').forEach(function(area){
+      var btn=area.querySelector('.content-category-toggle');
+      var menu=area.querySelector('.content-category-menu');
+      if(!btn || !menu || btn.dataset.mobileMenuBound==='1') return;
+      btn.dataset.mobileMenuBound='1';
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var willOpen=!area.classList.contains('is-open');
+        document.querySelectorAll('.content-category-area.is-open').forEach(function(other){
+          if(other!==area){
+            other.classList.remove('is-open');
+            var otherBtn=other.querySelector('.content-category-toggle');
+            if(otherBtn) otherBtn.setAttribute('aria-expanded','false');
+          }
+        });
+        area.classList.toggle('is-open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function(e){
+        if(e.target.closest('a')) closeMenu(area, btn);
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        if(!area.contains(e.target)){
+          var btn=area.querySelector('.content-category-toggle');
+          if(btn) closeMenu(area, btn);
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape') document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        var btn=area.querySelector('.content-category-toggle');
+        if(btn) closeMenu(area, btn);
+      });
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth>700) document.querySelectorAll('.content-category-area.is-open').forEach(function(area){
+        var btn=area.querySelector('.content-category-toggle');
+        if(btn) closeMenu(area, btn);
+      });
+    });
+  });
+})();
+</script></body></html>
