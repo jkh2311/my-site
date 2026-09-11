@@ -10,8 +10,7 @@
       "address": "서울특별시 강서구 마곡중앙1로 72, 101호",
       "phone": "02-2662-8111",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-01-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 2,
@@ -21,8 +20,7 @@
       "address": "서울특별시 관악구 남부순환로 1861, 1층 103호",
       "phone": "02-6956-2475",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-02-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 3,
@@ -32,8 +30,7 @@
       "address": "서울특별시 동작구 동작대로 151",
       "phone": "02-591-7555",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-03-seoul-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 4,
@@ -43,8 +40,7 @@
       "address": "서울특별시 도봉구 도봉로 578, 2층 2호",
       "phone": "02-904-1004",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-04-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 5,
@@ -54,8 +50,7 @@
       "address": "서울특별시 강동구 천호대로 1171, 지하1층,2층,3층",
       "phone": "02-457-0075",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-05-seoul-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 6,
@@ -65,8 +60,7 @@
       "address": "서울특별시 영등포구 영등포로 85-1, 지층,1,2,3층",
       "phone": "02-2676-7582",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-06-seoul-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 7,
@@ -76,8 +70,7 @@
       "address": "서울특별시 강남구 논현로 416, 1층",
       "phone": "02-562-7582",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-07-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 8,
@@ -87,8 +80,7 @@
       "address": "서울특별시 성동구 고산자로 207",
       "phone": "02-3395-7975",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-08-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 9,
@@ -98,8 +90,7 @@
       "address": "서울특별시 양천구 신월로 208",
       "phone": "02-2698-7582",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-09-seoul-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 10,
@@ -109,8 +100,7 @@
       "address": "서울특별시 송파구 올림픽로 76, J타워 202호",
       "phone": "02-418-0724",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-10-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 11,
@@ -120,8 +110,7 @@
       "address": "서울특별시 노원구 노원로 408, 1,2,4층",
       "phone": "02-919-0075",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-11-seoul-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 12,
@@ -131,8 +120,7 @@
       "address": "서울특별시 마포구 신촌로 110, 웨스턴5빌딩",
       "phone": "02-701-7580",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-12-seoul-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 13,
@@ -142,8 +130,7 @@
       "address": "경기도 고양시 일산동구 백마로 223, 103~104호",
       "phone": "031-906-7975",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-13-gyeonggi-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 14,
@@ -153,8 +140,7 @@
       "address": "경기도 수원시 장안구 천천로 100, 롯데시네마타워",
       "phone": "031-268-6575",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-14-gyeonggi-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 15,
@@ -164,8 +150,7 @@
       "address": "경기도 구리시 경춘로 294, 1~3층",
       "phone": "031-516-8585",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-15-gyeonggi-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 16,
@@ -175,8 +160,7 @@
       "address": "경기도 평택시 비전5로 20-24, 더테라스 207,208호",
       "phone": "031-692-5022",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-16-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 17,
@@ -186,8 +170,7 @@
       "address": "경기도 파주시 해올2길 16, 공감빌딩 3층",
       "phone": "031-941-7551",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-05-08",
-      "article": "/articles/vet24-17-gyeonggi-local/"
+      "checked": "2026-05-08"
     },
     {
       "id": 18,
@@ -197,8 +180,7 @@
       "address": "경기도 용인시 수지구 현암로 81, 벤포스타",
       "phone": "031-272-1313",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-18-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 19,
@@ -208,8 +190,7 @@
       "address": "경기도 안산시 단원구 원포공원2로 35, 메가쇼핑타운1",
       "phone": "031-486-7533",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-19-gyeonggi-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 20,
@@ -219,8 +200,7 @@
       "address": "경기도 하남시 덕풍동로 111-50, 트윈렉스2 2층",
       "phone": "031-791-8253",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-20-gyeonggi-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 21,
@@ -230,8 +210,7 @@
       "address": "경기도 남양주시 호평로45번길 28, 2층 201호",
       "phone": "031-511-7582",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-21-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 22,
@@ -241,8 +220,7 @@
       "address": "경기도 성남시 분당구 성남대로 385, 102호",
       "phone": "031-717-7558",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-22-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 23,
@@ -252,8 +230,7 @@
       "address": "경기도 의정부시 평화로 448",
       "phone": "031-951-9499",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-23-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 24,
@@ -263,8 +240,7 @@
       "address": "경기도 김포시 김포한강2로 11, 113동 2층",
       "phone": "031-987-7585",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-24-gyeonggi-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 25,
@@ -274,8 +250,7 @@
       "address": "인천광역시 남동구 소래역남로 20, 의성빌딩 2,3층",
       "phone": "032-423-7588",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-07-23",
-      "article": "/articles/vet24-25-incheon-local/"
+      "checked": "2026-07-23"
     },
     {
       "id": 26,
@@ -285,8 +260,7 @@
       "address": "인천광역시 부평구 원적로 295, 203~204호",
       "phone": "032-716-6716",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-26-incheon-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 27,
@@ -296,8 +270,7 @@
       "address": "인천광역시 연수구 인천타워대로 365, B동 301~306호",
       "phone": "032-832-7975",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-27-incheon-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 28,
@@ -307,8 +280,7 @@
       "address": "인천광역시 미추홀구 경원대로 890, 101,111호",
       "phone": "032-435-6333",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-28-incheon-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 29,
@@ -318,8 +290,7 @@
       "address": "인천광역시 계양구 장제로 714, 세종팰리스 1,2층",
       "phone": "032-275-7575",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-29-incheon-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 30,
@@ -329,8 +300,7 @@
       "address": "부산광역시 동래구 충렬대로 194, 동림빌딩 2층",
       "phone": "051-711-0006",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-30-busan-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 31,
@@ -340,8 +310,7 @@
       "address": "부산광역시 남구 수영로 221",
       "phone": "051-624-2475",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-31-busan-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 32,
@@ -351,8 +320,7 @@
       "address": "부산광역시 연제구 중앙대로 1084, 진도사옥 2~3층",
       "phone": "051-711-8253",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-32-busan-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 33,
@@ -362,8 +330,7 @@
       "address": "부산광역시 부산진구 가야대로 451, 개금메디칼빌딩 1층",
       "phone": "051-891-8575",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-01",
-      "article": "/articles/vet24-33-busan-local/"
+      "checked": "2026-08-01"
     },
     {
       "id": 34,
@@ -373,8 +340,7 @@
       "address": "부산광역시 수영구 수영로 637, 3,4층",
       "phone": "051-710-6555",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-34-busan-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 35,
@@ -384,8 +350,7 @@
       "address": "대구광역시 수성구 동대구로 289, 1층",
       "phone": "053-745-7512",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-35-daegu-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 36,
@@ -395,8 +360,7 @@
       "address": "대구광역시 동구 동대구로 590, 301동 101호",
       "phone": "053-710-2475",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-36-daegu-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 37,
@@ -406,8 +370,7 @@
       "address": "대구광역시 서구 서대구로 15",
       "phone": "053-572-7585",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-07-31",
-      "article": "/articles/vet24-37-daegu-local/"
+      "checked": "2026-07-31"
     },
     {
       "id": 38,
@@ -417,8 +380,7 @@
       "address": "대구광역시 북구 대학로 80",
       "phone": "053-950-6898",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-38-daegu-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 39,
@@ -428,8 +390,7 @@
       "address": "대전광역시 유성구 계룡로 131",
       "phone": "042-719-7566",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-39-daejeon-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 40,
@@ -439,8 +400,7 @@
       "address": "대전광역시 서구 둔산로 57, 1~3층",
       "phone": "042-488-2777",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-40-daejeon-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 41,
@@ -450,8 +410,7 @@
       "address": "울산광역시 남구 삼산로 160",
       "phone": "052-707-2475",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-41-ulsan-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 42,
@@ -461,8 +420,7 @@
       "address": "강원특별자치도 원주시 서원대로 502, 골드프라자 1,2층",
       "phone": "033-813-9975",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-42-gangwon-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 43,
@@ -488,8 +446,7 @@
         "parking": "공식 홈페이지에서 청주점의 구체적인 무료주차 시간·주차요금은 이번 확인에서 찾지 못했습니다. 방문 전 043-715-3133으로 주차 위치와 지원 여부를 확인하세요.",
         "doctors": [],
         "fees": []
-      },
-      "article": "/articles/vet24-43-chungbuk-local/"
+      }
     },
     {
       "id": 44,
@@ -499,8 +456,7 @@
       "address": "충청북도 청주시 서원구 사직대로 246",
       "phone": "043-268-5677",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-44-chungbuk-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 45,
@@ -510,8 +466,7 @@
       "address": "충청북도 청주시 서원구 충대로 1",
       "phone": "043-261-3220",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-45-chungbuk-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 46,
@@ -521,8 +476,7 @@
       "address": "충청남도 서산시 고운로 19, 2층",
       "phone": "041-429-3123",
       "status": "24시간 진료 안내 확인",
-      "checked": "2025-07-31",
-      "article": "/articles/vet24-46-chungnam-local/"
+      "checked": "2025-07-31"
     },
     {
       "id": 47,
@@ -532,8 +486,7 @@
       "address": "광주광역시 동구 독립로 292",
       "phone": "062-222-0075",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-06-18",
-      "article": "/articles/vet24-47-gwangju-local/"
+      "checked": "2026-06-18"
     },
     {
       "id": 48,
@@ -543,8 +496,7 @@
       "address": "광주광역시 광산구 북문대로420번길 206",
       "phone": "062-523-0075",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-09",
-      "article": "/articles/vet24-48-gwangju-local/"
+      "checked": "2026-08-09"
     },
     {
       "id": 49,
@@ -554,8 +506,7 @@
       "address": "전라남도 여수시 시청로 15, 1층 101호",
       "phone": "061-686-0200",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-07-02",
-      "article": "/articles/vet24-49-jeonnam-local/"
+      "checked": "2026-07-02"
     },
     {
       "id": 50,
@@ -565,8 +516,7 @@
       "address": "경상북도 경산시 대학로 30, 2층",
       "phone": "053-215-8577",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-07-09",
-      "article": "/articles/vet24-50-gyeongbuk-local/"
+      "checked": "2026-07-09"
     },
     {
       "id": 51,
@@ -576,8 +526,7 @@
       "address": "경상북도 포항시 남구 효성로93번길 4",
       "phone": "054-612-2475",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-51-gyeongbuk-local/"
+      "checked": "2026-08-08"
     },
     {
       "id": 52,
@@ -587,8 +536,7 @@
       "address": "경상남도 김해시 장유로 412, 2층",
       "phone": "055-724-0737",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-07-31",
-      "article": "/articles/vet24-52-gyeongnam-local/"
+      "checked": "2026-07-31"
     },
     {
       "id": 53,
@@ -598,8 +546,7 @@
       "address": "제주특별자치도 제주시 연북로 632, 지1층,1층",
       "phone": "064-805-8365",
       "status": "24시간 진료 안내 확인",
-      "checked": "2026-08-08",
-      "article": "/articles/vet24-53-jeju-local/"
+      "checked": "2026-08-08"
     }
   ]
 }
