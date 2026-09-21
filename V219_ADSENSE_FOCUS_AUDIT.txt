@@ -1,0 +1,10 @@
+V219 ADSENSE FOCUS SPLIT AUDIT
+Base: V218
+General top-level article HTML: 38
+Removed service links: 350
+HTML files changed for service navigation/internal links: 46
+Remaining service links in HTML: 0
+Protected hashes: {"naverf779d0b928caf101acb08a1026a9347f.html": "51fb215455aa142409096fb3e6fd5b2dbabd769f77019889c7b9ec1a853a60e8", "ads.txt": "58c0e6ba871c153030e101c2912d639d3f9cf188a42ea5f96598d61d88d1a57e"}
+
+Services preserved separately in my-site_V219_SERVICES_BACKUP.zip.
+Support-policy editorial articles remain in the 38 general articles; only the /support/ finder service was separated.
