@@ -3,7 +3,7 @@
 (function(){
   'use strict';
   const CATEGORY_MAP = [
-    ['life','생활정보'],['support','지원금/정책'],['finance','금융정보'],['health','건강정보'],['property','부동산정보'],['auto','자동차정보'],['travel','여행/맛집'],['it','IT/생활꿀팁']
+    ['life','생활·건강'],['support','지원금·정책'],['finance','금융·생활경제']
   ];
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function categoryMatches(value,label){ return String(value||'')===label;
