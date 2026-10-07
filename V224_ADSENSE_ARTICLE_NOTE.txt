@@ -1,0 +1,5 @@
+V224
+- 자동차보험 승인용 글 추가
+- 무료배송 글 + 자동차보험 글 모두 금융·생활경제 카테고리에 표시
+- 이후 신규 게시글 추가 시 article-index.json + articles.html 카테고리 카드 + 홈 최신글 + sitemap + RSS + site-index + naver-submit-list를 함께 갱신하는 것을 기본 규칙으로 적용
+- 장례식장 상세 UI 변경 없음
