@@ -1,0 +1,49 @@
+{
+  "articles": [
+    {
+      "slug": "energy-voucher-eligibility",
+      "h1": 1,
+      "h2": 9,
+      "h3": 0,
+      "chars": 2283,
+      "canonical": "https://haninelife.com/articles/energy-voucher-eligibility.html",
+      "jsonld": true,
+      "official_links": 3
+    },
+    {
+      "slug": "childbirth-parenting-benefits",
+      "h1": 1,
+      "h2": 9,
+      "h3": 0,
+      "chars": 2101,
+      "canonical": "https://haninelife.com/articles/childbirth-parenting-benefits.html",
+      "jsonld": true,
+      "official_links": 4
+    },
+    {
+      "slug": "medical-expense-cap-refund",
+      "h1": 1,
+      "h2": 10,
+      "h3": 0,
+      "chars": 2119,
+      "canonical": "https://haninelife.com/articles/medical-expense-cap-refund.html",
+      "jsonld": true,
+      "official_links": 3
+    },
+    {
+      "slug": "msafer-mobile-identity-theft-check",
+      "h1": 1,
+      "h2": 10,
+      "h3": 0,
+      "chars": 1996,
+      "canonical": "https://haninelife.com/articles/msafer-mobile-identity-theft-check.html",
+      "jsonld": true,
+      "official_links": 3
+    }
+  ],
+  "broken_local_links": [],
+  "protected_hashes": {
+    "naverf779d0b928caf101acb08a1026a9347f.html": "51fb215455aa142409096fb3e6fd5b2dbabd769f77019889c7b9ec1a853a60e8",
+    "ads.txt": "58c0e6ba871c153030e101c2912d639d3f9cf188a42ea5f96598d61d88d1a57e"
+  }
+}

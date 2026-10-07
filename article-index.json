@@ -1,5 +1,37 @@
 [
   {
+    "title": "전기·가스비 지원받을 수 있을까? 에너지바우처 신청조건 확인하기",
+    "description": "2026년 에너지바우처 지원대상과 세대원 특성기준, 세대원 수별 지원금액, 요금차감·국민행복카드 사용법과 신청 전 확인사항을 공식자료 기준으로 정리했습니다.",
+    "category": "지원금·정책",
+    "url": "/articles/energy-voucher-eligibility.html",
+    "publishedAt": "2026-10-07",
+    "subcategory": "생활비·에너지"
+  },
+  {
+    "title": "아이 키우고 있다면? 놓치기 쉬운 출산·육아 지원금 확인하기",
+    "description": "첫만남이용권, 부모급여, 아동수당과 행복출산 원스톱서비스를 아이 나이와 출생 시점에 따라 무엇부터 확인하면 되는지 2026년 공식 기준으로 정리했습니다.",
+    "category": "지원금·정책",
+    "url": "/articles/childbirth-parenting-benefits.html",
+    "publishedAt": "2026-10-07",
+    "subcategory": "출산·육아"
+  },
+  {
+    "title": "병원비 많이 나왔다면? 본인부담상한제 환급금 확인하는 법",
+    "description": "병원비가 많이 나왔을 때 본인부담상한제에서 어떤 비용을 합산하고 무엇이 제외되는지, 2026년 상한액과 사전급여·사후환급 확인 순서를 정리했습니다.",
+    "category": "생활·건강",
+    "url": "/articles/medical-expense-cap-refund.html",
+    "publishedAt": "2026-10-08",
+    "subcategory": "병원비·건강보험"
+  },
+  {
+    "title": "내 명의로 가입된 휴대폰이 있다면? 명의도용 확인하는 법",
+    "description": "모르는 휴대폰 개통이 의심될 때 Msafer에서 본인 명의 가입현황을 확인하고 추가 개통을 제한하는 방법, 의심 회선을 발견했을 때의 대응 순서를 정리했습니다.",
+    "category": "생활·건강",
+    "url": "/articles/msafer-mobile-identity-theft-check.html",
+    "publishedAt": "2026-10-08",
+    "subcategory": "생활·보안"
+  },
+  {
     "title": "월세 내는 청년이라면? 청년월세 지원조건 확인하는 법",
     "description": "2026년 청년월세 지원사업의 나이·거주·소득·재산 조건과 제외대상, 실제 지원금 계산, 신청 종료 후 다음 모집 전에 준비할 내용을 공식자료 기준으로 정리했습니다.",
     "category": "지원금·정책",
