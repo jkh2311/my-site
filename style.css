@@ -1588,3 +1588,14 @@ img{max-width:100%}
 .footer-links a{color:inherit;text-decoration:none}
 .footer-links a:hover,.footer-links a:focus-visible{text-decoration:underline;color:#1d4ed8}
 @media(max-width:760px){.footer-links{font-size:15px;gap:10px 18px}}
+
+/* V245: homepage footer category navigation */
+.footer-category-section{padding:48px 0 52px}
+.footer-category-heading{margin-bottom:22px}
+.footer-category-heading .section-label{margin-bottom:8px}
+.footer-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px}
+.footer-category-grid a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 18px;border:1px solid #465167;border-radius:10px;color:#f2f5fa;text-decoration:none;font-size:16px;font-weight:600;line-height:1.5;transition:background .2s,border-color .2s}
+.footer-category-grid a:hover,.footer-category-grid a:focus-visible{background:#26344b;border-color:#8998b2;text-decoration:underline}
+.footer-category-grid a span{color:#b8c8e0}
+@media(max-width:760px){.footer-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.footer-category-grid a{font-size:14px;padding:13px 12px}}
+@media(max-width:360px){.footer-category-grid{grid-template-columns:1fr}}
