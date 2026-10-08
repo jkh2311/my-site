@@ -1589,13 +1589,25 @@ img{max-width:100%}
 .footer-links a:hover,.footer-links a:focus-visible{text-decoration:underline;color:#1d4ed8}
 @media(max-width:760px){.footer-links{font-size:15px;gap:10px 18px}}
 
-/* V245: homepage footer category navigation */
-.footer-category-section{padding:48px 0 52px}
-.footer-category-heading{margin-bottom:22px}
-.footer-category-heading .section-label{margin-bottom:8px}
-.footer-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px}
-.footer-category-grid a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 18px;border:1px solid #465167;border-radius:10px;color:#f2f5fa;text-decoration:none;font-size:16px;font-weight:600;line-height:1.5;transition:background .2s,border-color .2s}
-.footer-category-grid a:hover,.footer-category-grid a:focus-visible{background:#26344b;border-color:#8998b2;text-decoration:underline}
-.footer-category-grid a span{color:#b8c8e0}
-@media(max-width:760px){.footer-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.footer-category-grid a{font-size:14px;padding:13px 12px}}
-@media(max-width:360px){.footer-category-grid{grid-template-columns:1fr}}
+/* V246: refined accessible category footer */
+.hani-modern-footer{background:#172033;color:#f8fafc;border-top:0;padding:56px 0 24px}
+.hani-footer-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}
+.hani-footer-eyebrow{font-size:11px;letter-spacing:.15em;font-weight:800;color:#aab8d2}
+.hani-footer-heading h2{font-size:26px;letter-spacing:-.05em;color:#fff;margin:9px 0 7px}
+.hani-footer-heading p{font-size:14px;color:#b6c3d7;margin:0}
+.hani-footer-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.hani-category-tile{min-height:86px;border:1px solid #43536d;border-radius:14px;background:linear-gradient(135deg,#202d43,#19253a);display:flex;align-items:center;gap:13px;padding:17px 16px;color:#f8fafc;text-decoration:none;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease}
+.hani-category-tile:hover,.hani-category-tile:focus-visible{transform:translateY(-3px);background:#293b58;border-color:#8da6d4;box-shadow:0 10px 24px #0c142655;outline-offset:3px}
+.hani-category-icon{width:39px;height:39px;border-radius:11px;background:#344661;display:grid;place-items:center;font-size:20px;flex-shrink:0;color:#dceaff}
+.hani-category-copy{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.hani-category-copy strong{font-size:15px;line-height:1.35;color:#fff}
+.hani-category-copy small{font-size:12px;line-height:1.4;color:#aebed5}
+.hani-category-arrow{color:#b5c9e8;font-size:19px}
+.hani-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:35px;padding-top:25px;border-top:1px solid #39465c}
+.hani-footer-bottom>strong{font-size:15px;color:#fff}
+.hani-modern-footer .footer-links{display:flex;flex-wrap:wrap;gap:12px 23px;font-size:15px;font-weight:600}
+.hani-modern-footer .footer-links a{color:#d8e1ef}
+.hani-modern-footer .footer-links a:hover{color:#fff}
+.hani-modern-footer .copyright{margin-top:21px;border-top:0;padding-top:0;color:#9eacc1}
+@media(max-width:900px){.hani-footer-categories{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.hani-modern-footer{padding:40px 0 23px}.hani-footer-categories{grid-template-columns:1fr;gap:9px}.hani-category-tile{min-height:75px;padding:12px 14px}.hani-footer-bottom{align-items:flex-start;flex-direction:column;gap:16px}.hani-modern-footer .footer-links{font-size:14px}}
