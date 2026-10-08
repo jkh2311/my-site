@@ -1,0 +1,18 @@
+한이네생활정보 정부지원금 공공데이터 동기화 V145
+
+1. Windows: sync_windows.bat 실행
+2. 공공데이터포털의 '일반 인증키'를 붙여넣고 Enter
+   - 입력 내용은 화면에 표시되지 않습니다.
+3. 먼저 /gov24/v3/serviceList?page=1&perPage=10&serviceKey=... 형식으로 인증을 확인합니다.
+4. HTTP 200이 확인되면 serviceList, serviceDetail, supportConditions 전체 데이터를 순서대로 수집합니다.
+5. 완료되면 support/data/services.json이 생성됩니다.
+
+V145 변경점
+- Swagger에서 사용자가 직접 성공한 것과 동일한 serviceKey(query) 인증 방식으로 고정
+- Authorization 헤더 자동시도 제거
+- 첫 10건 인증 테스트 후 전체 수집 시작
+- 1,000건 미만 수집 시 기존 JSON을 덮어쓰지 않는 안전장치 유지
+
+주의
+- 인증키를 HTML/JavaScript/services.json에 저장하지 않습니다.
+- 인증키를 채팅이나 공개 저장소에 올리지 마세요.

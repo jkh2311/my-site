@@ -1,0 +1,11 @@
+정부24 공공서비스 데이터 동기화 (V146)
+
+1. 공공데이터포털에서 "일반 인증키" 전체를 Ctrl+C로 복사합니다.
+2. support\sync_windows.bat 를 더블클릭합니다.
+3. 검은 창에서는 Ctrl+V를 누르지 말고 Enter만 누릅니다.
+4. 프로그램이 Windows 클립보드에서 인증키를 직접 읽습니다. 인증키는 화면에 표시되지 않습니다.
+5. 인증 성공 후 serviceList / serviceDetail / supportConditions 전체 데이터를 수집합니다.
+6. 완료 파일: support\data\services.json
+
+주의: 이전 버전에서 발생한 "URL can't contain control characters ... \x16" 오류는
+Windows 숨김입력창에서 Ctrl+V가 붙여넣기가 아니라 제어문자(0x16)로 전달되어 생긴 문제입니다.
