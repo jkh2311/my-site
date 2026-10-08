@@ -11,6 +11,11 @@ SCHEDULE={
 '/articles/childbirth-parenting-benefits.html': datetime(2026,10,7,11,20,tzinfo=timezone.utc),
 '/articles/medical-expense-cap-refund.html': datetime(2026,10,7,15,20,tzinfo=timezone.utc),
 '/articles/msafer-mobile-identity-theft-check.html': datetime(2026,10,7,19,20,tzinfo=timezone.utc),
+'/articles/towel-odor-washing-guide.html': datetime.fromisoformat('2026-10-08T05:20:00+00:00'),
+'/articles/washing-machine-cleaning-guide.html': datetime.fromisoformat('2026-10-08T09:20:00+00:00'),
+'/articles/parcel-label-personal-data.html': datetime.fromisoformat('2026-10-08T13:20:00+00:00'),
+'/articles/national-employment-support-guide.html': datetime.fromisoformat('2026-10-08T17:20:00+00:00'),
+'/articles/jeonse-guarantee-fee-support.html': datetime.fromisoformat('2026-10-08T21:20:00+00:00'),
 }
 # For deterministic local testing: RELEASE_NOW=2026-10-07T11:20:00+00:00
 raw=os.environ.get('RELEASE_NOW')

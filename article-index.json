@@ -1,5 +1,45 @@
 [
   {
+    "title": "전세보증보험 가입했다면? 보증료 지원금 받을 수 있는지 확인해 보자!",
+    "description": "전세보증금반환보증과 보증료 지원사업의 차이, HUG·HF·SGI 확인사항과 신청 전 서류 점검법을 정리했어요.",
+    "category": "지원금·정책",
+    "url": "/articles/jeonse-guarantee-fee-support.html",
+    "publishedAt": "2026-10-09",
+    "subcategory": "주거·전세지원"
+  },
+  {
+    "title": "실업급여 못 받는다면? 국민취업지원제도 구직촉진수당 확인하기!",
+    "description": "2026년 국민취업지원제도 Ⅰ·Ⅱ유형 차이, 구직촉진수당 지급 요건과 고용24 신청 순서를 정리했어요.",
+    "category": "지원금·정책",
+    "url": "/articles/national-employment-support-guide.html",
+    "publishedAt": "2026-10-09",
+    "subcategory": "취업·구직지원"
+  },
+  {
+    "title": "택배 상자 그냥 버려도 될까? 송장 개인정보 안전하게 지우는 법!",
+    "description": "택배 송장에 남는 이름·전화번호·주소, 어떻게 버려야 할까요? 분리배출 전 확인할 개인정보 보호 습관을 정리했어요.",
+    "category": "생활·건강",
+    "url": "/articles/parcel-label-personal-data.html",
+    "publishedAt": "2026-10-08",
+    "subcategory": "생활·개인정보"
+  },
+  {
+    "title": "세탁기 청소 얼마나 자주 해야 할까? 통세척부터 고무패킹까지!",
+    "description": "세탁기 냄새가 난다면 통세척만으로 충분할까요? 세제함·고무패킹·배수필터를 안전하게 관리하는 방법을 정리했어요.",
+    "category": "생활·건강",
+    "url": "/articles/washing-machine-cleaning-guide.html",
+    "publishedAt": "2026-10-08",
+    "subcategory": "가전·청소관리"
+  },
+  {
+    "title": "수건 빨아도 냄새난다면? 쉰내 없애는 세탁·건조 습관!",
+    "description": "수건을 빨아도 쉰내가 남는 이유부터 세탁량, 세제, 건조와 보관까지 실생활 점검법을 정리했어요.",
+    "category": "생활·건강",
+    "url": "/articles/towel-odor-washing-guide.html",
+    "publishedAt": "2026-10-08",
+    "subcategory": "세탁·생활관리"
+  },
+  {
     "title": "소비기한 지난 음식, 무조건 버려야 할까? 유통기한 차이부터 냉장고 보관법까지!",
     "description": "소비기한과 유통기한의 차이, 우유·두부·달걀 확인법, 개봉 후 보관과 냉장고 관리까지! 날짜 지난 음식이 고민될 때 꼭 확인할 내용을 정리했어요.",
     "category": "생활·건강",

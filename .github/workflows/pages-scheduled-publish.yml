@@ -5,11 +5,17 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # GitHub Actions cron is UTC. These correspond to KST 16:20, 20:20, 00:20, 04:20.
+    # UTC; new posts KST 2026-10-08 14:20,18:20,22:20 and 2026-10-09 02:20,06:20.
+    # GitHub scheduled runs may be delayed; workflow_dispatch provides manual fallback.
     - cron: '20 7 7 10 *'
     - cron: '20 11 7 10 *'
     - cron: '20 15 7 10 *'
     - cron: '20 19 7 10 *'
+    - cron: '20 5 8 10 *'
+    - cron: '20 9 8 10 *'
+    - cron: '20 13 8 10 *'
+    - cron: '20 17 8 10 *'
+    - cron: '20 21 8 10 *'
 
 permissions:
   contents: read
