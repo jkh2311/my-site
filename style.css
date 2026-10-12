@@ -1611,3 +1611,18 @@ img{max-width:100%}
 .hani-modern-footer .copyright{margin-top:21px;border-top:0;padding-top:0;color:#9eacc1}
 @media(max-width:900px){.hani-footer-categories{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.hani-modern-footer{padding:40px 0 23px}.hani-footer-categories{grid-template-columns:1fr;gap:9px}.hani-category-tile{min-height:75px;padding:12px 14px}.hani-footer-bottom{align-items:flex-start;flex-direction:column;gap:16px}.hani-modern-footer .footer-links{font-size:14px}}
+
+
+/* Official references: unmistakable click targets across all article pages */
+.article-source-box{margin:30px 0!important;padding:22px 23px!important;border:2px solid #bcd3f7!important;border-radius:18px!important;background:linear-gradient(135deg,#f2f7ff,#fff)!important}
+.article-source-box h2{font-size:clamp(21px,2.3vw,26px)!important;color:#173e7a!important;margin:0 0 12px!important}
+.article-source-box h2::before{content:"🔗 ";font-size:.95em}
+.article-source-box a[href^="http"]{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;vertical-align:middle;margin:7px 5px 7px 0;padding:13px 17px!important;min-height:48px;max-width:100%;box-sizing:border-box;border-radius:12px!important;background:#164f9e!important;border:2px solid #164f9e!important;color:#fff!important;font-size:clamp(15px,1.65vw,18px)!important;font-weight:800!important;line-height:1.5!important;text-decoration:none!important;box-shadow:0 4px 12px #123c792b;overflow-wrap:anywhere;white-space:normal}
+.article-source-box a[href^="http"]::after{content:"  ↗";font-weight:900;font-size:1.1em}
+.article-source-box a[href^="http"]:hover{background:#0d3978!important;border-color:#0d3978!important;transform:translateY(-1px)}
+.article-source-box a[href^="http"]:focus-visible{outline:3px solid #ffae35!important;outline-offset:3px}
+.article-source-box::after{content:"위 버튼을 누르면 해당 기관의 공식 사이트로 이동해요.";display:block;margin-top:12px;color:#47658c;font-size:14px;font-weight:650;line-height:1.5}
+.article :is(p,li) > a[href^="https://"]:not(.direct-btn):not(.btn){color:#0754a7;font-weight:750;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.article :is(p,li) > a[href^="https://"]:not(.direct-btn):not(.btn)::after{content:" ↗";font-weight:900}
+.article-source-box :is(p,li) > a[href^="https://"]::after{content:" ↗"}
+@media(max-width:600px){.article-source-box{padding:17px 15px!important}.article-source-box a[href^="http"]{display:flex!important;width:100%;margin:9px 0;padding:13px!important;font-size:16px!important}}
