@@ -1626,3 +1626,23 @@ img{max-width:100%}
 .article :is(p,li) > a[href^="https://"]:not(.direct-btn):not(.btn)::after{content:" ↗";font-weight:900}
 .article-source-box :is(p,li) > a[href^="https://"]::after{content:" ↗"}
 @media(max-width:600px){.article-source-box{padding:17px 15px!important}.article-source-box a[href^="http"]{display:flex!important;width:100%;margin:9px 0;padding:13px!important;font-size:16px!important}}
+
+
+/* Consistent official-reference button rows (including 3-link groups).
+   Put the heading on its own line; buttons start at the same left edge. */
+.article-source-box p:has(> a[href^="http"]){
+  display:flex!important;flex-wrap:wrap!important;align-items:stretch!important;
+  gap:10px 12px!important;font-size:0!important;line-height:0!important;
+}
+.article-source-box p:has(> a[href^="http"]) > strong{
+  display:block!important;flex:0 0 100%!important;font-size:15px!important;
+  line-height:1.5!important;margin:0!important;
+}
+.article-source-box p:has(> a[href^="http"]) > a[href^="http"]{
+  display:inline-flex!important;flex:1 1 195px!important;margin:0!important;
+  min-width:0!important;text-align:center!important;line-height:1.45!important;
+  align-self:stretch!important;
+}
+@media(max-width:700px){
+ .article-source-box p:has(> a[href^="http"]) > a[href^="http"]{flex:1 1 100%!important;width:100%!important}
+}
