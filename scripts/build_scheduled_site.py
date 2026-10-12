@@ -2,6 +2,8 @@ from pathlib import Path
 from datetime import datetime, timezone
 import shutil, json, re, csv, os
 import xml.etree.ElementTree as ET
+# Keep the default sitemap namespace when writing the deployed XML.
+ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parents[1]
