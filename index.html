@@ -423,6 +423,26 @@
 </figcaption>
 </figure>
 </div></section>
+<section class="hani-trending-section" aria-labelledby="hani-trending-title">
+<div class="container"><div class="hani-trending-head"><div><p class="section-label">TODAY'S TRENDING</p><h2 id="hani-trending-title">🔥 오늘의 핫한 키워드 TOP 10</h2><p>지금 많이 검색하는 주제를 살펴보세요. 검색 관심도 기준이며 전체 SNS 통합 순위는 아니에요.</p></div><a href="https://trends.google.com/trending?geo=KR" target="_blank" rel="noopener noreferrer">Google 트렌드 보기 ↗</a></div>
+<ol id="hani-trending-list" class="hani-trending-list" aria-live="polite"><li class="hani-trending-empty">오늘의 검색 트렌드를 불러오는 중이에요.</li></ol>
+<p class="hani-trending-note" id="hani-trending-note">출처: Google Trends · 대한민국 · 데이터 갱신 시각 확인 중</p></div></section>
+<style>
+.hani-trending-section{padding:52px 0 40px;background:linear-gradient(180deg,#f7f9fd,#fff)}.hani-trending-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.hani-trending-head h2{font-size:clamp(24px,3vw,32px);margin:8px 0}.hani-trending-head p{color:#68758e}.hani-trending-head>a{font-weight:700;color:#355da2;text-decoration:none;white-space:nowrap}.hani-trending-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px}.hani-trending-list li{min-width:0}.hani-trending-list a{display:flex;align-items:center;gap:14px;padding:14px 17px;border:1px solid #e5eaf3;border-radius:14px;background:#fff;text-decoration:none;color:#202d44;box-shadow:0 3px 14px rgba(26,46,79,.035);transition:transform .15s,border-color .15s}.hani-trending-list a:hover{transform:translateY(-2px);border-color:#a9c1ed}.hani-trending-rank{font-size:18px;font-weight:900;color:#61718a;min-width:24px}.hani-trending-list li:nth-child(-n+3) .hani-trending-rank{color:#e15a49}.hani-trending-keyword{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.hani-trending-traffic{font-size:12px;color:#7c879b;white-space:nowrap}.hani-trending-note{font-size:12px;color:#8490a2;margin-top:16px}.hani-trending-empty{grid-column:1/-1;color:#69768b;padding:16px 0}@media(max-width:650px){.hani-trending-list{grid-template-columns:1fr}.hani-trending-head{align-items:start;flex-direction:column}.hani-trending-section{padding:35px 0}}
+</style>
+<script>
+(function(){
+ const list=document.getElementById('hani-trending-list'),note=document.getElementById('hani-trending-note');
+ if(!list)return;
+ fetch('/trending-keywords.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('no data');return r.json()}).then(data=>{
+  const items=Array.isArray(data.items)?data.items.slice(0,10):[];
+  if(!items.length){list.innerHTML='<li class="hani-trending-empty">현재 확인 가능한 실시간 키워드가 없어요. <a href="https://trends.google.com/trending?geo=KR" target="_blank" rel="noopener noreferrer">Google 트렌드에서 직접 확인하기 ↗</a></li>';note.textContent='출처: Google Trends · 데이터 수집 지연 중';return;}
+  list.textContent='';
+  items.forEach((item,i)=>{const li=document.createElement('li'),a=document.createElement('a'),rank=document.createElement('span'),word=document.createElement('span'),traffic=document.createElement('span');a.href='https://www.google.com/search?q='+encodeURIComponent(item.keyword||'');a.target='_blank';a.rel='noopener noreferrer';rank.className='hani-trending-rank';rank.textContent=String(i+1).padStart(2,'0');word.className='hani-trending-keyword';word.textContent=item.keyword||'';traffic.className='hani-trending-traffic';traffic.textContent=item.traffic||'';a.append(rank,word,traffic);li.append(a);list.append(li)});
+  const stamp=data.updatedAt?new Date(data.updatedAt).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'}):'확인 불가';note.textContent='출처: Google Trends (대한민국) · 마지막 수집: '+stamp+' · 검색량 급상승 기준';
+ }).catch(()=>{list.innerHTML='<li class="hani-trending-empty">키워드를 불러오지 못했어요. <a href="https://trends.google.com/trending?geo=KR" target="_blank" rel="noopener noreferrer">Google 트렌드에서 확인하기 ↗</a></li>';note.textContent='출처: Google Trends · 연결 상태를 확인해 주세요.'});
+})();
+</script>
 <section class="section home-tools-section"><div class="container">
 <div class="section-heading"><p class="section-label">HANINE SERVICES</p><h2>한이네 생활 찾기</h2><p>게시글을 찾지 않아도 필요한 정보를 바로 확인할 수 있는 서비스를 모았습니다.</p></div>
 <div aria-label="한이네 생활 찾기 서비스" class="home-service-links home-featured-services">
