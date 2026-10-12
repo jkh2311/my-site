@@ -18,6 +18,9 @@ SCHEDULE={
 '/articles/parcel-label-personal-data.html': datetime.fromisoformat('2026-10-08T13:22:00+00:00'),
 '/articles/national-employment-support-guide.html': datetime.fromisoformat('2026-10-08T17:42:00+00:00'),
 '/articles/jeonse-guarantee-fee-support.html': datetime.fromisoformat('2026-10-08T21:39:00+00:00'),
+'/articles/national-tomorrow-learning-card-training.html': datetime.fromisoformat('2026-10-12T05:55:00+00:00'),
+'/articles/refinance-loan-total-cost-check.html': datetime.fromisoformat('2026-10-12T09:50:00+00:00'),
+'/articles/used-car-buying-eight-checks.html': datetime.fromisoformat('2026-10-12T13:35:00+00:00'),
 }
 # For deterministic local testing: RELEASE_NOW=2026-10-07T11:20:00+00:00
 raw=os.environ.get('RELEASE_NOW')
