@@ -10,7 +10,7 @@ on:
     - cron: '55 5 12 10 *'
     - cron: '50 9 12 10 *'
     - cron: '35 13 12 10 *'
-    - cron: '7 * * * *'
+    - cron: '12 6,10,14 12 10 *'
 
 permissions:
   contents: read
