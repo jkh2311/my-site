@@ -531,30 +531,31 @@ if(data.updatedAt)note.textContent='출처: Google Trends 대한민국 · 수집
 (function(){
  const grid=document.getElementById('home-latest-grid'), pager=document.getElementById('home-pagination');
  if(!grid||!pager)return;
- const cards=[...grid.querySelectorAll('.article-card')];
  let currentPage=1;
- const getPerPage=()=>window.matchMedia('(max-width:699px)').matches?10:6;
+ const getPerPage=()=>10;
  function show(page){
+   const cards=[...grid.querySelectorAll('.article-card')];
    const perPage=getPerPage();
    const pages=Math.max(1,Math.ceil(cards.length/perPage));
    currentPage=Math.min(Math.max(1,page),pages);
    cards.forEach((c,i)=>{
      const visible=i>=(currentPage-1)*perPage&&i<currentPage*perPage;
      c.hidden=!visible;
-     c.style.display='';
+     c.style.display=visible?'':'none';
    });
    pager.innerHTML='';
    if(pages<=1)return;
    for(let n=1;n<=pages;n++){
-     const b=document.createElement('button');b.type='button';b.textContent=n;b.className=n===currentPage?'active':'';
-     b.onclick=()=>{show(n);grid.scrollIntoView({behavior:'smooth',block:'start'});};pager.appendChild(b);
+     const button=document.createElement('button');
+     button.type='button';button.textContent=n;
+     button.className=n===currentPage?'active':'';
+     button.setAttribute('aria-label','최근 생활정보 '+n+'페이지');
+     button.setAttribute('aria-current',n===currentPage?'page':'false');
+     button.onclick=()=>{show(n);grid.scrollIntoView({behavior:'smooth',block:'start'});};
+     pager.appendChild(button);
    }
  }
- let wasMobile=window.matchMedia('(max-width:699px)').matches;
- window.addEventListener('resize',()=>{
-   const isMobile=window.matchMedia('(max-width:699px)').matches;
-   if(isMobile!==wasMobile){wasMobile=isMobile;show(1);}
- });
+ document.addEventListener('hani-latest-updated',()=>show(1));
  show(1);
 })();
 </script><script id="mobile-category-menu-fix-v190">
